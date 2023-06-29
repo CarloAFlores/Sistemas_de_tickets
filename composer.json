@@ -1,0 +1,19 @@
+{
+    "name": "sistemas/s-istemas_de_tickets",
+    "description": "Descarga del autoload",
+    "autoload": {
+        "psr-4": {
+            
+            "Model\\" : "./models",
+            "MVC\\" : "./",
+            "Controllers\\" : "./controllers"
+        }
+    },
+    "authors": [
+        {
+            "name": "CarloAFlores",
+            "email": "carlos2000sistemasc@gmail.com"
+        }
+    ],
+    "require": {}
+}
