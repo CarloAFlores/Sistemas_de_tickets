@@ -13,7 +13,7 @@ $inicio = false;
 </head>
 <body>
     <header>
-        <img src="" alt="logo_empresa">
+        <img src="" alt="">
     </header>
 
     <?php echo $contenido; ?>
