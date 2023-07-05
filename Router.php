@@ -15,6 +15,10 @@ class Router{
 		$this->rutasGET[$url] = $fn;
 	}
 
+	public function post($url,$fn){
+		$this->rutasPOST[$url] = $fn;
+	}
+
 
 	//En esta funcion se comprobaran que tipo de metodo fue enviado
 	public function comprobarRutas(){
@@ -22,12 +26,15 @@ class Router{
 		$urlActual = $_SERVER['PATH_INFO'] ?? '/';
 		//Funcion para saber el metodo que estaremos ocupando [GET,POST,PUT]
 		$metodo = $_SERVER['REQUEST_METHOD'];
+		
 
 
 		//Concicion en caso que estemos usando el metodo get
 		if($metodo === 'GET'){
 			//Asignacion de la ruta a una variable, en caso de no exister dicha ruta, nos lanzara un null
 			$fn = $this->rutasGET[$urlActual] ?? null;
+		} else {
+			$fn = $this->rutasPOST[$urlActual] ?? null;
 		}
 
 		//Condicion en que nos redireccionara a la pagina que deseemos

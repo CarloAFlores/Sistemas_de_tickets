@@ -194,3 +194,8 @@ h1{
 
 	bottom: 0;
 }
+
+.alertas{
+	background: red;
+	position: relative;
+}
