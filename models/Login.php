@@ -46,7 +46,5 @@ class Login extends General{
 	}
 
 	
-
-
 }
  ?>

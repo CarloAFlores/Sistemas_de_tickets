@@ -11,6 +11,12 @@
   <div class="alertas <?php echo $key; ?>">
     <?php echo $mensaje ?>
   </div>
+
+  <!--<script class="alertas" type="text/javascript">alert("<?php$key; ?>
+    <?php  $mensaje ?>");
+
+</script>-->
+
 </body>
 
 <?php
