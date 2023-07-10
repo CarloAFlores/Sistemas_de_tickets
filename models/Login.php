@@ -26,11 +26,12 @@ class Login extends General{
 
 	//En esta funcion nos encargaremos de validar nuestro usuario mediante el identificador y password, para que no vaya vacio
 	public function validarLogin(){
-		if(!$this->identificador) {
-			self::$alertas['error'][] = 'El identificador es Obligatorio';
-		}
+		
 		if(!$this->password) {
 			self::$alertas['error'][] = 'El password es obligatorio';
+		}
+		if(!$this->identificador) {
+			self::$alertas['error'][] = 'El identificador es Obligatorio';
 		}
 		return self::$alertas;
 	}
@@ -39,12 +40,14 @@ class Login extends General{
 	public function comprobarPasswordAndVerificado($password){
 
 		if($password !== $this->password || !$this->estado){
-			self::$alertas['error'][] = 'Password Incorrecto o tu identificador no ha sido confirmado';
+			self::$alertas['error'][] = 'Password Incorrecto o Identificador ';
 		}else{
 			return true;
 		}
 	}
 
-	
+	//Password Incorrecto o tu identificador no ha sido confirmado
+
+
 }
  ?>

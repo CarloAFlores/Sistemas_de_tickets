@@ -380,16 +380,15 @@ p {
 
 @media(max-width: 768px){
 	.alertas {
-		background: #d80000;
-		box-shadow: 0 0 20px #ff0000;
+		background: #80000078;
+		/*box-shadow: 0 0 15px #ff0000;*/
 		color: white;
 		position: relative;
-		max-width: 121%;
-		height: 2rem;
-		margin-left: -2em;
-		padding: 4px;
+		max-width: 95%;
+		height: 10%;
+		margin-left: 3%;
 		text-align: center;
-		top: 1rem;
+		top: -37%;
 
 	}
 }
