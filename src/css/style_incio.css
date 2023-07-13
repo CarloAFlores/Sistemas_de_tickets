@@ -265,13 +265,23 @@ h1{
 	h1{
 		margin: 0;
 		padding: 5%;
+		font-size: 45px;
 		text-align: center;
 		font-weight: bold;
-		
 		letter-spacing: 2px;
-    color: white;
-    text-shadow: 0px 0px 0px black, 1px 1px 0px black, 2px 2px 0px black;
-    transition: all 500ms;
+    	color: white;
+    	transition: all 500ms;
+    	text-shadow: 0px 0px 0px black, 1px 1px 0px black, 2px 2px 0px black;
+	}
+}
+
+@media(min-width: 768px) {
+	h1:hover{
+		font-size: 48px;
+		cursor: pointer;
+		text-shadow: 0px 0px 0px black, -1px -1px 0px black, -2px -2px 0px black;
+
+
 	}
 }
 
@@ -311,6 +321,11 @@ p {
 
 .facebook{
 	max-width: 4rem;
+	transition: ease-out .5s;
+}
+.facebook:hover{
+	cursor: pointer;
+	max-width: 5rem;
 }
 
 @media(max-width: 768px){
@@ -323,6 +338,12 @@ p {
 
 .nota{
 	max-width: 3.5rem;
+	transition: ease-out .5s;
+}
+
+.nota:hover{
+	cursor: pointer;
+	max-width: 4.5rem;
 }
 
 @media(max-width: 768px){
