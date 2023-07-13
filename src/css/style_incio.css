@@ -402,24 +402,16 @@ p {
 @media(max-width: 768px){
 	.alertas {
 		background: #80000078;
-		/*box-shadow: 0 0 15px #ff0000;*/
+		box-shadow: 0 0 15px #ff0000;
 		color: white;
 		position: relative;
 		max-width: 95%;
-		height: 10%;
+		height: 5%;
 		margin-left: 3%;
 		text-align: center;
-		top: -37%;
+		top: -19%;
+		border-radius: 0rem 1rem;
 
 	}
 }
 
-
-
-/*.warnings{
-	width: 200px;
-	text-align: center;
-	margin: auto;
-	color: #B06AB3;
-	padding-top: 20px;
-}*/
