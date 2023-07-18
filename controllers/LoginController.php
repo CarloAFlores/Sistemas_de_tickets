@@ -11,6 +11,8 @@ class LoginController{
 	public static function index(Router $router){
 		//En este arreglo se guardaran todos los errores que se tenga en el index del LOGIN
 		$alertas = [];
+		session_start();
+		$_SESSION['login'] = false;
 
 		//Aca es donde pedimos el tipo de metodo se mandara, en este caso es POST 
 		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -49,5 +51,17 @@ class LoginController{
 		$router->render('login/index',[
 			'alertas' => $alertas
 		]);
+	}
+
+	public static function logout(){
+		session_start();
+
+		$_SESSION = [];
+		var_dump($_SESSION);
+		
+
+        echo "<script language=\"javascript\">
+        window.location.href=\"http://localhost/SIstemas_de_tickets/public/\";
+        </script>";
 	}
 }

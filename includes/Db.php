@@ -1,6 +1,6 @@
 <?php
 //Aca es onde nos coinectamos a la base de datos
-$db = mysqli_connect('localhost', 'root', '3529600', 'ejemplo');
+$db = mysqli_connect('localhost', 'root', 'Linux3529600**', 'Tickets');
 
 //En caso de no poderse conectar nos saltaran estos errores
 if (!$db) {

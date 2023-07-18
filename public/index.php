@@ -16,6 +16,8 @@ $router->get('/',[LoginController::class, 'index']);
 //Se agrego el metodo post, para mandar nuestro formulario medainet el metodo POST
 $router->post('/',[LoginController::class, 'index']);
 
+$router -> get('/logout',[LoginController::class, 'logout']);
+
 $router->get('/nosotros',[InicioController::class, 'index']);
 
 

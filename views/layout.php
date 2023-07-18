@@ -1,6 +1,6 @@
 <!--Mediante esta condicion podemos decir si el footer se vera o no -->
 <?php 
-$inicio = false;
+$auth = $_SESSION['login'];
  ?>
 
 <!DOCTYPE html>
@@ -12,18 +12,21 @@ $inicio = false;
 
 </head>
 <body>
-    <header>
-        <img src="" alt="">
-    </header>
+    <?php if($auth): ?>
+        <header>
+            <img src="" alt="">
+            <a href="logout">Cerrar session</a>
+        </header>
+    <?php endif; ?>
 
     <?php echo $contenido; ?>
 
 
 <!--Aca es donde aplicamos la funcion anteriormente declarada-->
-    <?php if($inicio): ?>
-    <footer>
-        <h1>FOOTER</h1>
-    </footer>
+    <?php if($auth): ?>
+        <footer>
+            <h1>FOOTER</h1>
+        </footer>
     <?php  endif;?>
     
 </body>
