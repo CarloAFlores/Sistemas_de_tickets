@@ -15,5 +15,8 @@
     "url": "(https://github.com/CarloAFlores/Sistemas_de_tickets.git)"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "boxicons": "^2.1.4"
+  }
 }
