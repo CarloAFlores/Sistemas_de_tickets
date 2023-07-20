@@ -1,84 +1,207 @@
-body{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-header{
-	background: #40B6D0;
+
+body{
+    font-family: 'Poppins', sans-serif;
+    
 }
-footer{;
-	display: grid;
-	place-items: center;
-	font-family: 'Belanosima', sans-serif;
-	width: 100%;
+
+
+.menu{
+    background-color: #1A202C;
+    color: #fff;
+    height: 70px;
 }
 
 .header__logo{
-	background: #2797B0;
-	display: flex;
-	align-items: center;
-	height: 4rem;
+    background: #2797B0;
+    display: flex;
+    align-items: center;
+    height: 6rem;
+}
+
+.header__logo--img{
+    width:25rem;
+    height: 6rem;
+    margin-left: 1rem;
+    transition: all 0.5s;
+}
+
+.header__logo--img:hover{
+    transform: scale(1.2);
+}
+
+
+.menu__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.menu__links{
+    height: 100%;
+    transition: transform .5s;
+    display: flex;
+}
+
+.menu__item{
+    list-style: none;
+    position: relative;
+    height: 100%;
+    --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+    --transform: rotate(-90deg);
+}
+
+.menu__item:hover{
+    --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    --transform: rotate(0);
+}
+
+.menu__link{
+    color: #fff;
+    text-decoration: none;
+    padding: 0 15px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.menu__link:hover{
+    background-color: #5e7094;
+}
+
+
+.menu__arrow{
+    transform: var(--transform);
+    transition: transform .3s;
+    display: block;
+    margin-left: 3px;
+}
+
+.menu__nesting{
+    list-style: none;
+    transition:clip-path .3s;
+    clip-path: var(--clip);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: max-content;
+    transform: translateY(100%);
+    background-color: #000;
+}
+
+.menu__link--inside{
+    padding: 10px;
+}
+
+.menu__link--inside:hover{
+    background-color: #798499;
+}
+
+.menu__hamburguer{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+
+@media (max-width:800px){
+
+    .header__logo{
+    background: #2797B0;
+    display: flex;
+    align-items: center;
+    height: 4rem;
 }
 .header__logo--img{
-	width:10rem;
-	height: 2.5rem;
-	margin-left: 1rem;
-}
-.nav{
-	display: flex;
-	justify-content: space-around;
+    width:12rem;
+    height: 3.5rem;
+    margin-left: 1rem;
 }
 
-.nav__menu{
-	font-family: 'Hind Siliguri', sans-serif;
-	font-weight: 400;
-	display: flex;
-	align-items: center;
-	color: white;
+    .menu__hamburguer{
+        display: flex;
+    }
 
-}
-.nav__titulo{
-	font-family: 'Belanosima', sans-serif;
-	color: white;
-}
-.nav__menu--btn{
-	margin-left: .5rem;
-	background: white;
-	border: none;
-	height: 2rem;
-	width: 4rem;
-	display: grid;
-	place-items: center;
-	border-radius: 5px;
-}
+    .menu__item{
+        --clip:0;
+        overflow:hidden ;
+    }
 
-@media (min-width: 700px){
-	.header__logo{
-		height: 8rem;
-	}
-	.header__logo--img{
-		width:25rem;
-		height: 6rem;
-	}
+    .menu__item--active{
+        --transform: rotate(0);
+        --background: #5e7094;
+    }
 
-	.nav{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	height: 4.5rem;
-	}
-	.nav__menu{
+    .menu__item--show{
+        background-color: var(--background);
+    }
 
-		width: 10rem;
-		height: 3rem;
-		justify-content: space-between;
-		font-size: 1.6rem;
-		margin-left: 2rem;
-	}
-	.nav__titulo{
-		font-size: 1.6rem;
-		margin-right: 5rem;
-	}
 
+    .menu__links{
+        position: fixed;
+        max-width: 400px;
+        width: 100%;
+        top: 70px;
+        bottom: 0;
+        right: 0;
+        background-color: #000;
+        overflow-y: auto;
+        display: grid;
+        grid-auto-rows: max-content;
+        transform: translateX(100%);
+    }
+
+    .menu__links--show{
+        transform: unset;
+        width: 75%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        top: 8.2rem;
+    }
+
+    .menu__link{
+        padding: 25px 0;
+        padding-left: 30px;
+        height: auto;
+    }
+
+    .menu__arrow{
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+    .menu__nesting{
+        display: grid;
+        position: unset;
+        width: 100%;
+        transform: translateY(0);
+        height: 0;
+        transition: height .3s;
+    }
+
+    .menu__link--inside{
+        width: 90%;
+        margin-left: auto;
+        border-left: 1px solid #798499;
+    }
+
+    
 }

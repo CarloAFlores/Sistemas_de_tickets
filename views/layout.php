@@ -17,22 +17,66 @@ $auth = $_SESSION['login'];
 </head>
 <body>
     <?php if($auth): ?>
-        <header>
-            <div class="header__logo">
-                <img src="../../src/img/logosinfondoblanco.png" alt="" class="header__logo--img">
+        <div class="header__logo">
+                <img src="../../src/img/logosinfondoblanco.png" alt="LOGO ECI©" class="header__logo--img">
             </div>
 
-            <div class="header__menu nav">
-                <div class="nav__menu">
-                    <p>MENU</p>
-                    <button class="nav__menu--btn">
-                        <i class="bx bx-menu bx-sm"></i>
-                    </button>
-                </div>
-                <h5 class="nav__titulo">SISTEMA DE TICKETS</h5>
-            </div>
+            <nav class="menu">
+                
+                <section class="menu__container">
 
-        </header>
+            <h1 class="menu__logo">Sistema de Tickets</h1>
+
+
+            <ul class="menu__links">
+                <li class="menu__item">
+                    <a href="#" class="menu__link">Principal</a>
+                </li>
+    
+                <li class="menu__item menu__item--show">
+                    <a href="#" class="menu__link">Mis Tickets <i class='bx bxs-chevron-down bx-md menu__arrow'></i> </a>
+    
+                    <ul class="menu__nesting">
+                        <li class="menu__inside">
+                            <a href="#" class="menu__link menu__link--inside">Pendientes</a>
+                        </li>
+                        <li class="menu__inside">
+                            <a href="#" class="menu__link menu__link--inside">En Proceso</a>
+                        </li>
+                        <li class="menu__inside">
+                            <a href="#" class="menu__link menu__link--inside">En espera por falta de Recurso</a>
+                        </li>
+                        <!--<li class="menu__inside">
+                            <a href="#" class="menu__link menu__link--inside">No Procede</a>
+                        </li>-->
+                        <li class="menu__inside">
+                            <a href="#" class="menu__link menu__link--inside">Terminados</a>
+                        </li>
+                        <li class="menu__inside">
+                            <a href="#" class="menu__link menu__link--inside">Cancelados</a>
+                        </li>
+                        <li class="menu__inside">
+                            <a href="#" class="menu__link menu__link--inside">Eliminados</a>
+                        </li>
+                    </ul>
+                </li>
+    
+                <li class="menu__item">
+                    <a href="#" class="menu__link">Estadisticas</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">Cerrar Sesión</a>
+                </li>
+    
+            </ul>
+
+            <div class="menu__hamburguer">
+                <i class='bx bx-menu-alt-right bx-md' class="menu__img"></i> 
+            </div>
+        </section>
+
+      
+    </nav>
     <?php endif; ?>
 
     <?php echo $contenido; ?>
@@ -45,5 +89,7 @@ $auth = $_SESSION['login'];
         </footer>
     <?php  endif;?>
     
+    <script src="../../src/js/main.js"></script>
+
 </body>
 </html>
