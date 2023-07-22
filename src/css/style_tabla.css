@@ -1,0 +1,236 @@
+/*-------BOTONES------------------------------------*/
+.botones{
+	height: 2rem;/*rem y px*/
+	display: flex;
+	justify-content: space-between;
+	margin-top: 2rem;
+}
+
+
+.boton1{
+	font-family: 'Poppins', sans-serif;
+	font-weight: 590;
+	font-size: 20px;
+	color: #ffffff;
+	background-color: #000;
+	border-radius: 1rem;
+	border-color: #0fa0f5; 
+	width: 7rem;
+	height: 3rem;
+	margin-left: 10rem;
+	cursor: pointer;
+
+}
+
+.boton2{
+	font-family: 'Poppins', sans-serif;
+	font-weight: 590;
+	font-size: 20px;
+	color: #ffffff;
+	margin-right: 10rem;
+	width: 7rem;
+	height: 3rem;
+	background-color: #000;
+	border-radius: 1rem;
+	border-color: #0fa0f5;
+	cursor: pointer;
+}
+
+/*------TABLA---ESCRITORIO------------------------------------*/
+
+.tabla{
+	margin-top: 4rem;
+	margin-bottom: 3rem;
+
+}
+
+
+.tabla tbody tr td .btn{
+	width: 7rem;
+	text-decoration: none;
+	line-height: 35px;
+	display: inline-block;
+	background-color: #46848b;
+	font-weight: medium;
+	color: #FFFFFF;
+	text-align: center;
+	border-radius: 2rem;
+	border: 2px solid teal;
+}
+
+table{
+	width: 50%;
+	margin: 0 auto;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+table > thead > tr > th{
+	padding: 15px;
+	background-color: #46848b;
+	color: #f8f8fa;	
+
+}
+
+table > tbody > tr > td{
+	padding: 15px;
+	border-bottom: 1px solid grey;
+	text-align: justify;
+	text-align: center;
+}
+
+table > tbody> tr:nth-child(even) > td{
+	background-color: rgb(165, 160, 160);
+}
+
+.active > td {
+	color: #05689b !important;
+	
+}
+
+.tabla tbody tr td div a{
+	
+	text-decoration: none;
+	text-transform: uppercase;
+	
+}
+
+
+
+/*Botones pequeños*/
+
+.tabla tbody tr td .opciones_pequeñas{
+	/*background: teal;*/
+	display: grid;
+	grid: repeat(2, 40px) / auto-flow 40px;
+	justify-content: center;
+	align-items: center;
+	gap: 1px;
+
+}
+.tabla tbody tr td div .lista{
+	background: #f3de25;
+	border-radius: 7px;
+	cursor: pointer;
+}
+.tabla tbody tr td div .subir{
+	background: #1fed46;
+	border-radius: 7px;
+	cursor: pointer;
+}
+.tabla tbody tr td div .resubir{
+	background: #ffaa00;
+	border-radius: 7px;
+	cursor: pointer;
+}
+.tabla tbody tr td div .book{
+	background: #00ffec;
+	border-radius: 7px;
+	cursor: pointer;
+}
+.tabla tbody tr td div .trash{
+	background: red;
+	border-radius: 7px;
+	cursor: pointer;
+}
+.tabla tbody tr td div .revision{
+	background: #4482ff;
+	border-radius: 7px;
+	cursor: pointer;
+}
+
+/*--------PARTE DE LOS INPUTS----------*/
+
+table > thead > tr > th > input{
+	background: #fff;
+	width: 7rem;
+	border-radius: 1rem;
+	height: 2rem;
+	    border-color: #0fa0f5;
+}
+
+table > thead > tr > th > select{
+	border-radius: 1rem;
+	width: 7rem;
+	height: 2rem;
+	border-color: #0fa0f5;
+}
+
+nav .navegador{
+	background: red;
+}
+
+
+/*TABLA-----RESPONSIVE CELULAR----------*/
+
+@media (max-width: 1200px){
+
+	.tabla{
+		width: 21rem;
+	}
+
+	table > thead{
+		display: none;
+	}
+
+	table > tbody > tr > td{
+		display: block;
+		width: 100%;
+	}
+
+	.tabla tbody tr td{
+	border: 1px solid #000;
+	}
+
+	.tabla tbody tr td{
+		text-align: right;
+		padding-left: 50%;
+		position: relative;
+	}
+
+	.tabla td:before{
+		content: attr(data-label);
+		position: absolute;
+		left: 0;
+		width: 50%;
+		padding-left: 12px;
+		font-weight: 600;
+		font-size: 14px;
+		text-align: left;
+	}
+
+	table > tbody > .tbrow {
+		border: 15px solid transparent;
+	}
+	
+	.boton1{
+		
+		margin: 1rem;
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		align-items: center;
+	}
+
+	.boton2{
+	
+	margin: 1rem;
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		align-items: center;
+	}
+
+	.tabla tbody tr td .btn{
+	max-width: 6rem;
+	text-decoration: none;
+	line-height: 20px;
+	display: inline-block;
+	background-color: #46848b;
+	color: #FFFFFF;
+	text-align: center;
+	border-radius: 2rem;
+	border: 2px solid teal;
+	}
+
+}

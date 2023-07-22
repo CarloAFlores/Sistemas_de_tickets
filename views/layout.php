@@ -17,6 +17,7 @@ $auth = $_SESSION['login'];
 </head>
 <body>
     <?php if($auth): ?>
+    <header>
         <div class="header__logo">
                 <img src="../../src/img/logosinfondoblanco.png" alt="LOGO ECI©" class="header__logo--img">
             </div>
@@ -74,6 +75,7 @@ $auth = $_SESSION['login'];
                 <i class='bx bx-menu-alt-right bx-md' class="menu__img"></i> 
             </div>
         </section>
+    </header>
 
       
     </nav>

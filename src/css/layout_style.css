@@ -70,7 +70,7 @@ body{
 .menu__link{
     color: #fff;
     text-decoration: none;
-    padding: 0 15px;
+    padding: 0 30px;
     display: flex;
     height: 100%;
     align-items: center;
@@ -101,7 +101,7 @@ body{
 }
 
 .menu__link--inside{
-    padding: 10px;
+    padding: 20px; /*Tamaño para la barra que se sale y esconde*/
 }
 
 .menu__link--inside:hover{
@@ -117,23 +117,33 @@ body{
     display: none;
 }
 
-
+.menu__img{
+    display: block;
+    width: 36px;
+}
 
 
 
 @media (max-width:800px){
+    header{
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
 
     .header__logo{
-    background: #2797B0;
-    display: flex;
-    align-items: center;
-    height: 4rem;
+        background: #2797B0;
+        display: flex;
+        align-items: center;
+        height: 4rem;
 }
-.header__logo--img{
-    width:12rem;
-    height: 3.5rem;
-    margin-left: 1rem;
-}
+    .header__logo--img{
+        width:12rem;
+        height: 3.5rem;
+        margin-left: 1rem;
+    }
+
+    
 
     .menu__hamburguer{
         display: flex;
@@ -169,6 +179,7 @@ body{
     }
 
     .menu__links--show{
+        z-index: 1;
         transform: unset;
         width: 75%;
         display: grid;
