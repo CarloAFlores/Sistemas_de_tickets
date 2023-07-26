@@ -16,13 +16,14 @@ header('Location: pagina_no_encontrada');
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@200;300;400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 	<div class="botones">
-    <button class="boton1">Volver</button>
-    <button class="boton2">Crear</button>
-</div>
+        <!--<button class="boton1">Volver</button>-->
+        <button class="boton2">Crear</button>
+    </div>
 
 <table class="tabla">
     <thead>
@@ -67,29 +68,36 @@ header('Location: pagina_no_encontrada');
                 <td data-label="Status Ticket">En proceso</td>
                 <td data-label="Progreso">
                     <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
+                        <div class="progress-bar bg-success" role="progressbar" style="width:50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
                     </div>
                 </td>
                 <td data-label="Opciones">
                    	<div class="opciones_pequeñas"> 
-                    	<div class="lista">
+
+                    	<button class="boton-li icono" title="Status">
                     	    <i class='bx bx-list-ul' style='color:#ffffff'></i>
-                    	</div>
-                    	<div class="subir">
+                    	</button>
+
+                    	<button class="boton-subir icono" title="Archivo">
                     	    <i class='bx bx-upload' style='color:#ffffff'></i>
-                    	</div>
-                    	<div class="resubir">
+                    	</button>
+
+                    	<button class="boton-resubir icono" title="AdRespuesta">
                     	    <i class='bx bx-upload' style='color:#ffffff'></i>
-                    	</div>
-                    	<div class="book">
+                    	</button>
+
+                    	<button class="boton-book icono" title="Resumen">
                     	    <i class='bx bxs-book-content' style='color:#ffffff'></i>
-                    	</div>
-                    	<div class="trash">
+                    	</button>
+
+                    	<button class="boton-trash icono" title="Eliminar">
                     	    <i class='bx bxs-trash' style='color:#ffffff' ></i>
-                    	</div>
-                    	<div class="revision">
+                    	</button>
+
+                    	<button class="boton-revision icono" title="Actualizar">
                     	    <i class='bx bx-revision' style='color:#ffffff' ></i>
-                    	</div>
+                    	</button>
+                        
                    	</div>
                 </td>
                 <td data-label="Detalles"><a href="#" class="btn">Ver más</a></td>
@@ -107,26 +115,33 @@ header('Location: pagina_no_encontrada');
                     </div>
                 </td>
                 <td data-label="Opciones">
-                   <div class="opciones_pequeñas"> 
-                    	<div class="lista">
-                    	    <i class='bx bx-list-ul' style='color:#ffffff'></i>
-                    	</div>
-                    	<div class="subir">
-                    	    <i class='bx bx-upload' style='color:#ffffff'></i>
-                    	</div>
-                    	<div class="resubir">
-                    	    <i class='bx bx-upload' style='color:#ffffff'></i>
-                    	</div>
-                    	<div class="book">
-                    	    <i class='bx bxs-book-content' style='color:#ffffff'></i>
-                    	</div>
-                    	<div class="trash">
-                    	    <i class='bx bxs-trash' style='color:#ffffff' ></i>
-                    	</div>
-                    	<div class="revision">
-                    	    <i class='bx bx-revision' style='color:#ffffff' ></i>
-                    	</div>
-                   	</div>
+                    <div class="opciones_pequeñas"> 
+
+                        <button class="boton-li icono" title="Status">
+                            <i class='bx bx-list-ul' style='color:#ffffff'></i>
+                        </button>
+
+                        <button class="boton-subir icono" title="Archivo">
+                            <i class='bx bx-upload' style='color:#ffffff'></i>
+                        </button>
+
+                        <button class="boton-resubir icono" title="AdRespuesta">
+                            <i class='bx bx-upload' style='color:#ffffff'></i>
+                        </button>
+
+                        <button class="boton-book icono" title="Resumen">
+                            <i class='bx bxs-book-content' style='color:#ffffff'></i>
+                        </button>
+
+                        <button class="boton-trash icono" title="Eliminar">
+                            <i class='bx bxs-trash' style='color:#ffffff' ></i>
+                        </button>
+
+                        <button class="boton-revision icono" title="Actualizar">
+                            <i class='bx bx-revision' style='color:#ffffff' ></i>
+                        </button>
+                        
+                    </div>
                 </td>
                 <td data-label="Detalles"><a href="#" class="btn">Ver más</a></td>
             </tr>
@@ -139,30 +154,37 @@ header('Location: pagina_no_encontrada');
                 <td data-label="Status Ticket">Completado</td>
                 <td data-label="Progreso">
                     <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">100%</div>
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 100%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">100%</div>
                     </div>
                 </td>
                 <td data-label="Opciones">
-                   	<div class="opciones_pequeñas"> 
-                    	<div class="lista">
-                    	    <i class='bx bx-list-ul' style='color:#ffffff'></i>
-                    	</div>
-                    	<div class="subir">
-                    	    <i class='bx bx-upload' style='color:#ffffff'></i>
-                    	</div>
-                    	<div class="resubir">
-                    	    <i class='bx bx-upload' style='color:#ffffff'></i>
-                    	</div>
-                    	<div class="book">
-                    	    <i class='bx bxs-book-content' style='color:#ffffff'></i>
-                    	</div>
-                    	<div class="trash">
-                    	    <i class='bx bxs-trash' style='color:#ffffff' ></i>
-                    	</div>
-                    	<div class="revision">
-                    	    <i class='bx bx-revision' style='color:#ffffff' ></i>
-                    	</div>
-                   	</div>
+                    <div class="opciones_pequeñas"> 
+
+                        <button class="boton-li icono" title="Status">
+                            <i class='bx bx-list-ul' style='color:#ffffff'></i>
+                        </button>
+
+                        <button class="boton-subir icono" title="Archivo">
+                            <i class='bx bx-upload' style='color:#ffffff'></i>
+                        </button>
+
+                        <button class="boton-resubir icono" title="AdRespuesta">
+                            <i class='bx bx-upload' style='color:#ffffff'></i>
+                        </button>
+
+                        <button class="boton-book icono" title="Resumen">
+                            <i class='bx bxs-book-content' style='color:#ffffff'></i>
+                        </button>
+
+                        <button class="boton-trash icono" title="Eliminar">
+                            <i class='bx bxs-trash' style='color:#ffffff' ></i>
+                        </button>
+
+                        <button class="boton-revision icono" title="Actualizar">
+                            <i class='bx bx-revision' style='color:#ffffff' ></i>
+                        </button>
+                        
+                    </div>
                 </td>
                 <td data-label="Detalles"><a href="#" class="btn">Ver más</a></td>
             </tr>
@@ -175,30 +197,37 @@ header('Location: pagina_no_encontrada');
                 <td data-label="Status Ticket">Eliminado</td>
                 <td data-label="Progreso">
                     <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">0%</div>
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">0%</div>
                     </div>
                 </td>
                 <td data-label="Opciones">
-                   	<div class="opciones_pequeñas"> 
-                    	<div class="lista">
-                    	    <i class='bx bx-list-ul' style='color:#ffffff'></i>
-                    	</div>
-                    	<div class="subir">
-                    	    <i class='bx bx-upload' style='color:#ffffff'></i>
-                    	</div>
-                    	<div class="resubir">
-                    	    <i class='bx bx-upload' style='color:#ffffff'></i>
-                    	</div>
-                    	<div class="book">
-                    	    <i class='bx bxs-book-content' style='color:#ffffff'></i>
-                    	</div>
-                    	<div class="trash">
-                    	    <i class='bx bxs-trash' style='color:#ffffff' ></i>
-                    	</div>
-                    	<div class="revision">
-                    	    <i class='bx bx-revision' style='color:#ffffff' ></i>
-                    	</div>
-                   	</div>
+                    <div class="opciones_pequeñas"> 
+
+                        <button class="boton-li icono" title="Status">
+                            <i class='bx bx-list-ul' style='color:#ffffff'></i>
+                        </button>
+
+                        <button class="boton-subir icono" title="Archivo">
+                            <i class='bx bx-upload' style='color:#ffffff'></i>
+                        </button>
+
+                        <button class="boton-resubir icono" title="AdRespuesta">
+                            <i class='bx bx-upload' style='color:#ffffff'></i>
+                        </button>
+
+                        <button class="boton-book icono" title="Resumen">
+                            <i class='bx bxs-book-content' style='color:#ffffff'></i>
+                        </button>
+
+                        <button class="boton-trash icono" title="Eliminar">
+                            <i class='bx bxs-trash' style='color:#ffffff' ></i>
+                        </button>
+
+                        <button class="boton-revision icono" title="Actualizar">
+                            <i class='bx bx-revision' style='color:#ffffff' ></i>
+                        </button>
+                        
+                    </div>
                 </td>
                 <td data-label="Detalles"><a href="#" class="btn">Ver más</a></td>
             </tr>
@@ -211,54 +240,60 @@ header('Location: pagina_no_encontrada');
                 <td data-label="Status Ticket">En proceso con falta de recursos</td>
                 <td data-label="Progreso">
                     <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 20%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">20%</div>
+                        <div class="progress-bar" role="progressbar" style="width: 30%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">20%</div>
                     </div>
                 </td>
                 <td data-label="Opciones">
-                   	<div class="opciones_pequeñas"> 
-                    	<div class="lista">
-                    	    <i class='bx bx-list-ul' style='color:#ffffff'></i>
-                    	</div>
-                    	<div class="subir">
-                    	    <i class='bx bx-upload' style='color:#ffffff'></i>
-                    	</div>
-                    	<div class="resubir">
-                    	    <i class='bx bx-upload' style='color:#ffffff'></i>
-                    	</div>
-                    	<div class="book">
-                    	    <i class='bx bxs-book-content' style='color:#ffffff'></i>
-                    	</div>
-                    	<div class="trash">
-                    	    <i class='bx bxs-trash' style='color:#ffffff' ></i>
-                    	</div>
-                    	<div class="revision">
-                    	    <i class='bx bx-revision' style='color:#ffffff' ></i>
-                    	</div>
-                   	</div>
+                    <div class="opciones_pequeñas"> 
+
+                        <button class="boton-li icono" title="Status">
+                            <i class='bx bx-list-ul' style='color:#ffffff'></i>
+                        </button>
+
+                        <button class="boton-subir icono" title="Archivo">
+                            <i class='bx bx-upload' style='color:#ffffff'></i>
+                        </button>
+
+                        <button class="boton-resubir icono" title="AdRespuesta">
+                            <i class='bx bx-upload' style='color:#ffffff'></i>
+                        </button>
+
+                        <button class="boton-book icono" title="Resumen">
+                            <i class='bx bxs-book-content' style='color:#ffffff'></i>
+                        </button>
+
+                        <button class="boton-trash icono" title="Eliminar">
+                            <i class='bx bxs-trash' style='color:#ffffff' ></i>
+                        </button>
+
+                        <button class="boton-revision icono" title="Actualizar">
+                            <i class='bx bx-revision' style='color:#ffffff' ></i>
+                        </button>
+                        
+                    </div>
                 </td>
                 <td data-label="Detalles"><a href="#" class="btn">Ver más</a></td>
             </tr>
         </tbody>
 </table>
 
-<div></div>
-<nav class="navegador" aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </ul>
-</nav>
+<div class="paginacion">
+    <nav aria-label="...">
+        <ul class="pagination">
+            <li class="page-item disabled numeros">
+                <span class="page-link">Previous</span>
+            </li>
+            <li class="page-item numeros"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active numeros" aria-current="page">
+                <span class="page-link numeros">2</span>
+            </li>
+            <li class="page-item numeros"><a class="page-link" href="#">3</a></li>
+            <li class="page-item numeros">
+                <a class="page-link" href="#">Next</a>
+            </li>
+        </ul>
+    </nav>
+</div>
 
     <script src="../../src/js/tabla.js"></script>
 

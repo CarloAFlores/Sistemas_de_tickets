@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
-
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');*/
 
 *{
     margin: 0;
@@ -8,10 +7,9 @@
 }
 
 body{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Ysabeau SC', sans-serif;
     
 }
-
 
 .menu{
     background-color: #1A202C;
@@ -20,16 +18,28 @@ body{
 }
 
 .header__logo{
-    background: #2797B0;
+    background: #4567bd;/*#2797B0*/
     display: flex;
     align-items: center;
+    justify-content: space-between;
     height: 6rem;
+}
+
+.saludito{
+    color: #fff;
+    margin-right: 2rem;
+    font-size: 2rem;
+    font-family: 'Ysabeau SC', sans-serif;
+}
+
+.saludito span{
+    font-size: 1.5rem;
 }
 
 .header__logo--img{
     width:25rem;
     height: 6rem;
-    margin-left: 1rem;
+    margin-left: 2rem;
     transition: all 0.5s;
 }
 
@@ -39,6 +49,7 @@ body{
 
 
 .menu__container{
+    font-family: 'Ysabeau SC', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,11 +57,18 @@ body{
     max-width: 1200px;
     height: 100%;
     margin: 0 auto;
+
+
+}
+
+.menu__logo{
+    text-shadow: #0042ff 0.1em 0.1em 0.2em;
+    font-size: 2.5rem;
 }
 
 .menu__links{
     height: 100%;
-    transition: transform .5s;
+    margin-bottom: 0;
     display: flex;
 }
 
@@ -80,7 +98,6 @@ body{
     background-color: #5e7094;
 }
 
-
 .menu__arrow{
     transform: var(--transform);
     transition: transform .3s;
@@ -101,7 +118,7 @@ body{
 }
 
 .menu__link--inside{
-    padding: 20px; /*Tamaño para la barra que se sale y esconde*/
+    padding: 10px;
 }
 
 .menu__link--inside:hover{
@@ -122,28 +139,60 @@ body{
     width: 36px;
 }
 
+.pie{
+   
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Ysabeau SC', sans-serif;
+    text-shadow: #0042ff 0.1em 0.1em 0.2em;
 
+}
+
+.pie h3{
+
+    font-size: larger;
+}
 
 @media (max-width:800px){
-    header{
-        position: sticky;
-        top: 0;
-        z-index: 1;
-    }
+
 
     .header__logo{
-        background: #2797B0;
-        display: flex;
-        align-items: center;
-        height: 4rem;
+    display: flex;
+    align-items: center;
+    height: 4rem;
 }
     .header__logo--img{
         width:12rem;
         height: 3.5rem;
         margin-left: 1rem;
     }
-
+    header{
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
     
+    .menu__logo{
+        
+        font-size: 1.9rem;
+    }
+
+    .saludito{
+        color: #fff;
+        margin-right: 1rem;
+        font-size: 1rem;
+        font-family: 'Ysabeau SC', sans-serif;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        gap: 7px;
+    }
+    
+    .saludito span{
+        font-size: .9rem;
+    }
 
     .menu__hamburguer{
         display: flex;
@@ -213,6 +262,4 @@ body{
         margin-left: auto;
         border-left: 1px solid #798499;
     }
-
-    
 }

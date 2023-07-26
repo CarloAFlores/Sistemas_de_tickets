@@ -11,8 +11,8 @@ $auth = $_SESSION['login'];
     <title>Sistema de Tickets</title>
     <link rel="stylesheet" href="../../src/css/layout_style.css">
     <link rel="stylesheet" href="../../node_modules/boxicons/css/boxicons.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+
 
 </head>
 <body>
@@ -20,13 +20,17 @@ $auth = $_SESSION['login'];
     <header>
         <div class="header__logo">
                 <img src="../../src/img/logosinfondoblanco.png" alt="LOGO ECI©" class="header__logo--img">
-            </div>
 
-            <nav class="menu">
+                <h1 class="saludito">
+                    Bienvenido <span>Jennifer Flores</span>
+                </h1>
+        </div>
+
+        <nav class="menu">
                 
-                <section class="menu__container">
+            <section class="menu__container">
 
-            <h1 class="menu__logo">Sistema de Tickets</h1>
+        <h1 class="menu__logo">Sistema de Tickets</h1>
 
 
             <ul class="menu__links">
@@ -86,8 +90,8 @@ $auth = $_SESSION['login'];
 
 <!--Aca es donde aplicamos la funcion anteriormente declarada-->
     <?php if($auth): ?>
-        <footer>
-            <h3>Desarrollado BY ECI© 2023</h3>
+        <footer class="pie">
+            <h3 class="pie_h3">Desarrollado BY ECI© 2023</h3>
         </footer>
     <?php  endif;?>
     

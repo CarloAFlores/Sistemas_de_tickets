@@ -1,14 +1,14 @@
 /*-------BOTONES------------------------------------*/
 .botones{
 	height: 2rem;/*rem y px*/
-	display: flex;
-	justify-content: space-between;
-	margin-top: 2rem;
+
+	text-align: right;
+	margin: 1px 3em 0 auto;
 }
 
 
-.boton1{
-	font-family: 'Poppins', sans-serif;
+/*.boton1{
+	font-family: 'Ysabeau SC', sans-serif;
 	font-weight: 590;
 	font-size: 20px;
 	color: #ffffff;
@@ -20,10 +20,10 @@
 	margin-left: 10rem;
 	cursor: pointer;
 
-}
+}*/
 
 .boton2{
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Ysabeau SC', sans-serif;
 	font-weight: 590;
 	font-size: 20px;
 	color: #ffffff;
@@ -33,12 +33,13 @@
 	background-color: #000;
 	border-radius: 1rem;
 	border-color: #0fa0f5;
-	cursor: pointer;
+	margin: 23px;
 }
 
 /*------TABLA---ESCRITORIO------------------------------------*/
 
 .tabla{
+	font-family: 'Ysabeau SC', sans-serif;
 	margin-top: 4rem;
 	margin-bottom: 3rem;
 
@@ -50,12 +51,18 @@
 	text-decoration: none;
 	line-height: 35px;
 	display: inline-block;
-	background-color: #46848b;
-	font-weight: medium;
+	background-color: #4567bd;
 	color: #FFFFFF;
 	text-align: center;
-	border-radius: 2rem;
-	border: 2px solid teal;
+	border-radius: 2rem 1rem;
+	transition: all .5s ease;
+	/*border: 2px solid teal;*/
+
+}
+
+.tabla tbody tr td .btn:hover{
+	box-shadow: 16px 18px 14px 0px rgba(75,90,168,0.75);
+
 }
 
 table{
@@ -66,8 +73,16 @@ table{
 }
 
 table > thead > tr > th{
+	text-align: center;
 	padding: 15px;
-	background-color: #46848b;
+	background-color: #4567bd;
+	color: #f8f8fa;	
+
+}
+
+table > thead > tr > th > input{
+	padding: 15px;
+	background-color: green;
 	color: #f8f8fa;	
 
 }
@@ -75,7 +90,7 @@ table > thead > tr > th{
 table > tbody > tr > td{
 	padding: 15px;
 	border-bottom: 1px solid grey;
-	text-align: justify;
+	
 	text-align: center;
 }
 
@@ -105,52 +120,63 @@ table > tbody> tr:nth-child(even) > td{
 	grid: repeat(2, 40px) / auto-flow 40px;
 	justify-content: center;
 	align-items: center;
-	gap: 1px;
+	gap: 3px;
 
 }
-.tabla tbody tr td div .lista{
+.icono{
+	width: 100%;
+	height: 2rem;
+	border-radius: 7px;
+	transition: all .5s ease;
+}
+.icono:hover{
+	box-shadow: 10px 10px 13px 0px rgba(6,0,242,0.75);
+
+}
+.boton-li{
 	background: #f3de25;
-	border-radius: 7px;
-	cursor: pointer;
+	border-color: #f3de25;
 }
-.tabla tbody tr td div .subir{
+
+.boton-subir{
 	background: #1fed46;
-	border-radius: 7px;
-	cursor: pointer;
+	border-color: #1fed46;
+
 }
-.tabla tbody tr td div .resubir{
+.boton-resubir{
 	background: #ffaa00;
-	border-radius: 7px;
-	cursor: pointer;
+	border-color: #ffaa00;
+
 }
-.tabla tbody tr td div .book{
+.boton-book{
 	background: #00ffec;
-	border-radius: 7px;
-	cursor: pointer;
+	border-color: #00ffec;
+
 }
-.tabla tbody tr td div .trash{
+.boton-trash{
 	background: red;
-	border-radius: 7px;
-	cursor: pointer;
+	border-color: red;
+
 }
-.tabla tbody tr td div .revision{
+.boton-revision{
 	background: #4482ff;
-	border-radius: 7px;
-	cursor: pointer;
+	border-color: #4482ff;
+
 }
 
 /*--------PARTE DE LOS INPUTS----------*/
 
 table > thead > tr > th > input{
 	background: #fff;
+	color: #000;
 	width: 7rem;
-	border-radius: 1rem;
+	border-radius: 2rem 1rem;
 	height: 2rem;
-	    border-color: #0fa0f5;
+	border-color: #0fa0f5;
 }
 
 table > thead > tr > th > select{
-	border-radius: 1rem;
+	border-radius: 2rem 1rem;
 	width: 7rem;
 	height: 2rem;
 	border-color: #0fa0f5;
@@ -158,6 +184,26 @@ table > thead > tr > th > select{
 
 nav .navegador{
 	background: red;
+}
+
+.progress-bar{
+	
+	font-size: 0.80rem;
+}
+
+.paginacion{
+	font-family: 'Ysabeau SC', sans-serif;
+	
+	/* Arriba | Derecha | Abajo | Izquierda */
+
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.numeros{
+	margin-left: 1rem;
 }
 
 
@@ -226,11 +272,9 @@ nav .navegador{
 	text-decoration: none;
 	line-height: 20px;
 	display: inline-block;
-	background-color: #46848b;
 	color: #FFFFFF;
 	text-align: center;
 	border-radius: 2rem;
-	border: 2px solid teal;
 	}
 
 }
