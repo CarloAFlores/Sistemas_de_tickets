@@ -91,7 +91,7 @@ $auth = $_SESSION['login'];
 <!--Aca es donde aplicamos la funcion anteriormente declarada-->
     <?php if($auth): ?>
         <footer class="pie">
-            <h3 class="pie_h3">Desarrollado BY ECI© 2023</h3>
+            <h3 class="pie_h3">Developers LCC© 2023</h3>
         </footer>
     <?php  endif;?>
     

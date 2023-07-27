@@ -280,15 +280,19 @@ header('Location: pagina_no_encontrada');
 <div class="paginacion">
     <nav aria-label="...">
         <ul class="pagination">
-            <li class="page-item disabled numeros">
-                <span class="page-link">Previous</span>
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
             </li>
-            <li class="page-item numeros"><a class="page-link" href="#">1</a></li>
-            <li class="page-item active numeros" aria-current="page">
-                <span class="page-link numeros">2</span>
-            </li>
-            <li class="page-item numeros"><a class="page-link" href="#">3</a></li>
             <li class="page-item numeros">
+                <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item numeros" aria-current="page">
+                <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item numeros">
+                <a class="page-link" href="#">3</a>
+            </li>
+            <li class="page-item">
                 <a class="page-link" href="#">Next</a>
             </li>
         </ul>

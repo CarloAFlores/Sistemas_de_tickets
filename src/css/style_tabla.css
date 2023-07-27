@@ -187,7 +187,7 @@ nav .navegador{
 }
 
 .progress-bar{
-	
+	text-align: center;
 	font-size: 0.80rem;
 }
 
@@ -203,7 +203,17 @@ nav .navegador{
 }
 
 .numeros{
-	margin-left: 1rem;
+	margin: 1rem;
+}
+.page-link{
+	border-radius: 3px 35px;
+	transition: all .5s ease;
+}
+
+.page-link:hover{
+	background: #4567bd;
+	color: #fff;
+	box-shadow: 16px 18px 14px 0px rgba(75,90,168,0.75);
 }
 
 
