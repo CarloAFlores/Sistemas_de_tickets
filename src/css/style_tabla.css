@@ -56,12 +56,13 @@
 	text-align: center;
 	border-radius: 2rem 1rem;
 	transition: all .5s ease;
-	/*border: 2px solid teal;*/
+	
 
 }
 
 .tabla tbody tr td .btn:hover{
 	box-shadow: 16px 18px 14px 0px rgba(75,90,168,0.75);
+	border: 1px solid #fff;
 
 }
 
@@ -134,8 +135,8 @@ table > tbody> tr:nth-child(even) > td{
 
 }
 .boton-li{
-	background: #f3de25;
-	border-color: #f3de25;
+	background: #e9d100d6;
+	border-color: #e9d100d6;
 }
 
 .boton-subir{
