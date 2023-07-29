@@ -22,7 +22,7 @@ header('Location: pagina_no_encontrada');
 <body>
 	<div class="botones">
         <!--<button class="boton1">Volver</button>-->
-        <button class="boton2">Crear</button>
+        <a href="crear" class="boton2">Crear</a>
     </div>
 
 <table class="tabla">

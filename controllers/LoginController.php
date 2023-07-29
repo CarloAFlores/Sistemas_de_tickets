@@ -39,7 +39,7 @@ class LoginController{
 						$_SESSION['login'] = true;
 						//Pasando la validacion este nos reedirigira a nuestra siguiente pantalla
 						echo "<script language=\"javascript\">
-							window.location.href=\"index.php/nosotros\";
+							window.location.href=\"index.php/inicio\";
 							</script>";
 					}
 				}

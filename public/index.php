@@ -18,7 +18,24 @@ $router->post('/',[LoginController::class, 'index']);
 
 $router -> get('/logout',[LoginController::class, 'logout']);
 
-$router->get('/nosotros',[InicioController::class, 'index']);
+$router->get('/inicio',[InicioController::class, 'index']);
 
+$router->get('/crear',[InicioController::class, 'crear']);
+
+//--------------------------------------------------------------------------------------------------------
+
+$router->get('/pendientes',[InicioController::class, 'pendientes']);
+
+$router->get('/en_proceso',[InicioController::class, 'proceso']);
+
+$router->get('/falta_recursos',[InicioController::class, 'falta_recursos']);
+
+$router->get('/terminados',[InicioController::class, 'terminados']);
+
+$router->get('/cancelados',[InicioController::class, 'cancelados']);
+
+//--------------------------------------------------------------------------------------------------------
+
+$router->get('/estadisticas',[InicioController::class, 'estadisticas']);
 
 $router->comprobarRutas();

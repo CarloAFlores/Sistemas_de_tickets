@@ -35,7 +35,7 @@ $auth = $_SESSION['login'];
 
             <ul class="menu__links">
                 <li class="menu__item">
-                    <a href="#" class="menu__link">Principal</a>
+                    <a href="inicio" class="menu__link">Principal</a>
                 </li>
     
                 <li class="menu__item menu__item--show">
@@ -43,22 +43,22 @@ $auth = $_SESSION['login'];
     
                     <ul class="menu__nesting">
                         <li class="menu__inside">
-                            <a href="#" class="menu__link menu__link--inside">Pendientes</a>
+                            <a href="pendientes" class="menu__link menu__link--inside">Pendientes</a>
                         </li>
                         <li class="menu__inside">
-                            <a href="#" class="menu__link menu__link--inside">En Proceso</a>
+                            <a href="en_proceso" class="menu__link menu__link--inside">En Proceso</a>
                         </li>
                         <li class="menu__inside">
-                            <a href="#" class="menu__link menu__link--inside">En espera por falta de Recurso</a>
+                            <a href="falta_recursos" class="menu__link menu__link--inside">En espera por falta de Recurso</a>
                         </li>
                         <!--<li class="menu__inside">
                             <a href="#" class="menu__link menu__link--inside">No Procede</a>
                         </li>-->
                         <li class="menu__inside">
-                            <a href="#" class="menu__link menu__link--inside">Terminados</a>
+                            <a href="terminados" class="menu__link menu__link--inside">Terminados</a>
                         </li>
                         <li class="menu__inside">
-                            <a href="#" class="menu__link menu__link--inside">Cancelados</a>
+                            <a href="cancelados" class="menu__link menu__link--inside">Cancelados</a>
                         </li>
                         <li class="menu__inside">
                             <a href="#" class="menu__link menu__link--inside">Eliminados</a>
@@ -67,10 +67,10 @@ $auth = $_SESSION['login'];
                 </li>
     
                 <li class="menu__item">
-                    <a href="#" class="menu__link">Estadisticas</a>
+                    <a href="estadisticas" class="menu__link">Estadisticas</a>
                 </li>
                 <li class="menu__item">
-                    <a href="#" class="menu__link">Cerrar Sesión</a>
+                    <a href="logout" class="menu__link">Cerrar Sesión</a>
                 </li>
     
             </ul>
