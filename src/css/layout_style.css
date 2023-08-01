@@ -66,6 +66,12 @@ body{
     font-size: 2.5rem;
 }
 
+@media(max-width: 1076px){
+    .menu__logo{
+        font-size: 1.9rem;
+    }
+}
+
 .menu__links{
     height: 100%;
     margin-bottom: 0;
@@ -118,7 +124,7 @@ body{
 }
 
 .menu__link--inside{
-    padding: 10px;
+    padding: 15px;
 }
 
 .menu__link--inside:hover{

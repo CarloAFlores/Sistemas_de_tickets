@@ -60,9 +60,7 @@ $auth = $_SESSION['login'];
                         <li class="menu__inside">
                             <a href="cancelados" class="menu__link menu__link--inside">Cancelados</a>
                         </li>
-                        <li class="menu__inside">
-                            <a href="#" class="menu__link menu__link--inside">Eliminados</a>
-                        </li>
+                        
                     </ul>
                 </li>
     
