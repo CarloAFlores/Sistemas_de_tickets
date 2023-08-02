@@ -26,7 +26,7 @@
 .content{
 	
 	font-family: 'Ysabeau SC', sans-serif;
-	padding: 0 1.5em;
+	padding: 1.5em;
 	max-width: 1170px;
 	margin-left: auto;
 	margin-right: auto;
@@ -179,6 +179,14 @@ background: linear-gradient(0deg, rgba(94,112,148,1) 0%, rgba(69,103,189,1) 100%
 		align-items: center;
 
 	}
+	.content{
+	font-family: 'Ysabeau SC', sans-serif;
+	padding: 1.5em;
+	max-width: 1170px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1rem;
+}
 
 	.alta-form{
 		display: block;

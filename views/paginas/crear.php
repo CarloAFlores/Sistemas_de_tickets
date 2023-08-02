@@ -12,9 +12,11 @@
     <link rel="stylesheet" href="../../src/css/style_crear_chiquito.css">
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
 
+
  </head>
 
  <body>
+
 
 
  	<div class="botones__nuevos">
@@ -116,12 +118,40 @@
 
     </div>
 
+<!------------FORMULARIO PEQUEÑO RESPONSIVO--------------->
+
+
     <div class="d-md-none content">
 
         <h1 class="brand">Alta de Tickets <span><⁠(⁠￣⁠︶⁠￣⁠)⁠></span></h1>
 
     <div class="container">
         <h3>Crea tu Ticket</h3>
+
+        <div class="progress-bar">
+            <div class="paso">
+                <p>Principal</p>
+                <div class="num">
+                    <span>1</span>
+                </div>
+                <div class="check"><i class='bx bx-check'></i></div>
+            </div>
+            <div class="paso">
+                <p>General</p>
+                <div class="num">
+                    <span>2</span>
+                </div>
+                <div class="check "><i class='bx bx-check'></i></div>
+            </div>
+            <div class="paso">
+                <p>Archivo</p>
+                <div class="num">
+                    <span>3</span>
+                </div>
+                <div class="check"> <i class='bx bx-check'></i></div>
+            </div>
+        </div>
+
         <div class="form-princ">
             <form action="#">
                 
@@ -140,14 +170,14 @@
                     </div>
                     <div class="campo">
                         <div class="label">Asunto</div>
-                        <input type="text" id="asunto" placeholder="Asunto">
+                        <input type="text" id="asunto">
                     </div>
                     <div class="campo">
                         <div class="label">Motivo</div>
                         <textarea id="motivo" rows="2"></textarea>
                     </div>
                     <div class="campo">
-                        <button type="button">Siguiente</button>
+                        <button type="button" id="sgt" onclick="pulsar(1)" class="btn_sgnts">Siguiente</button>
                     </div>                    
                 </div>
 
@@ -171,21 +201,37 @@
                     </div>
                     <div class="campo">
                         <div class="label">Usuario Corresponsable</div>
-                        <div class="usuario_corresponsable">
-                        <input type="text" id="user_corres">
+                        
+                        <input type="text" id="user_corres" placeholder="Usuario Corresponsable">
                         <button class="btn_corres">+</button>
-                        </div>
                     </div>
+                    <div class="campo btns">
+                        <button class="volver-pag1 volver" type="button" onclick="volver(1)">Anterior</button>
+                        <button class="adelante-pag3 adelante" type="button" onclick="pulsar(2)">Siguiente</button>
+                    </div>                    
+                </div>
+
+                <!--PAGINA 3-->
+                <div class="pagina" id="parte3">
+                    <div class="titulo">Información adjunta</div>
                     <div class="campo">
-                        <button class="volver-pag1 volver">Anterior</button>
-                        <button class="adelante-pag3 adelante" type="button">Siguiente</button>
+                        <div class="label">Adjunto</div>
+                        <button class="adjunto" type="submit" title="Sube tu archivo">Upload file</button>
+                    </div>
+                    
+                    <div class="campo btns">
+                        <button class="volver-pag2 volver" type="button" onclick="volver(2)">Anterior</button>
+                        <button class="fin" type="button">Guardar</button>
                     </div>                    
                 </div>
             </form>
         </div>
     </div>
 
-    </div>
+</div>
  	
+    <script src="../../src/js/movimiento.js"></script>
+
+
  </body>
  </html>
