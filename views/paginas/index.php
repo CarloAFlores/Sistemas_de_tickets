@@ -74,7 +74,7 @@ header('Location: pagina_no_encontrada');
                 <td data-label="Opciones">
                    	<div class="opciones_pequeñas"> 
 
-                    	<button class="boton-li icono" title="Status">
+                    	<button class="boton-li icono" title="Status" type="button">
                     	    <i class='bx bx-list-ul' style='color:#ffffff'></i>
                     	</button>
 
@@ -277,6 +277,19 @@ header('Location: pagina_no_encontrada');
         </tbody>
 </table>
 
+<!--primer modal-->
+<div class="primermodal-container">
+    <div class="primermodal modal-close">
+        <p class="close">X</p>
+        <img src="../../src/img/ilustracion.svg" alt="ilustracion">
+        <div class="modal-textos">
+            <h2>HOLA MUNDO</h2>
+            <p>Como estas el día de hoy</p>
+        </div>
+    </div>
+</div>
+<!--se cierra-->
+
 <div class="paginacion">
     <nav aria-label="...">
         <ul class="pagination">
@@ -300,6 +313,7 @@ header('Location: pagina_no_encontrada');
 </div>
 
     <script src="../../src/js/tabla.js"></script>
+    <script type="../../src/js/modals.js"></script>
 
 	
 </body>

@@ -107,11 +107,7 @@
 
                 <p>Hola, por favor llena todos los Datos</p>
 
-                <ul class="imagenes__totales">
-                    
-                    <li class="imagenes"><i class='bx bxl-tiktok' style='color:#fffcfc' ></i></li>
-                    <li class="imagenes"><i class='bx bxl-facebook-circle' style='color:#ffffff' ></i></li>
-                </ul>
+                
             </div>
             </div>
         </div>
@@ -131,21 +127,21 @@
         <div class="progress-bar">
             <div class="paso">
                 <p>Principal</p>
-                <div class="num">
+                <div class="num" id="num1">
                     <span>1</span>
                 </div>
                 <div class="check"><i class='bx bx-check'></i></div>
             </div>
             <div class="paso">
                 <p>General</p>
-                <div class="num">
+                <div class="num" id="num2">
                     <span>2</span>
                 </div>
                 <div class="check "><i class='bx bx-check'></i></div>
             </div>
             <div class="paso">
                 <p>Archivo</p>
-                <div class="num">
+                <div class="num" id="num3">
                     <span>3</span>
                 </div>
                 <div class="check"> <i class='bx bx-check'></i></div>
@@ -156,7 +152,7 @@
             <form action="#">
                 
                 <!--PAGINA 1-->
-                <div class="pagina" id="parte1">
+                <div class="pagina movPag" id="parte1">
                     <div class="titulo">Información principal</div>
                     <div class="campo">
                         <div class="label">Etiqueta</div>
@@ -176,8 +172,8 @@
                         <div class="label">Motivo</div>
                         <textarea id="motivo" rows="2"></textarea>
                     </div>
-                    <div class="campo">
-                        <button type="button" id="sgt" onclick="pulsar(1)" class="btn_sgnts">Siguiente</button>
+                    <div class="campo sigPag">
+                        <button class="btn5" type="button" id="sgt" onclick="pulsar(1)">Siguiente</button>
                     </div>                    
                 </div>
 
