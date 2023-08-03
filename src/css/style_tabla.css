@@ -243,7 +243,7 @@ nav .navegador{
 .primermodal{
 	width: 40%;
 	height: 50%;
-	background: #fff;
+	background: linear-gradient(0deg, rgba(234,237,242,1) 0%, rgba(69,71,189,1) 100%);
 	text-align: center;
 	display: flex;
 	border-radius: 10px;
@@ -258,7 +258,7 @@ nav .navegador{
 }
 
 .primermodal > img{
-	height: 50%;
+	height: 35%;
 }
 
 .close{
@@ -278,6 +278,15 @@ nav .navegador{
 .modal-close{
 	transform: translateY(-200%);
 }
+
+.cajita{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border: 4px solid red;
+}
+
+
 
 /*TABLA-----RESPONSIVE CELULAR----------*/
 

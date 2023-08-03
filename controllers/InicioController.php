@@ -3,6 +3,7 @@ namespace Controllers;
 
 use MVC\Router;
 use Model\Tickets;
+use Model\Login;
 
 
 class inicioController{
@@ -11,8 +12,10 @@ class inicioController{
 		session_start();
 
 		$tickets = Tickets::final();
+		$login = Login::all();
 		$router->render('paginas/index',[
-			'tickets' => $tickets
+			'tickets' => $tickets,
+			'login' => $login
 		]);
 	}
 

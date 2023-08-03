@@ -113,18 +113,24 @@ header('Location: pagina_no_encontrada');
         <p class="close">X</p>
         <img src="../../src/img/ilustracion.svg" alt="ilustracion">
         <div class="modal-textos">
-            <h2>STATUS <span>Ticket</span></h2>
-            <div class="cajita">
+            <h2>STATUS <span> Ticket </span></h2>
+
+
+            <form class="cajita">
                 <div class="cajita__dos">
+                    <h4>Status</h4>
                     <select>
                         <option value="1">Proceso</option>
                         <option value="2">Validacion</option>
                     </select>
                 </div>
                 <div class="cajita__tres">
+                    <h4>Comentario</h4>
                     <textarea rows="2"></textarea>
                 </div>
-            </div>
+                <button type="submit" title="subir" class="botonmodal">Guardar</button>
+             </form>
+
         </div>
     </div>
 </div>
