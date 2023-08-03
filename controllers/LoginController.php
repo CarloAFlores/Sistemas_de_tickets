@@ -61,7 +61,7 @@ class LoginController{
 		
 
         echo "<script language=\"javascript\">
-        window.location.href=\"http://localhost/Sistemas_de_tickets/public/\";
+        window.location.href=\"http://localhost/SIstemas_de_tickets/public/\";
         </script>";
 	}
 }

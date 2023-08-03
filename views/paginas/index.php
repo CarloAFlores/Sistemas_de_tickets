@@ -59,13 +59,14 @@ header('Location: pagina_no_encontrada');
         </tr>
     </thead>
         <tbody>
+            <?php foreach ($tickets as $ticket): ?>
             <tr class="tbrow">
-                <td data-label="No. Ticket">1</td>
-                <td data-label="Etiqueta">Cambio de Diadema</td>
-                <td data-label="Asunto">Lorem ipsum dolor sit amet.</td>
-                <td data-label="Comentario">Cambios de diademas para todos los coaches</td>
+                <td data-label="No. Ticket"><?php echo $ticket->id; ?></td>
+                <td data-label="Etiqueta"><?php echo $ticket->etiqueta; ?></td>
+                <td data-label="Asunto"><?php echo $ticket->asunto; ?></td>
+                <td data-label="Comentario"><?php echo $ticket->descripcion; ?></td>
                 <td data-label="Usuario Crea">Sergio Merino</td>
-                <td data-label="Status Ticket">En proceso</td>
+                <td data-label="Status Ticket"><?php echo $ticket->nombre_status; ?></td>
                 <td data-label="Progreso">
                     <div class="progress">
                         <div class="progress-bar bg-success" role="progressbar" style="width:50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
@@ -102,178 +103,7 @@ header('Location: pagina_no_encontrada');
                 </td>
                 <td data-label="Detalles"><a href="#" class="btn">Ver más</a></td>
             </tr>
-            <tr class="tbrow">
-                <td data-label="No. Ticket">2</td>
-                <td data-label="Etiqueta">Permisos</td>
-                <td data-label="Asunto">Lorem ipsum dolor sit amet.</td>
-                <td data-label="Comentario">Permisos para los chicos de validación </td>
-                <td data-label="Usuario Crea">Hector Marroquin</td>
-                <td data-label="Status Ticket">Terminado</td>
-                <td data-label="Progreso">
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">100%</div>
-                    </div>
-                </td>
-                <td data-label="Opciones">
-                    <div class="opciones_pequeñas"> 
-
-                        <button class="boton-li icono" title="Status">
-                            <i class='bx bx-list-ul' style='color:#ffffff'></i>
-                        </button>
-
-                        <button class="boton-subir icono" title="Archivo">
-                            <i class='bx bx-upload' style='color:#ffffff'></i>
-                        </button>
-
-                        <button class="boton-resubir icono" title="AdRespuesta">
-                            <i class='bx bx-upload' style='color:#ffffff'></i>
-                        </button>
-
-                        <button class="boton-book icono" title="Resumen">
-                            <i class='bx bxs-book-content' style='color:#ffffff'></i>
-                        </button>
-
-                        <button class="boton-trash icono" title="Eliminar">
-                            <i class='bx bxs-trash' style='color:#ffffff' ></i>
-                        </button>
-
-                        <button class="boton-revision icono" title="Actualizar">
-                            <i class='bx bx-revision' style='color:#ffffff' ></i>
-                        </button>
-                        
-                    </div>
-                </td>
-                <td data-label="Detalles"><a href="#" class="btn">Ver más</a></td>
-            </tr>
-            <tr class="tbrow">
-                <td data-label="No. Ticket">3</td>
-                <td data-label="Etiqueta">Papeletas</td>
-                <td data-label="Asunto">Lorem ipsum dolor sit amet.</td>
-                <td data-label="Comentario">Me podria dar acceso para ver la papeleta de Megacable a no.nomina 2432</td>
-                <td data-label="Usuario Crea">Carlos Flores</td>
-                <td data-label="Status Ticket">Completado</td>
-                <td data-label="Progreso">
-                    <div class="progress">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 100%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">100%</div>
-                    </div>
-                </td>
-                <td data-label="Opciones">
-                    <div class="opciones_pequeñas"> 
-
-                        <button class="boton-li icono" title="Status">
-                            <i class='bx bx-list-ul' style='color:#ffffff'></i>
-                        </button>
-
-                        <button class="boton-subir icono" title="Archivo">
-                            <i class='bx bx-upload' style='color:#ffffff'></i>
-                        </button>
-
-                        <button class="boton-resubir icono" title="AdRespuesta">
-                            <i class='bx bx-upload' style='color:#ffffff'></i>
-                        </button>
-
-                        <button class="boton-book icono" title="Resumen">
-                            <i class='bx bxs-book-content' style='color:#ffffff'></i>
-                        </button>
-
-                        <button class="boton-trash icono" title="Eliminar">
-                            <i class='bx bxs-trash' style='color:#ffffff' ></i>
-                        </button>
-
-                        <button class="boton-revision icono" title="Actualizar">
-                            <i class='bx bx-revision' style='color:#ffffff' ></i>
-                        </button>
-                        
-                    </div>
-                </td>
-                <td data-label="Detalles"><a href="#" class="btn">Ver más</a></td>
-            </tr>
-            <tr class="tbrow">
-                <td data-label="No. Ticket">4</td>
-                <td data-label="Etiqueta">Encuesta</td>
-                <td data-label="Asunto">Lorem ipsum dolor sit amet.</td>
-                <td data-label="Comentario">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-                <td data-label="Usuario Crea">Sergio Merino</td>
-                <td data-label="Status Ticket">Eliminado</td>
-                <td data-label="Progreso">
-                    <div class="progress">
-                        <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">0%</div>
-                    </div>
-                </td>
-                <td data-label="Opciones">
-                    <div class="opciones_pequeñas"> 
-
-                        <button class="boton-li icono" title="Status">
-                            <i class='bx bx-list-ul' style='color:#ffffff'></i>
-                        </button>
-
-                        <button class="boton-subir icono" title="Archivo">
-                            <i class='bx bx-upload' style='color:#ffffff'></i>
-                        </button>
-
-                        <button class="boton-resubir icono" title="AdRespuesta">
-                            <i class='bx bx-upload' style='color:#ffffff'></i>
-                        </button>
-
-                        <button class="boton-book icono" title="Resumen">
-                            <i class='bx bxs-book-content' style='color:#ffffff'></i>
-                        </button>
-
-                        <button class="boton-trash icono" title="Eliminar">
-                            <i class='bx bxs-trash' style='color:#ffffff' ></i>
-                        </button>
-
-                        <button class="boton-revision icono" title="Actualizar">
-                            <i class='bx bx-revision' style='color:#ffffff' ></i>
-                        </button>
-                        
-                    </div>
-                </td>
-                <td data-label="Detalles"><a href="#" class="btn">Ver más</a></td>
-            </tr>
-            <tr class="tbrow">
-                <td data-label="No. Ticket">5</td>
-                <td data-label="Etiqueta">Reporteador</td>
-                <td data-label="Asunto">Lorem ipsum dolor sit amet.</td>
-                <td data-label="Comentario">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-                <td data-label="Usuario Crea">Hector Marroquin</td>
-                <td data-label="Status Ticket">En proceso con falta de recursos</td>
-                <td data-label="Progreso">
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 30%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">20%</div>
-                    </div>
-                </td>
-                <td data-label="Opciones">
-                    <div class="opciones_pequeñas"> 
-
-                        <button class="boton-li icono" title="Status">
-                            <i class='bx bx-list-ul' style='color:#ffffff'></i>
-                        </button>
-
-                        <button class="boton-subir icono" title="Archivo">
-                            <i class='bx bx-upload' style='color:#ffffff'></i>
-                        </button>
-
-                        <button class="boton-resubir icono" title="AdRespuesta">
-                            <i class='bx bx-upload' style='color:#ffffff'></i>
-                        </button>
-
-                        <button class="boton-book icono" title="Resumen">
-                            <i class='bx bxs-book-content' style='color:#ffffff'></i>
-                        </button>
-
-                        <button class="boton-trash icono" title="Eliminar">
-                            <i class='bx bxs-trash' style='color:#ffffff' ></i>
-                        </button>
-
-                        <button class="boton-revision icono" title="Actualizar">
-                            <i class='bx bx-revision' style='color:#ffffff' ></i>
-                        </button>
-                        
-                    </div>
-                </td>
-                <td data-label="Detalles"><a href="#" class="btn">Ver más</a></td>
-            </tr>
+        <?php endforeach; ?>
         </tbody>
 </table>
 

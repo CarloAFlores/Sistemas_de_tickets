@@ -2,13 +2,18 @@
 namespace Controllers;
 
 use MVC\Router;
+use Model\Tickets;
 
 
 class inicioController{
 	
 	public static function index(Router $router){
 		session_start();
-		$router->render('paginas/index');
+
+		$tickets = Tickets::final();
+		$router->render('paginas/index',[
+			'tickets' => $tickets
+		]);
 	}
 
 	public static function crear(Router $router){
