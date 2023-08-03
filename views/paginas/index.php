@@ -69,13 +69,13 @@ header('Location: pagina_no_encontrada');
                 <td data-label="Status Ticket"><?php echo $ticket->nombre_status; ?></td>
                 <td data-label="Progreso">
                     <div class="progress">
-                        <div class="progress-bar bg-success" role="progressbar" style="width:50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
+                        <div class="progress-bar bg-<?php echo $ticket->color;?>" role="progressbar" style="width:<?php echo $ticket->progreso;?>%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><?php echo $ticket->progreso;?>%</div>
                     </div>
                 </td>
                 <td data-label="Opciones">
                    	<div class="opciones_pequeñas"> 
 
-                    	<button class="boton-li icono" title="Status" type="button">
+                    	<button href="#" class="boton-li icono cta" title="Status" type="button" id="miboton">
                     	    <i class='bx bx-list-ul' style='color:#ffffff'></i>
                     	</button>
 
@@ -113,8 +113,18 @@ header('Location: pagina_no_encontrada');
         <p class="close">X</p>
         <img src="../../src/img/ilustracion.svg" alt="ilustracion">
         <div class="modal-textos">
-            <h2>HOLA MUNDO</h2>
-            <p>Como estas el día de hoy</p>
+            <h2>STATUS <span>Ticket</span></h2>
+            <div class="cajita">
+                <div class="cajita__dos">
+                    <select>
+                        <option value="1">Proceso</option>
+                        <option value="2">Validacion</option>
+                    </select>
+                </div>
+                <div class="cajita__tres">
+                    <textarea rows="2"></textarea>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -143,7 +153,6 @@ header('Location: pagina_no_encontrada');
 </div>
 
     <script src="../../src/js/tabla.js"></script>
-    <script type="../../src/js/modals.js"></script>
 
 	
 </body>

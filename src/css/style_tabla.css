@@ -92,7 +92,7 @@ table > thead > tr > th > input{
 }
 
 table > tbody > tr > td{
-	padding: 15px;
+	padding: 5px;
 	border-bottom: 1px solid grey;
 	
 	text-align: center;
@@ -139,7 +139,11 @@ table > tbody> tr:nth-child(even) > td{
 }
 .boton-li{
 	background: #e9d100d6;
+	
+}
+.cta{
 	border-color: #e9d100d6;
+
 }
 
 .boton-subir{
@@ -229,7 +233,7 @@ nav .navegador{
 	height: 100vh;
 	top: 0;
 	left: 0;
-	background: rgba(0, 0, 0, 0.5);
+	background: rgba(0, 0, 0, 0.3);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -242,10 +246,13 @@ nav .navegador{
 	background: #fff;
 	text-align: center;
 	display: flex;
+	border-radius: 10px;
 	flex-direction: column;
 	justify-content: space-evenly;
 	position: relative;
-	animation: jen 1s;
+	transition: transform 2s;
+	transform: translateY(0%);
+	
 
 	/*overflow: hidden*/;
 }
@@ -254,8 +261,22 @@ nav .navegador{
 	height: 50%;
 }
 
-.modal-close{
+.close{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	background: #c44a4a;
+	cursor: pointer;
+	color: #fff;
+	line-height: 25px;
+	border-radius: 50%;
+}
 
+.modal-close{
+	transform: translateY(-200%);
 }
 
 /*TABLA-----RESPONSIVE CELULAR----------*/
@@ -329,13 +350,4 @@ nav .navegador{
 	border-radius: 2rem;
 	}
 
-}
-
-@keyframes jen{
-	0%{
-		transform: translateY(-200%);
-	}
-	100%{
-		transform: translateY(0%);
-	}
 }

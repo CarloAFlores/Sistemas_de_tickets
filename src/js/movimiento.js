@@ -1,4 +1,4 @@
-
+ 
 function  pulsar(mostrar){
 	let parte1 = document.getElementById("parte1");
 	let parte2 = document.getElementById("parte2");
