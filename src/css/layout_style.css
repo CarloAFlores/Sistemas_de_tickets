@@ -121,6 +121,7 @@ body{
     width: max-content;
     transform: translateY(100%);
     background-color: #000;
+    z-index: 1;
 }
 
 .menu__link--inside{
