@@ -22,7 +22,7 @@ $auth = $_SESSION['login'];
                 <img src="../../src/img/logosinfondoblanco.png" alt="LOGO ECI©" class="header__logo--img">
 
                 <h1 class="saludito">
-                    Bienvenido <span>Jennifer Flores</span>
+                    Bienvenido <span><?php echo $auth = $_SESSION['nombre']; ?></span>
                 </h1>
         </div>
 

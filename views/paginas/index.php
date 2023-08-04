@@ -65,7 +65,7 @@ header('Location: pagina_no_encontrada');
                 <td data-label="Etiqueta"><?php echo $ticket->etiqueta; ?></td>
                 <td data-label="Asunto"><?php echo $ticket->asunto; ?></td>
                 <td data-label="Comentario"><?php echo $ticket->descripcion; ?></td>
-                <td data-label="Usuario Crea">Sergio Merino</td>
+                <td data-label="Usuario Crea"><?php echo $ticket->nombre; ?> </td>
                 <td data-label="Status Ticket"><?php echo $ticket->nombre_status; ?></td>
                 <td data-label="Progreso">
                     <div class="progress">

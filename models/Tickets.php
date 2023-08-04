@@ -3,7 +3,7 @@ namespace Model;
 
 class Tickets extends General{
 	protected static $tabla = 'tickets';
-	protected static $columnasDB = ['id','etiqueta','asunto','descripcion','hora_creacion','hora_finalizacion','fecha_creacion','fecha_finalizada','adjunto','id_status','id_satisfaccion','id_responsable','id_corresponsable','estado','nmr_nom','nombre_status','color','progreso'];
+	protected static $columnasDB = ['id','etiqueta','asunto','descripcion','hora_creacion','hora_finalizacion','fecha_creacion','fecha_finalizada','adjunto','id_status','id_satisfaccion','id_responsable','id_corresponsable','estado','nmr_nom','nombre_status','color','progreso','nombre'];
 
 	public $id ;
 	public $etiqueta;
@@ -25,6 +25,7 @@ class Tickets extends General{
 	public $nombre_status;
 	public $color;
 	public $progreso;
+	public $nombre;
 
 	public function __construct($args = []){
 		$this->id = $args['id'] ?? null;
@@ -48,7 +49,8 @@ class Tickets extends General{
 	}
 
 	public static function final(){
-		$query = "SELECT status.nombre_status,status.color,status.progreso,tickets.* FROM " . static::$tabla." INNER JOIN status ON  tickets.id_satisfaccion = status.id";
+		$query = "SELECT usuarios.nombre,status.nombre_status,status.color,status.progreso,tickets.* FROM " . static::$tabla." INNER JOIN status ON  tickets.id_satisfaccion = status.id 
+		    INNER JOIN usuarios ON tickets.nmr_nom = usuarios.identificador";
         $resultado = self::consultarSQL($query);
         return $resultado;
 	}
