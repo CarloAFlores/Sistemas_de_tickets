@@ -1,4 +1,4 @@
-.botones__nuevos{
+.botones__nuevos {
 	height: 2rem;/*rem y px*/
 	display: flex;
 	justify-content: space-between;
@@ -20,6 +20,11 @@
 	height: 3rem;
 	margin-left: 11rem;
 	cursor: pointer;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
 
 }
 

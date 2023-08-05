@@ -20,7 +20,7 @@
 
 
  	<div class="botones__nuevos">
-    	<button class="boton3">Volver</button>
+    	<a  href="inicio" class="boton3">Volver</a>
     	<!--<button class="boton2">Crear</button>-->
 	</div>
 

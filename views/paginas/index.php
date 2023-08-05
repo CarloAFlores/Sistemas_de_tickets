@@ -73,6 +73,7 @@ header('Location: pagina_no_encontrada');
                         <div class="progress-bar bg-<?php echo $ticket->color;?>" role="progressbar" style="width:<?php echo $ticket->progreso;?>%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><?php echo $ticket->progreso;?>%</div>
                     </div>
                 </td>
+
                 <td data-label="Opciones">
                    	<div class="opciones_pequeñas"> 
 
@@ -92,7 +93,7 @@ header('Location: pagina_no_encontrada');
                     	    <i class='bx bxs-book-content' style='color:#ffffff'></i>
                     	</button>
 
-                    	<button class="boton-trash icono" title="Eliminar">
+                    	<button class="boton-trash icono" title="Eliminar" type="button" id="" onclick="hola4(<?php echo $ticket->id; ?>)">
                     	    <i class='bx bxs-trash' style='color:#ffffff' ></i>
                     	</button>
 
@@ -102,7 +103,9 @@ header('Location: pagina_no_encontrada');
                         
                    	</div>
                 </td>
-                <td data-label="Detalles"><a href="#" class="btn">Ver más</a></td>
+                <td data-label="Detalles">
+                    <button type="button" class="btn" title="Detalles" onclick="hola5(<?php echo $ticket->id; ?>)">Ver más</button>
+                </td>
             </tr>
         <?php endforeach; ?>
         </tbody>
@@ -163,20 +166,19 @@ header('Location: pagina_no_encontrada');
     </div>
 </div>
 <!--se cierra-->
-<!--tercer modal
+<!--tercer modal-->
 <div class="tercermodal-container">
     <div class="tercermodal modal-close3">
         <p class="close3">X</p>
         <img src="../../src/img/ilustracion4.svg" alt="ilustracion">
         <div class="modal-textos3">
-            <h2>UPLOAD <span> Archivo </span></h2>
+            <h2>UPLOAD <span> Respuesta </span></h2>
 
 
             <form class="cajita3">
                 <div class="cajita__dos3">
-                    <h4>Subir archivo</h4>
-                    <label for="file">Choose file to upload</label>
-                    <input type="file" name="file" accept="image/png, image/jpeg">
+                    <h4>Comentario</h4>
+                    <textarea rows="1"></textarea>
                 </div>
                 
                 <div class="cajita__cuatro3">
@@ -187,8 +189,119 @@ header('Location: pagina_no_encontrada');
         </div>
     </div>
 </div>
-se cierra-->
+<!--se cierra-->
+<!--cuarto modal-->
+<div class="cuartomodal-container">
+    <div class="cuartomodal modal-close4">
+        <p class="close4">X</p>
+        <img src="../../src/img/ilustracion5.svg" alt="ilustracion">
+        <div class="modal-textos4">
+            <h2>BORRAR <span> Ticket </span></h2>
 
+
+            <form class="cajita4">
+                <div class="cajita__dos4">
+                    <h4>¿Estás seguro que quieres eliminar el Ticket?</h4>
+                </div>
+                
+                <div class="cajita__cuatro4">
+                    <button type="submit" title="Aceptar" id="aceptar">Aceptar</button>
+                    <button type="submit" title="Cancelar" >Cancelar</button>
+                </div>
+             </form>
+
+        </div>
+    </div>
+</div>
+<!--se cierra-->
+<!--quinto modal-->
+<div class="quintomodal-container">
+    <div class="quintomodal modal-close5">
+        <p class="close5">X</p>
+        <img src="../../src/img/ilustracion6.svg" alt="ilustracion">
+        <div class="modal-textos5">
+            <h2>DETALLES<span> Ticket </span></h2>
+
+
+            <form class="cajita5">
+                    
+                <div class="cajita__cuatro5">
+                    <div class="tabla__modal">
+                        <div class="fila">
+                            <div class="columna">
+                                <div class="cabeza">No.Ticket</div>
+                                <div class="contenido">1</div>
+                            </div>
+                            <div class="columna">
+                                <div class="cabeza">Etiqueta</div>
+                                <div class="contenido">Se necesita mejorar el sistema</div>
+                            </div>
+                            <div class="columna">
+                                <div class="cabeza">Asunto</div>
+                                <div class="contenido">Se necesita mejorar el sistema</div>
+                            </div>
+                            <div class="columna">
+                                <div class="cabeza">Comentario</div>
+                                <div class="contenido">Puede tener tiempo de diferencia</div>
+                            </div>
+                            <div class="columna">
+                                <div class="cabeza">Adjunto</div>
+                                <div class="contenido">...</div>
+                            </div>
+                            <div class="columna">
+                                <div class="cabeza">Usuario Crea</div>
+                                <div class="contenido">Abigail Zaragoza</div>
+                            </div>
+                            <div class="columna">
+                                <div class="cabeza">Puesto Crea</div>
+                                <div class="contenido">Recursos Humanos</div>
+                            </div>
+                            <div class="columna">
+                                <div class="cabeza">Fecha creación</div>
+                                <div class="contenido">8/08/2023</div>
+                            </div>
+                            <div class="columna">
+                                <div class="cabeza">Hora creacion</div>
+                                <div class="contenido">12:40</div>
+                            </div>
+                            <div class="columna">
+                                <div class="cabeza">Usuario responsable</div>
+                                <div class="contenido">Sergio Merino</div>
+                            </div>
+                            <div class="columna">
+                                <div class="cabeza">Puesto Responsable</div>
+                                <div class="contenido">Auxiliar Sistemas</div>
+                            </div>
+                            <div class="columna">
+                                <div class="cabeza">Fecha Final</div>
+                                <div class="contenido">20/08/2023</div>
+                            </div>
+                            <div class="columna">
+                                <div class="cabeza">Hora final</div>
+                                <div class="contenido">13:20</div>
+                            </div>
+                            <div class="columna">
+                                <div class="cabeza">Status</div>
+                                <div class="contenido">Terminado</div>
+                            </div>
+                            
+                            <div class="columna">
+                                <div class="cabeza">SI / NO Satisfacción</div>
+                                <div class="contenido">SI</div>
+                            </div>
+                            <div class="columna">
+                                <div class="cabeza">Progreso</div>
+                                <div class="contenido">Se necesita mejorar el sistema</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </form>
+
+        </div>
+    </div>
+</div>
+<!--se cierra-->
 <div class="paginacion">
     <nav aria-label="...">
         <ul class="pagination">

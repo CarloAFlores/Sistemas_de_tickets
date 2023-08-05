@@ -42,6 +42,7 @@ $auth = $_SESSION['login'];
                     <a href="#" class="menu__link">Mis Tickets <i class='bx bxs-chevron-down bx-md menu__arrow'></i> </a>
     
                     <ul class="menu__nesting">
+                        <!--
                         <li class="menu__inside">
                             <a href="pendientes" class="menu__link menu__link--inside">Pendientes</a>
                         </li>
@@ -51,22 +52,24 @@ $auth = $_SESSION['login'];
                         <li class="menu__inside">
                             <a href="falta_recursos" class="menu__link menu__link--inside">En espera por falta de Recurso</a>
                         </li>
-                        <!--<li class="menu__inside">
+                        <li class="menu__inside">
                             <a href="#" class="menu__link menu__link--inside">No Procede</a>
-                        </li>-->
+                        </li>
                         <li class="menu__inside">
                             <a href="terminados" class="menu__link menu__link--inside">Terminados</a>
                         </li>
                         <li class="menu__inside">
                             <a href="cancelados" class="menu__link menu__link--inside">Cancelados</a>
+                        </li>-->
+
+                        <li class="menu__item">
+                            <a href="estadisticas" class="menu__link menu__link--inside">Estadisticas</a>
                         </li>
                         
                     </ul>
                 </li>
     
-                <li class="menu__item">
-                    <a href="estadisticas" class="menu__link">Estadisticas</a>
-                </li>
+
                 <li class="menu__item">
                     <a href="logout" class="menu__link">Cerrar Sesión</a>
                 </li>

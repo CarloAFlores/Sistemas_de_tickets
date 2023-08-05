@@ -29,7 +29,7 @@ cerrar.addEventListener("click",function(){
 	setTimeout(function(){
 		modalC.style.opacity = "0";
 		modalC.style.visibility = "hidden";
-	},850)
+	},400)
 })
 
 function hola(id){
@@ -54,7 +54,7 @@ cerrar2.addEventListener("click",function(){
 	setTimeout(function(){
 		modalC2.style.opacity = "0";
 		modalC2.style.visibility = "hidden";
-	},850)
+	},400)
 })
 
 function hola2(id){
@@ -62,6 +62,81 @@ function hola2(id){
 	modalC2.style.opacity = "1";
 	modalC2.style.visibility = "visible";
 	modal2.classList.toggle("modal-close2");
+
+	console.log(id)
+}
+
+//funcion del modal3
+
+let cerrar3 = document.querySelectorAll(".close3")[0];
+let modal3 = document.querySelectorAll(".tercermodal")[0];
+let modalC3 = document.querySelectorAll(".tercermodal-container")[0];
+
+
+cerrar3.addEventListener("click",function(){
+	modal3.classList.toggle("modal-close3");
+
+	setTimeout(function(){
+		modalC3.style.opacity = "0";
+		modalC3.style.visibility = "hidden";
+	},400)
+})
+
+function hola3(id){
+
+	modalC3.style.opacity = "1";
+	modalC3.style.visibility = "visible";
+	modal3.classList.toggle("modal-close3");
+
+	console.log(id)
+}
+
+//funcion del modal4(borrar)
+
+let cerrar4 = document.querySelectorAll(".close4")[0];
+let modal4 = document.querySelectorAll(".cuartomodal")[0];
+let modalC4 = document.querySelectorAll(".cuartomodal-container")[0];
+
+
+cerrar4.addEventListener("click",function(){
+	modal4.classList.toggle("modal-close4");
+
+	setTimeout(function(){
+		modalC4.style.opacity = "0";
+		modalC4.style.visibility = "hidden";
+	},400)
+})
+
+function hola4(id){
+
+	modalC4.style.opacity = "1";
+	modalC4.style.visibility = "visible";
+	modal4.classList.toggle("modal-close4");
+
+	console.log(id)
+}
+
+//funcion del modal4(vermás)
+
+let cerrar5 = document.querySelectorAll(".close5")[0];
+let modal5 = document.querySelectorAll(".quintomodal")[0];
+let modalC5 = document.querySelectorAll(".quintomodal-container")[0];
+
+
+cerrar5.addEventListener("click",function(){
+	modal5.classList.toggle("modal-close5");
+
+	setTimeout(function(){
+		modalC5.style.opacity = "0";
+		modalC5.style.visibility = "hidden";
+	},400)
+})
+
+function hola5(id){
+
+	modalC5.style.opacity = "1";
+	modalC5.style.visibility = "visible";
+	modal5.classList.toggle("modal-close5");
 
 	console.log(id)
 }
