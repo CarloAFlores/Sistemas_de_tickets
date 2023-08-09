@@ -1,0 +1,101 @@
+.caja{
+	font-family: 'Ysabeau SC', sans-serif;
+	}
+.img__ilustracion{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	margin: 1rem;
+}
+
+.img{
+	height: 11rem;
+	width: 14%;
+	transition: all 0.5s;
+
+}
+.img:hover{
+	transform: scale(1.2);
+}
+
+.img__ilustracion h1{
+	font-size: 3rem;
+	text-shadow: #0926da 0.2em 0.1em 0.2em;
+}
+.img__ilustracion span{
+	font-size: 20px;
+}
+.cajita5{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-left: 14rem;
+	margin-top: 4rem;
+	}
+
+.tabla__movile{
+	width: 100%;
+}
+
+.tabla__movile .fila .columna{
+	display: flex;
+}
+.tabla__movile .fila .columna .cabeza,
+.tabla__movile .fila .columna .contenido{
+	border: 1px solid #909090;
+	border-bottom: none;
+	padding: 10px;
+}
+
+.tabla__movile .fila .columna .cabeza{
+	width: 20%;
+	font-weight: bold;
+	color: #fff;
+	background: #000;
+}
+
+.tabla__movile .fila .columna .contenido{
+	width: 60%;
+	color: #000;
+}
+
+.tabla__movile:nth-of-type(even) .fila .columna .contenido{
+	background: red;
+}
+
+@media(max-width: 768px){
+	.caja{
+	font-family: 'Ysabeau SC', sans-serif;
+	margin: 10px;
+	}
+	.img__ilustracion{
+		margin: 11px;
+	}
+	.img__ilustracion h1{
+		font-size: 2rem;
+		text-shadow: #0926da 0.2em 0.1em 0.2em;
+	}
+	.img__ilustracion span{
+		font-size: 20px;
+	}
+	.img{
+		height: 13rem;
+		width: 53%;
+	}
+
+	.cajita5{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 0;
+	}
+	.tabla__movile .fila .columna .contenido{
+
+		width: 66%;
+	}
+
+	.tabla__movile .fila .columna .cabeza{
+		width: 34%;
+	}
+
+}

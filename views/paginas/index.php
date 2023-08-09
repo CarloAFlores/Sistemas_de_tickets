@@ -8,8 +8,6 @@ header('Location: pagina_no_encontrada');
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-
 	<link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../../node_modules/boxicons/css/boxicons.min.css">
 	<link rel="stylesheet" href="../../src/css/style_tabla.css">
@@ -70,8 +68,11 @@ header('Location: pagina_no_encontrada');
                 <td data-label="Status Ticket"><?php echo $ticket->nombre_status; ?></td>
                 <td data-label="Progreso">
                     <div class="progress">
-                        <div class="progress-bar bg-<?php echo $ticket->color;?>" role="progressbar" style="width:<?php echo $ticket->progreso;?>%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><?php echo $ticket->progreso;?>%</div>
+                        <div class="progress-bar progress-bar-striped progress-bar-animated barritamodal bg-<?php echo $ticket->color;?>" role="progressbar" style="width:<?php echo $ticket->progreso;?>%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><?php echo $ticket->progreso;?>%</div>
                     </div>
+                    
+                    
+                    
                 </td>
 
                 <td data-label="Opciones">
@@ -104,7 +105,7 @@ header('Location: pagina_no_encontrada');
                    	</div>
                 </td>
                 <td data-label="Detalles">
-                    <button type="button" class="btn" title="Detalles" onclick="hola5(<?php echo $ticket->id; ?>)">Ver más</button>
+                    <a href="en_proceso" class="btn" type="button">Ver mas</a>
                 </td>
             </tr>
         <?php endforeach; ?>
@@ -246,7 +247,9 @@ header('Location: pagina_no_encontrada');
                             </div>
                             <div class="columna">
                                 <div class="cabeza">Adjunto</div>
-                                <div class="contenido">...</div>
+                                <div class="contenido">
+                                    <h4>....</h4>
+                                </div>
                             </div>
                             <div class="columna">
                                 <div class="cabeza">Usuario Crea</div>
@@ -291,7 +294,11 @@ header('Location: pagina_no_encontrada');
                             </div>
                             <div class="columna">
                                 <div class="cabeza">Progreso</div>
-                                <div class="contenido">Se necesita mejorar el sistema</div>
+                                <div class="contenido">
+                                    <div class="progress progress-barrita">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated barritamodal" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%">100%</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -302,6 +309,7 @@ header('Location: pagina_no_encontrada');
     </div>
 </div>
 <!--se cierra-->
+
 <div class="paginacion">
     <nav aria-label="...">
         <ul class="pagination">

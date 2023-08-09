@@ -48,7 +48,7 @@
 
 }
 
-
+/*BOTON VER MÁS*/
 .tabla tbody tr td .btn{
 	width: 7rem;
 	text-decoration: none;
@@ -193,7 +193,7 @@ nav .navegador{
 
 .progress-bar{
 	text-align: center;
-	font-size: 0.80rem;
+	font-size: 0.99rem;
 }
 
 .paginacion{

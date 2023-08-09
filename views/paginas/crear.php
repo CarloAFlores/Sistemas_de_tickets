@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
 
 
+
  </head>
 
  <body>
@@ -38,29 +39,29 @@
 
                     <div class="  div" >
                         <label>Etiqueta</label>
-                        <select > 
-                            <option value="1" >N/A</option>
-                            <option value="2" >Papeletas</option>
-                            <option value="3" >Formulario</option>
-                            <option value="4" >Gafetes</option>
+                        <select id="etiqueta1"> 
+                            <option value="" >N/A</option>
+                            <option value="1" >Papeletas</option>
+                            <option value="2" >Formulario</option>
+                            <option value="3" >Gafetes</option>
                         </select>
     
                     </div>
                     
                     <div class="div">
                         <label>Asunto</label>
-                        <input type="text" name="asunto">
+                        <input type="text" name="asunto" id="asunto1"> 
                     </div>
                     <div class="block div_personal">
                         <label>Motivo</label>
-                        <textarea name="motivo" rows="2"></textarea>
+                        <textarea name="motivo" rows="2" id="motivo1"></textarea>
                     </div>
 
                     <!--<div class="segundo_div">-->
                 
                     <div class="div">
                         <label>Usuario Responsable</label>
-                        <input type="text" name="usuario_r">
+                        <input type="text" name="usuario_r" id="userRespon">
                     </div>
 
 
@@ -80,7 +81,7 @@
                    <div class="div"> 
                         <label>Usuario Corresponsable</label>
                         <div class="corresponsable">
-                        <input type="text" name="usuario_c">
+                        <input type="text" name="usuario_c" id="userCorres">
                         <button class="div_btn">+</button>
                         </div>
                    </div>
@@ -92,7 +93,7 @@
                     </div>
 
                     <div class="block div_personal">
-                        <button class="submit_guardar" type="submit">Guardar</button>
+                        <button class="submit_guardar" type="button" id="guardar1">Guardar</button>
                     </div>
 
                     <!--</div>-->
@@ -158,10 +159,10 @@
                         <div class="label">Etiqueta</div>
                         
                         <select id="etiqueta"> 
-                            <option value="1" >N/A</option>
-                            <option value="2" >Papeletas</option>
-                            <option value="3" >Formulario</option>
-                            <option value="4" >Gafetes</option>
+                            <option value="" >N/A</option>
+                            <option value="1" >Papeletas</option>
+                            <option value="2" >Formulario</option>
+                            <option value="3" >Gafetes</option>
                         </select>
                     </div>
                     <div class="campo">
@@ -215,9 +216,9 @@
                         <button class="adjunto" type="submit" title="Sube tu archivo">Upload file</button>
                     </div>
                     
-                    <div class="campo btns">
-                        <button class="volver-pag2 volver" type="button" onclick="volver(2)">Anterior</button>
-                        <button class="fin" type="button">Guardar</button>
+                    <div class="campo btns" id="parte3_btns">
+                        <button class="volver-pag2 volver" type="button" onclick="volver(2)" >Anterior</button>
+                        <button class="fin" type="submit" id="guardar2" onclick="pulsar(3)">Guardar</button>
                     </div>                    
                 </div>
             </form>
@@ -227,7 +228,8 @@
 </div>
  	
     <script src="../../src/js/movimiento.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="../../src/js/sweetAlert.js"></script>
 
  </body>
  </html>

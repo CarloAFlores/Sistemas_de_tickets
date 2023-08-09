@@ -431,6 +431,7 @@
 	box-shadow: 11px 10px 12px 2px rgba(50,48,161,0.75);
 }
 
+
 /*Comienzo del quinto modal*/
 
 .quintomodal-container{
@@ -465,7 +466,7 @@
 }
 
 .quintomodal > img{
-	height: 35%;
+	height: 28%;
 }
 
 .close5{
@@ -534,15 +535,20 @@
 }
 
 .tabla__modal .fila .columna .cabeza{
-	width: 35%;
+	width: 23%;
 	font-weight: bold;
 	color: #fff;
 	background: #000;
 }
 
 .tabla__modal .fila .columna .contenido{
-	width: 50%;
+	width: 72%;
 	color: #fff;
+}
+
+.progress-barrita{
+	border-radius: 15px;
+	height: 23px;
 }
 
 
