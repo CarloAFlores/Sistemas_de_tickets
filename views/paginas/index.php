@@ -20,9 +20,20 @@ header('Location: pagina_no_encontrada');
 
 <body>
 	<div class="botones">
-        <!--<button class="boton1">Volver</button>-->
+        
         <a href="crear" class="boton2">Crear</a>
+        <button href="#"class="boton1" id="ocultar-mostrar" onclick="obtener()">Buscar</button>
     </div>
+    <div class="d-md-none content box" id="ocultar-y-mostrar">
+
+
+            <form action='/search' id='search-form' method='get' target='_top'>
+            <input id='search-text' name='q' placeholder='Busca tu ticket' type='text' class="buscador">
+            <button id='search-button' type='submit'><span><i class='bx bx-search bx-spin' style='color:#ffffff'  id="lupa"></i></span></button>
+            </form>
+    </div>
+    
+
 
 <table class="tabla">
     <thead>

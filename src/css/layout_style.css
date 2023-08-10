@@ -237,7 +237,7 @@ body{
     .menu__links--show{
         z-index: 1;
         transform: unset;
-        width: 75%;
+        width: 65%;
         display: grid;
         justify-content: center;
         align-items: center;
@@ -245,7 +245,7 @@ body{
     }
 
     .menu__link{
-        padding: 25px 0;
+        padding: 25px 17px;
         padding-left: 30px;
         height: auto;
     }
@@ -265,7 +265,7 @@ body{
     }
 
     .menu__link--inside{
-        width: 90%;
+        width: 100%;
         margin-left: auto;
         border-left: 1px solid #798499;
     }

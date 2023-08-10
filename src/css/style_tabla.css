@@ -8,7 +8,8 @@
 	top: 2rem;
 }
 
-/*.boton1{
+.boton1{
+	display: none;
 	font-family: 'Ysabeau SC', sans-serif;
 	font-weight: 590;
 	font-size: 20px;
@@ -21,7 +22,7 @@
 	margin-left: 10rem;
 	cursor: pointer;
 
-}*/
+}
 
 .boton2{
 	font-family: 'Ysabeau SC', sans-serif;
@@ -37,8 +38,17 @@
 	border:2px solid #0fa0f5;
 	text-decoration: none;
 	text-align: center;
+	transition: all 0.3s ease;
 }
 
+.boton2:hover{
+	box-shadow: 11px 10px 12px 2px rgba(50,48,161,0.75);
+}
+
+
+.box{
+	display: none;
+}
 /*------TABLA---ESCRITORIO------------------------------------*/
 
 .tabla{
@@ -230,7 +240,61 @@ nav .navegador{
 
 	.tabla{
 		width: 21rem;
+		
 	}
+	.box{
+	display: none;
+	justify-content: end;
+	align-items: center;
+	width: 100%;
+	margin-left: -2rem;
+	}
+
+	#search-form {
+		height: 36px;
+		border: 1px solid #3f51b5;
+		-webkit-border-radius: 15px;
+		-moz-border-radius: 15px;
+		border-radius: 15px;
+		background-color: #fff;
+		overflow: hidden;
+	}
+
+	#search-text {
+		font-size: 14px;
+		color: #000;
+		border-width: 0;
+		background: transparent;
+		outline: none;
+		padding: 0 0 0 16px;
+	}
+	
+	#search-box input[type="text"] {
+		width: 90%;
+		padding: 8px 0 12px 1em;
+		color: #333;
+
+		outline: none;
+	}
+	#search-button {
+			height: 34px;
+			width: 80px;
+			font-size: 14px;
+			color: #656;
+			text-align: center;
+			line-height: 4px;
+		border-width: 0;
+		background-color: #3f51b5;
+		border: 3px solid #fff;
+		border-radius: 15px 15px 15px 15px;
+		cursor: pointer;
+}
+
+#lupa{
+	width: 36px !important
+}
+
+
 
 	table > thead{
 		display: none;
@@ -267,22 +331,27 @@ nav .navegador{
 	}
 	
 	.botones{
-		
-		margin: 1rem;
-		display: flex;
-		justify-content: flex-start;
-		text-align: center;
-		align-items: center;
-	}
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	margin: 1rem 2em 5rem 2rem;
+	top: 2rem;
+	background: transparent;
+}
 
 	.boton2{
-	
-	margin: 1rem;
 		display: flex;
 		justify-content: center;
 		text-align: center;
 		align-items: center;
-		margin: 0 1rem;
+		margin: 0;
+	}
+
+	.boton1{
+	display: block;
+	height: 53px;
+	margin: 0;
+
 	}
 
 	.tabla tbody tr td .btn{

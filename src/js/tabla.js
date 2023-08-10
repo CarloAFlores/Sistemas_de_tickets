@@ -116,7 +116,7 @@ function hola4(id){
 	console.log(id)
 }
 
-//funcion del modal4(vermás)
+/*funcion del modal5(vermás)
 
 let cerrar5 = document.querySelectorAll(".close5")[0];
 let modal5 = document.querySelectorAll(".quintomodal")[0];
@@ -140,3 +140,18 @@ function hola5(id){
 
 	console.log(id)
 }
+*/
+
+
+ function obtener(){
+
+ 	console.log('hola');
+
+ 	let ver = document.getElementById("ocultar-y-mostrar");
+ 	if (ver.style.display === "none") {
+ 	    ver.style.display = "flex";
+ 	} else {
+ 	    ver.style.display = "none";
+ 	}
+
+ }

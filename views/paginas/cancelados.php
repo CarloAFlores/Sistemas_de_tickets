@@ -6,5 +6,5 @@ header('Location: pagina_no_encontrada');
 
  ?>
 <body>
-	<h1>Cancelados papuh >:v</h1>
+	<h1>Creados papuh >:v</h1>
 </body>

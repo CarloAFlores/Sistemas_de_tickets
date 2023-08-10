@@ -39,7 +39,7 @@ $auth = $_SESSION['login'];
                 </li>
     
                 <li class="menu__item menu__item--show">
-                    <a href="#" class="menu__link">Mis Tickets <i class='bx bxs-chevron-down bx-md menu__arrow'></i> </a>
+                    <a href="#" class="menu__link"> Tickets <i class='bx bxs-chevron-down bx-md menu__arrow'></i> </a>
     
                     <ul class="menu__nesting">
                         <!--
@@ -57,10 +57,10 @@ $auth = $_SESSION['login'];
                         </li>
                         <li class="menu__inside">
                             <a href="terminados" class="menu__link menu__link--inside">Terminados</a>
-                        </li>
-                        <li class="menu__inside">
-                            <a href="cancelados" class="menu__link menu__link--inside">Cancelados</a>
                         </li>-->
+                        <li class="menu__inside">
+                            <a href="cancelados" class="menu__link menu__link--inside">Creados</a>
+                        </li>
 
                         <li class="menu__inside">
                             <a href="estadisticas" class="menu__link menu__link--inside">Estadisticas</a>
