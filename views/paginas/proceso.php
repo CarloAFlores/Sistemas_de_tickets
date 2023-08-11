@@ -25,25 +25,28 @@ header('Location: pagina_no_encontrada');
         <img src="../../src/img/ilustracion6.svg" alt="ilustracion" class="img">
     </div>
         <div class="caja">
+            <div>
+                <?php var_dump($val); ?>
+            </div>
 
             <form class="cajita5">
                     <div class="tabla__movile">
                         <div class="fila">
                             <div class="columna">
                                 <div class="cabeza">No.Ticket</div>
-                                <div class="contenido">1</div>
+                                <div class="contenido"><?php echo $val->id; ?></div>
                             </div>
                             <div class="columna">
                                 <div class="cabeza">Etiqueta</div>
-                                <div class="contenido">Se necesita mejorar el sistema</div>
+                                <div class="contenido"><?php echo $val->etiqueta;?></div>
                             </div>
                             <div class="columna">
                                 <div class="cabeza">Asunto</div>
-                                <div class="contenido">Se necesita mejorar el sistema</div>
+                                <div class="contenido"><?php echo $val->asunto; ?></div>
                             </div>
                             <div class="columna">
                                 <div class="cabeza">Comentario</div>
-                                <div class="contenido">Puede tener tiempo de diferencia</div>
+                                <div class="contenido"><?php echo $val->descripcion; ?></div>
                             </div>
                             <div class="columna">
                                 <div class="cabeza">Adjunto</div>
@@ -53,50 +56,50 @@ header('Location: pagina_no_encontrada');
                             </div>
                             <div class="columna">
                                 <div class="cabeza">Usuario Crea</div>
-                                <div class="contenido">Abigail Zaragoza</div>
+                                <div class="contenido"><?php echo $val->nombre?></div>
                             </div>
                             <div class="columna">
                                 <div class="cabeza">Puesto Crea</div>
-                                <div class="contenido">Recursos Humanos</div>
+                                <div class="contenido">xxxxxxxxxxxxxx</div>
                             </div>
                             <div class="columna">
                                 <div class="cabeza">Fecha creación</div>
-                                <div class="contenido">8/08/2023</div>
+                                <div class="contenido"><?php echo $val->fecha_creacion; ?></div>
                             </div>
                             <div class="columna">
                                 <div class="cabeza">Hora creacion</div>
-                                <div class="contenido">12:40</div>
+                                <div class="contenido"><?php echo $val->hora_creacion; ?></div>
                             </div>
                             <div class="columna">
                                 <div class="cabeza">Usuario responsable</div>
-                                <div class="contenido">Sergio Merino</div>
+                                <div class="contenido">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
                             </div>
                             <div class="columna">
                                 <div class="cabeza">Puesto Responsable</div>
-                                <div class="contenido">Auxiliar Sistemas</div>
+                                <div class="contenido">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
                             </div>
                             <div class="columna">
                                 <div class="cabeza">Fecha Final</div>
-                                <div class="contenido">20/08/2023</div>
+                                <div class="contenido"><?php echo $val->fecha_finalizada;?></div>
                             </div>
                             <div class="columna">
                                 <div class="cabeza">Hora final</div>
-                                <div class="contenido">13:20</div>
+                                <div class="contenido"><?php echo $val->hora_finalizacion; ?></div>
                             </div>
                             <div class="columna">
                                 <div class="cabeza">Status</div>
-                                <div class="contenido">Terminado</div>
+                                <div class="contenido"><?php echo $val->nombre_status;?></div>
                             </div>
                             
                             <div class="columna">
                                 <div class="cabeza">SI / NO Satisfacción</div>
-                                <div class="contenido">SI</div>
+                                <div class="contenido">XXXXXXXXXXX</div>
                             </div>
                             <div class="columna">
                                 <div class="cabeza">Progreso</div>
                                 <div class="contenido">
                                     <div class="progress progress-barrita">
-                                        <div class="progress-bar progress-bar-striped progress-bar-animated barritamodal" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%">100%</div>
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated barritamodal bg-<?php echo $ticket->color;?>" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $val->progreso;?>%"><?php echo $val->progreso; ?>%</div>
                                     </div>
                                 </div>
                             </div>

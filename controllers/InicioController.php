@@ -21,6 +21,7 @@ class inicioController{
 
 	public static function crear(Router $router){
 		session_start();
+
 		$router->render('paginas/crear');
 	}
 
@@ -31,7 +32,12 @@ class inicioController{
 
 	public static function proceso(Router $router){
 		session_start();
-		$router->render('paginas/proceso');
+		$id = $_GET['id'];
+		
+		$val = Tickets::busqueda($id);
+		$router->render('paginas/proceso',[
+			'val' => $val
+		]);
 	}
 
 	public static function falta_recursos(Router $router){

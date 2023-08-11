@@ -55,6 +55,13 @@ class Tickets extends General{
         return $resultado;
 	}
 
+	public static function busqueda($id){
+		$query = "SELECT usuarios.nombre,status.nombre_status,status.color,status.progreso,tickets.* FROM " . static::$tabla  ." INNER JOIN status ON  tickets.id_satisfaccion = status.id 
+		    INNER JOIN usuarios ON tickets.nmr_nom = usuarios.identificador WHERE tickets.id = ${id}";
+		$resultado = self::consultarSQL($query);
+		return array_shift( $resultado ) ;
+	}
+
 
 }
 ?>

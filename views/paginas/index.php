@@ -116,7 +116,7 @@ header('Location: pagina_no_encontrada');
                    	</div>
                 </td>
                 <td data-label="Detalles">
-                    <a href="en_proceso" class="btn" type="button">Ver mas</a>
+                    <a href="en_proceso?id=<?php echo $ticket->id; ?>" class="btn" type="button">Ver mas</a>
                 </td>
             </tr>
         <?php endforeach; ?>
