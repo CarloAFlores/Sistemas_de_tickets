@@ -3,7 +3,7 @@ namespace Model;
 
 class Tickets extends General{
 	protected static $tabla = 'tickets';
-	protected static $columnasDB = ['id','etiqueta','asunto','descripcion','hora_creacion','hora_finalizacion','fecha_creacion','fecha_finalizada','adjunto','id_status','id_satisfaccion','id_responsable','id_corresponsable','estado','nmr_nom','nombre_status','color','progreso','nombre'];
+	protected static $columnasDB = ['id','etiqueta','asunto','descripcion','hora_creacion','hora_finalizacion','fecha_creacion','fecha_finalizada','adjunto','id_status','id_satisfaccion','id_responsable','id_corresponsable','estado','nmr_nom','nombre_status','color','progreso','nombre','nombre_satisfaccion','nombre_puesto','responsable','corresponsable'];
 
 	public $id ;
 	public $etiqueta;
@@ -26,6 +26,10 @@ class Tickets extends General{
 	public $color;
 	public $progreso;
 	public $nombre;
+	public $nombre_satisfaccion;
+	public $nombre_puesto;
+	public $responsable;
+	public $corresponsable;
 
 	public function __construct($args = []){
 		$this->id = $args['id'] ?? null;
@@ -56,8 +60,13 @@ class Tickets extends General{
 	}
 
 	public static function busqueda($id){
-		$query = "SELECT usuarios.nombre,status.nombre_status,status.color,status.progreso,tickets.* FROM " . static::$tabla  ." INNER JOIN status ON  tickets.id_satisfaccion = status.id 
-		    INNER JOIN usuarios ON tickets.nmr_nom = usuarios.identificador WHERE tickets.id = ${id}";
+		$query = "SELECT usuarios.nombre,status.nombre_status,status.color,status.progreso,satisfaccion.nombre_satisfaccion,puesto.nombre_puesto,responsable.nombre as responsable,corresponsable.nombre as corresponsable,tickets.* FROM " . static::$tabla  ." INNER JOIN status ON  tickets.id_satisfaccion = status.id 
+		    INNER JOIN usuarios ON tickets.nmr_nom = usuarios.identificador
+		    INNER JOIN satisfaccion ON tickets.id_satisfaccion = satisfaccion.id 
+		    INNER JOIN puesto ON tickets.id_puesto = puesto.id
+		    INNER JOIN usuarios AS responsable ON tickets.id_responsable = responsable.identificador
+		    INNER JOIN usuarios AS corresponsable ON tickets.id_corresponsable = corresponsable.identificador
+		    WHERE tickets.id = ${id}";
 		$resultado = self::consultarSQL($query);
 		return array_shift( $resultado ) ;
 	}

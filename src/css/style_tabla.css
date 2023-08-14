@@ -230,6 +230,10 @@ nav .navegador{
 	color: #fff;
 	box-shadow: 16px 18px 14px 0px rgba(75,90,168,0.75);
 }
+.titulo{
+		text-align: center;
+		margin: 2rem 0 0 0;
+	}
 
 
 
@@ -363,7 +367,6 @@ nav .navegador{
 	text-align: center;
 	border-radius: 2rem;
 	}
-
 	
 
 }

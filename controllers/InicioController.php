@@ -52,7 +52,12 @@ class inicioController{
 
 	public static function cancelados(Router $router){
 		session_start();
-		$router->render('paginas/cancelados');
+
+		$tickets = Tickets::final();
+
+		$router->render('paginas/cancelados',[
+			'tickets' => $tickets
+		]);
 	}
 
 	public static function estadisticas(Router $router){

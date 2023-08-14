@@ -19,20 +19,23 @@ header('Location: pagina_no_encontrada');
 </head>
 <body>
 
+    <div class="botones__nuevos d-none d-md-block content">
+        <a  href="inicio" class="boton3">Volver</a>
+        <!--<button class="boton2">Crear</button>-->
+    </div>
+
+
 	<div class="img__ilustracion">
         
-        <h1>Detalles<span> Ticket </span></h1>
+        <h1>Detalles <span> Ticket </span></h1>
         <img src="../../src/img/ilustracion6.svg" alt="ilustracion" class="img">
     </div>
         <div class="caja">
-            <div>
-                <?php var_dump($val); ?>
-            </div>
 
             <form class="cajita5">
                     <div class="tabla__movile">
                         <div class="fila">
-                            <div class="columna">
+                            <div class="columna columna1">
                                 <div class="cabeza">No.Ticket</div>
                                 <div class="contenido"><?php echo $val->id; ?></div>
                             </div>
@@ -60,7 +63,7 @@ header('Location: pagina_no_encontrada');
                             </div>
                             <div class="columna">
                                 <div class="cabeza">Puesto Crea</div>
-                                <div class="contenido">xxxxxxxxxxxxxx</div>
+                                <div class="contenido"><?php echo $val->nombre_puesto;?></div>
                             </div>
                             <div class="columna">
                                 <div class="cabeza">Fecha creación</div>
@@ -72,11 +75,11 @@ header('Location: pagina_no_encontrada');
                             </div>
                             <div class="columna">
                                 <div class="cabeza">Usuario responsable</div>
-                                <div class="contenido">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
+                                <div class="contenido"><?php echo $val->responsable; ?></div>
                             </div>
                             <div class="columna">
-                                <div class="cabeza">Puesto Responsable</div>
-                                <div class="contenido">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
+                                <div class="cabeza">Puesto Corresponsable</div>
+                                <div class="contenido"><?php echo $val->corresponsable; ?></div>
                             </div>
                             <div class="columna">
                                 <div class="cabeza">Fecha Final</div>
@@ -93,21 +96,21 @@ header('Location: pagina_no_encontrada');
                             
                             <div class="columna">
                                 <div class="cabeza">SI / NO Satisfacción</div>
-                                <div class="contenido">XXXXXXXXXXX</div>
+                                <div class="contenido"><?php echo $val->nombre_satisfaccion ?></div>
                             </div>
-                            <div class="columna">
+                            <div class="columna columna2">
                                 <div class="cabeza">Progreso</div>
                                 <div class="contenido">
                                     <div class="progress progress-barrita">
-                                        <div class="progress-bar progress-bar-striped progress-bar-animated barritamodal bg-<?php echo $ticket->color;?>" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $val->progreso;?>%"><?php echo $val->progreso; ?>%</div>
+                                     <div class="progress-bar progress-bar-striped progress-bar-animated barritamodal bg-<?php echo $val->color;?>" role="progressbar" style="width:<?php echo $val->progreso;?>%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><?php echo $val->progreso;?>%</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
              </form>
-
         </div>
+
 <!--se cierra-->
 
 </body>
