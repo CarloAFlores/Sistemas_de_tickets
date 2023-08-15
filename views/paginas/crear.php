@@ -88,7 +88,7 @@
                         <input class="upload_file" type="file" title="Sube tu archivo">
                     </div>
 
-                    <div class="block div_personal">
+                    <div class="block div_personal boton__guardar">
                         <button class="submit_guardar" type="button" id="guardar1">Guardar</button>
                     </div>
 
@@ -100,9 +100,12 @@
 
             <div class="alta-info--principal">
                 <div class="alta-info">
-                    <h4>More Info</h4>
+                    <h4>Buen Día</h4>
     
-                        <p>Hola, por favor llena todos los Datos</p>
+                        <p>Hola, por favor llena todos los Campos Correctamente</p>
+
+                        <img src="../../src/img/ilustracion7.svg" alt="ilustracion" class="
+                        imagen">
  
                 </div>
             </div>
