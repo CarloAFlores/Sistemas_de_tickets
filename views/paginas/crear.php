@@ -12,13 +12,9 @@
     <link rel="stylesheet" href="../../src/css/style_crear_chiquito.css">
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
 
-
-
  </head>
 
  <body>
-
-
 
  	<div class="botones__nuevos">
     	<a  href="inicio" class="boton3">Volver</a>
@@ -89,7 +85,7 @@
 
                     <div class="div div_upload">
                         <label>Adjunto</label>
-                        <button class="upload_file" type="submit" title="Sube tu archivo">Upload file</button>
+                        <input class="upload_file" type="file" title="Sube tu archivo">
                     </div>
 
                     <div class="block div_personal">
@@ -102,14 +98,13 @@
             </div>
 
 
-        <div class="alta-info--principal">
-            <div class="alta-info">
-                <h4>More Info</h4>
-
-                <p>Hola, por favor llena todos los Datos</p>
-
-                
-            </div>
+            <div class="alta-info--principal">
+                <div class="alta-info">
+                    <h4>More Info</h4>
+    
+                        <p>Hola, por favor llena todos los Datos</p>
+ 
+                </div>
             </div>
         </div>
 
@@ -213,7 +208,7 @@
                     <div class="titulo">Información adjunta</div>
                     <div class="campo">
                         <div class="label">Adjunto</div>
-                        <button class="adjunto" type="submit" title="Sube tu archivo">Upload file</button>
+                        <input class="upload_file" type="file" title="Sube tu archivo">
                     </div>
                     
                     <div class="campo btns" id="parte3_btns">

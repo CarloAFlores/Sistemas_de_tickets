@@ -1,3 +1,4 @@
+/*Estilos para el contendor pqueño*/
 .container{
 	border: 10px solid transparent ;
 	
@@ -6,18 +7,18 @@
 
 }
 
+/*Titulo de Crea tu ticket*/
 .container h3{
 	font-size: 30px;
 	font-weight: 500;
 	margin: 0 0 25px 0;
 }
 
+
 .container .form-princ{
 	width: 100%;
 	overflow: hidden;
 }
-
-
 
 .form-princ form{
 	display: flex;
@@ -140,6 +141,7 @@ form .pagina .campo .btn_corres{
 	margin-right: 3.5rem;
 }
 
+/*Progres bar-circulito*/
 .container .progress-bar{
 	display: -webkit-box;
 	

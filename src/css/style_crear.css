@@ -1,3 +1,5 @@
+
+/*Contenedor del botón de Volver*/
 .botones__nuevos {
 	height: 2rem;/*rem y px*/
 	display: flex;
@@ -7,7 +9,7 @@
 	height: 100%;
 }
 
-
+/*Estilos del boton de volver*/
 .boton3{
 	font-family: 'Ysabeau SC', sans-serif;
 	font-weight: 600;
@@ -19,7 +21,6 @@
 	width: 7rem;
 	height: 3.3rem;
 	margin-left: 11rem;
-	cursor: pointer;
 	border:2px solid #0fa0f5;
 	display: flex;
 	align-items: center;
@@ -32,7 +33,7 @@
 	box-shadow: 11px 10px 12px 2px rgba(50,48,161,0.75);
 }
 
-
+/*Aqui se le dan estilos al contenedor donde se va a posicionar el formulario*/
 .content{
 	
 	font-family: 'Ysabeau SC', sans-serif;
@@ -43,6 +44,7 @@
 	padding: 3.5rem;
 }
 
+/*Titulo*/
 .brand{
 
 	text-align: center;
@@ -50,11 +52,13 @@
 	padding-bottom: 2rem;
 }
 
+/*Emogi*/
 .brand span{
 	color: #4567bd;
 	font-size: 25px;
 }
 
+/*Formulario parte de la posicion de los dos contenedores*/
 .alta-wrapper{
 	display: grid;
 	grid-template-columns: 2fr 1fr;
@@ -63,6 +67,8 @@
 	border-radius: 0 2rem 2rem 0;
 
 }
+
+/*Se agregan estilos adentro del formulario blanco*/
 
 .alta-wrapper > *{
 	transition: margin-right 3s, color 1s;
@@ -74,17 +80,20 @@ background: rgb(10,87,140);
 background: linear-gradient(0deg, rgba(94,112,148,1) 0%, rgba(69,103,189,1) 100%);
 }*/
 
+/*División para algunos campos dentro del formulario*/
 .alta-form form{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 
 }
 
+/*Aqui solo se aplica a los que contengan esa clase de .block*/
 .alta-form form .block{
 	grid-column: 1/3;
 	
 }
 
+/*Estilos a los campos seleccionados*/
 .alta-form form button,
 .alta-form form input,
 .alta-form form select,
@@ -118,12 +127,14 @@ background: linear-gradient(0deg, rgba(94,112,148,1) 0%, rgba(69,103,189,1) 100%
 	box-shadow: 11px 10px 12px 2px rgba(50,48,161,0.75);
 }
 
+/*Empieza el footer en esta parte*/
 .alta-info--principal{
 	background-image: url("../img/antena.jpg");
 	padding: 3rem;
 	border-radius: 2rem;
 }
 
+/*Informacion del footer*/
 .alta-info{
 	background: linear-gradient(90deg, rgb(69 103 189 / 3%) 0%, rgb(48 124 215 / 83%) 42%, rgba(115,197,214,1) 100%);
 	height: 100%;
@@ -138,6 +149,7 @@ background: linear-gradient(0deg, rgba(94,112,148,1) 0%, rgba(69,103,189,1) 100%
 	
 }
 
+
 .imagenes__totales{
 	list-style: none;
 }
@@ -145,21 +157,25 @@ background: linear-gradient(0deg, rgba(94,112,148,1) 0%, rgba(69,103,189,1) 100%
 .imagenes{
 	padding: .3rem;
 }
+/*Clase del boton Usuario corresponsable*/
 .corresponsable{
 	display: flex;
 }
+/*Separacion de contenedores */
 .div{
 	width: 85%;
 	margin-left: 2.5rem;
 	margin-top: 2rem;
 }
 
+/*Boton de guardar*/
 .div_personal{
 	width: 92.5%;
 	margin-left: 2.5rem;
 	margin-top: 2rem;
 }
 
+/*Boton de + en Usuario Corresponsable*/
 .div_btn{
 	width: 20% !important;
 	height: 1rem;
@@ -169,8 +185,21 @@ background: linear-gradient(0deg, rgba(94,112,148,1) 0%, rgba(69,103,189,1) 100%
 
 }
 
+.upload_file{
+	background: #000 !important;
+    border-color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 2rem 1rem;
+    /* border: 3px solid #0fa0f5; */
+    transition: all 0.5s ease 0s;
+}
+
 
 /*Modo responsivo Celular*/
+
+/*Contenedor del botón de Volver*/
 @media(max-width: 768px){
 	.botones__nuevos{
 	height: 2rem;/*rem y px*/
@@ -181,7 +210,7 @@ background: linear-gradient(0deg, rgba(94,112,148,1) 0%, rgba(69,103,189,1) 100%
 	height: 100%;
 }
 
-
+	/*Estilos del boton de volver*/
 	.boton3{
 		margin: 1rem;
 		display: flex;
@@ -190,6 +219,9 @@ background: linear-gradient(0deg, rgba(94,112,148,1) 0%, rgba(69,103,189,1) 100%
 		align-items: center;
 
 	}
+
+
+	/*Medidas del contenedor donde se encuentra el formulario pequeño*/
 	.content{
 	font-family: 'Ysabeau SC', sans-serif;
 	padding: 1.5em;
@@ -197,55 +229,7 @@ background: linear-gradient(0deg, rgba(94,112,148,1) 0%, rgba(69,103,189,1) 100%
 	margin-left: auto;
 	margin-right: auto;
 	padding: 1rem;
-}
-
-	.alta-form{
-		display: block;
 	}
 
-
-	.alta-wrapper{
-		display: block;
-	}
-
-	.alta-wrapper > * {
-		padding: 1rem;
-	}
-
-	.alta-info h4,
-	.alta-info ul,
-	.alta-info p{
-		text-align: center;
-		margin: 0 0 0 0;
-	}
-
-	.alta-form form{
-		display: block;
-		width: 97%;
-		padding: 0.7rem;
-		border: none;
-
-	}
-
-
-	.alta-form form textarea{
-		width: 93%;
-	}
-
-	.upload_file{
-		width: 49% !important;
-		height: 4rem !important;
-		padding: 0 17px !important;
-		text-align: end !important;
-}
-
-.div_upload{
-	display: flex;
-	justify-content: space-between;
-}
-
-.submit_guardar{
-	width: 92% !important;
-}
-
+	
 }

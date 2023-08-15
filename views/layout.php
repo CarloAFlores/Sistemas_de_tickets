@@ -80,10 +80,11 @@ $auth = $_SESSION['login'];
                 <i class='bx bx-menu-alt-right bx-md' class="menu__img"></i> 
             </div>
         </section>
+         </nav>
     </header>
 
       
-    </nav>
+ 
     <?php endif; ?>
 
     <?php echo $contenido; ?>
