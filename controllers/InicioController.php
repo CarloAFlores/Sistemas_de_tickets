@@ -10,6 +10,8 @@ class inicioController{
 	
 	public static function index(Router $router){
 		session_start();
+		$id = $_GET['id'];
+		var_dump($id);
 
 		$tickets = Tickets::final();
 		$login = Login::all();
@@ -33,6 +35,7 @@ class inicioController{
 	public static function proceso(Router $router){
 		session_start();
 		$id = $_GET['id'];
+
 		
 		$val = Tickets::busqueda($id);
 		$router->render('paginas/proceso',[

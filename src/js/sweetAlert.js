@@ -4,6 +4,7 @@ const usuarioResponsable = document.getElementById("userRespon");
 const usuarioCorresponsable = document.getElementById("userCorres");
 const button = document.getElementById("guardar1");
 const etiqueta = document.getElementById("etiqueta1");
+const borrar = document.getElementById("Seraeliminado");
 
 
 button.addEventListener('click',()=>{
@@ -55,4 +56,27 @@ button.addEventListener('click',()=>{
 			button.type = "submit";
 	}
 });
+
+
+function mostrarEliminacion(id){
+	Swal.fire({
+	  title: 'Estas seguro de eliminarlo?',
+	  text: "No podrás volver a ver el ticket",
+	  icon: 'warning',
+	  showCancelButton: true,
+	  confirmButtonColor: '#3085d6',
+	  cancelButtonColor: '#d33',
+	  confirmButtonText: 'Sí, borralo!'
+	}).then((result) => {
+	  if (result.isConfirmed) {
+	  	console.log(id)
+	    Swal.fire(
+	      'Eliminado!',
+	      'El ticket a sido eliminado correctamente.',
+	      'success'
+	    )
+	  }
+	})	
+}
+
 

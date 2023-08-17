@@ -116,6 +116,11 @@ function hola4(id){
 	console.log(id)
 }
 
+
+function aceptar4(id){
+	console.log(id)
+}
+
 /*funcion del modal5(vermás)
 
 let cerrar5 = document.querySelectorAll(".close5")[0];
@@ -142,7 +147,7 @@ function hola5(id){
 }
 */
 
-
+/*FUNCION PARA EL BUSCADOR MOVIL*/
  function obtener(){
 
  	console.log('hola');

@@ -105,9 +105,11 @@ header('Location: pagina_no_encontrada');
                     	    <i class='bx bxs-book-content' style='color:#ffffff'></i>
                     	</button>
 
-                    	<button class="boton-trash icono" title="Eliminar" type="button" id="" onclick="hola4(<?php echo $ticket->id; ?>)">
+                        <form action="" method="GET">
+                    	<button class="boton-trash icono" title="Eliminar" type="button" id="Seraeliminado" onclick="mostrarEliminacion(<?php echo $ticket->id; ?>);">
                     	    <i class='bx bxs-trash' style='color:#ffffff' ></i>
                     	</button>
+                        </form>
 
                     	<button class="boton-revision icono" title="Actualizar">
                     	    <i class='bx bx-revision' style='color:#ffffff' ></i>
@@ -202,7 +204,7 @@ header('Location: pagina_no_encontrada');
     </div>
 </div>
 <!--se cierra-->
-<!--cuarto modal-->
+<!--cuarto modal
 <div class="cuartomodal-container">
     <div class="cuartomodal modal-close4">
         <p class="close4">X</p>
@@ -217,7 +219,9 @@ header('Location: pagina_no_encontrada');
                 </div>
                 
                 <div class="cajita__cuatro4">
-                    <button type="submit" title="Aceptar" id="aceptar">Aceptar</button>
+                    <button type="button" title="Aceptar" id="aceptar" onclick="aceptar4(<?php echo $ticket->id; ?>)">Aceptar
+                    </button>
+
                     <button type="submit" title="Cancelar" >Cancelar</button>
                 </div>
              </form>
@@ -225,7 +229,7 @@ header('Location: pagina_no_encontrada');
         </div>
     </div>
 </div>
-<!--se cierra-->
+se cierra-->
 <!--quinto modal-->
 <div class="quintomodal-container">
     <div class="quintomodal modal-close5">
@@ -344,7 +348,8 @@ header('Location: pagina_no_encontrada');
 </div>
 
     <script src="../../src/js/tabla.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="../../src/js/sweetAlert.js"></script>
 	
 </body>
 

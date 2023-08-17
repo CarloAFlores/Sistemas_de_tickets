@@ -131,8 +131,22 @@ background: linear-gradient(0deg, rgba(94,112,148,1) 0%, rgba(69,103,189,1) 100%
 	background: linear-gradient(60deg,rgba(0,0,0,.7),rgba(0,0,0,.7)),url("../img/antena.jpg");
 	padding: 3rem;
 	border-radius: 2rem;
+	background-size: 200%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
 	/*box-shadow: 11px 10px 12px 2px rgba(50,48,161,0.75);*/
     margin: 3rem -2rem 3rem 0rem;
+   position: relative;
+    animation: movimiento 8s infinite linear alternate;
+}
+
+@keyframes movimiento{
+	from{
+		background-position: bottom left;
+		}to{
+		background-position: top right;
+		}
 }
 
 /*Informacion del footer*/
@@ -247,7 +261,5 @@ background: linear-gradient(0deg, rgba(94,112,148,1) 0%, rgba(69,103,189,1) 100%
 	margin-left: auto;
 	margin-right: auto;
 	padding: 1rem;
-	}
-
-	
+	}	
 }
