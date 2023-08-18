@@ -75,10 +75,10 @@ class Tickets extends General{
 		return array_shift( $resultado ) ;
 	}
 
-	public static function borrar($id){
-		$query = "UPDATE". static::$tabla . "SET estado WHERE tickets.id = ${id}";
+	/*public static function borrar($id){
+		$query = "UPDATE tickets SET estado WHERE tickets.id = ${id};"
 		$resultado = self::consultarSQL($query);
-		return  $resultado;
-	}
+		return array_shift( $resultado ) ;
+	}*/
 }
 ?>

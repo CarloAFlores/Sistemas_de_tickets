@@ -106,7 +106,7 @@ header('Location: pagina_no_encontrada');
                     	</button>
 
                         <form action="" method="GET">
-                    	<button class="boton-trash icono" title="Eliminar" type="button" id="Seraeliminado" onclick="mostrarEliminacion(<?php echo $ticket->id; ?>);">
+                    	<button class="boton-trash icono" title="Eliminar" type="button" id="Seraeliminado" onclick="hola4(<?php echo $ticket->id; ?>);">
                     	    <i class='bx bxs-trash' style='color:#ffffff' ></i>
                     	</button>
                         </form>
@@ -204,7 +204,7 @@ header('Location: pagina_no_encontrada');
     </div>
 </div>
 <!--se cierra-->
-<!--cuarto modal
+<!--cuarto modal-->
 <div class="cuartomodal-container">
     <div class="cuartomodal modal-close4">
         <p class="close4">X</p>
@@ -219,6 +219,7 @@ header('Location: pagina_no_encontrada');
                 </div>
                 
                 <div class="cajita__cuatro4">
+                    <input type="hidden" name="id_ticket" id="id_ticket">
                     <button type="button" title="Aceptar" id="aceptar" onclick="aceptar4(<?php echo $ticket->id; ?>)">Aceptar
                     </button>
 
@@ -229,7 +230,7 @@ header('Location: pagina_no_encontrada');
         </div>
     </div>
 </div>
-se cierra-->
+<!--se cierra-->
 <!--quinto modal-->
 <div class="quintomodal-container">
     <div class="quintomodal modal-close5">
@@ -348,8 +349,8 @@ se cierra-->
 </div>
 
     <script src="../../src/js/tabla.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script type="text/javascript" src="../../src/js/sweetAlert.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="../../src/js/sweetAlert.js"></script>-->
 	
 </body>
 

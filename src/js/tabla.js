@@ -48,6 +48,7 @@ let modal2 = document.querySelectorAll(".segundomodal")[0];
 let modalC2 = document.querySelectorAll(".segundomodal-container")[0];
 
 
+
 cerrar2.addEventListener("click",function(){
 	modal2.classList.toggle("modal-close2");
 
@@ -97,6 +98,7 @@ let cerrar4 = document.querySelectorAll(".close4")[0];
 let modal4 = document.querySelectorAll(".cuartomodal")[0];
 let modalC4 = document.querySelectorAll(".cuartomodal-container")[0];
 
+let id_ticket = document.querySelector("#id_ticket");
 
 cerrar4.addEventListener("click",function(){
 	modal4.classList.toggle("modal-close4");
@@ -113,13 +115,19 @@ function hola4(id){
 	modalC4.style.visibility = "visible";
 	modal4.classList.toggle("modal-close4");
 
+	id_ticket.value = id;
+
 	console.log(id)
 }
 
 
 function aceptar4(id){
-	console.log(id)
-}
+
+	let id_ticket = document.querySelector("#id_ticket");
+	const idx = id_ticket.value;
+	
+	alert(idx);
+	}
 
 /*funcion del modal5(vermás)
 
