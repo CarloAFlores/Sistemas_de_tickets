@@ -126,8 +126,27 @@ function aceptar4(id){
 	let id_ticket = document.querySelector("#id_ticket");
 	const idx = id_ticket.value;
 	
-	alert(idx);
-	}
+	const data = { idx: idx};
+
+	fetch('Inicio/eliminar', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify(data)
+	})
+	.then(response => response.json())
+	.then(result => {
+		console.log(result);
+
+		actualizarTabla();
+
+	})
+
+	.catch(error => {
+		console.log('Error al realizar la soplicitud:', error);
+	});
+}
 
 /*funcion del modal5(vermás)
 
