@@ -64,4 +64,12 @@ class inicioController{
 		session_start();
 		$router->render('paginas/estadisticas');
 	}
+
+	public static function eliminar(){
+		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+		    // VAlidar Id
+		    $id = $_POST['id'];
+		}
+	}
 }

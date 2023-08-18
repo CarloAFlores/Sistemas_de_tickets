@@ -22,6 +22,8 @@ $router->get('/inicio',[InicioController::class, 'index']);
 
 $router->get('/crear',[InicioController::class, 'crear']);
 
+$router->post('/eliminar',[InicioController::class, 'eliminar']);
+
 //--------------------------------------------------------------------------------------------------------
 
 $router->get('/pendientes',[InicioController::class, 'pendientes']);
