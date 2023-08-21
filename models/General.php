@@ -40,9 +40,6 @@ class General {
             $array[] = static::crearObjeto($registro);
         }
 
-        // liberar la memoria
-        $resultado->free();
-
         // retornar los resultados
         return $array;
     }

@@ -66,10 +66,12 @@ class inicioController{
 	}
 
 	public static function eliminar(){
-		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-		    // VAlidar Id
-		    $id = $_POST['id'];
-		}
+		$datos = json_decode(file_get_contents('php://input'));
+
+		$tickets = Tickets::busqueda($datos->{'a'});
+
+		echo json_encode($tickets);
+
 	}
 }

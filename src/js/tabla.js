@@ -126,20 +126,26 @@ function aceptar4(id){
 	let id_ticket = document.querySelector("#id_ticket");
 	const idx = id_ticket.value;
 	
-	const data = { idx: idx};
+	var datos = { id: idx};
 
-	fetch('Inicio/eliminar', {
+	var payload = {
+	    a: idx,
+	    b: 2
+	};
+
+	var data = new FormData();
+	data.append( "json", JSON.stringify( payload ) );
+
+	fetch('eliminar', {
 		method: 'POST',
+		body: JSON.stringify(payload),
 		headers: {
-			'Content-Type': 'application/json'
-		},
-		body: JSON.stringify(data)
+		  'Content-Type': 'application/json'// AQUI indicamos el formato
+		}
 	})
-	.then(response => response.json())
-	.then(result => {
+	.then((response) => response.json())
+	.then(result =>{
 		console.log(result);
-
-		actualizarTabla();
 
 	})
 
