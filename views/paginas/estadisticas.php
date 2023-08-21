@@ -15,18 +15,23 @@ header('Location: pagina_no_encontrada');
  	<meta name="viewport" content="width=device-width, initial-scale=1" />
  </head>
  <body>
-	<header>
+	<div>
 		<h1 class="titulo_estadisticas">Estadísticas | ECI</h1>
-	</header>
+	</div>
+
+	<div class="botones__modales">
+		<button class="botones boton__areas"><i class='bx bx-bar-chart-alt bx-tada' ></i>StatsÁreas</button>
+		<button class="botones boton__persona"><i class='bx bx-bar-chart-alt bx-tada' ></i>StatsPersona</button>
+	</div>
 
 	<main>
-		<h2>Reporte por Status <|:v</h2>
+		<h2 class="titulo__dos">Reporte por Status</h2>
 	
 		<table id="" >
 			<thead>
 				
 				<tr>
-					<th>Color</th>
+					<th></th>
 					<th>Status</th>
 					<th>Trabajados</th>
 					<th>%</th>
@@ -37,87 +42,80 @@ header('Location: pagina_no_encontrada');
 			<tbody>
 					
 				<tr>
-					<td>Negro</td>
-					<td>Creado ECI</td>
-					<td>0</td>
-					<td>0.00%</td>
-					<td>0</td>
-					<td>0.00%</td>
+					<td data-label="Color" class="color__negro"></td>
+					<td data-label="Status">Creado ECI</td>
+					<td data-label="Trabajados">0</td>
+					<td data-label="%">0.00%</td>
+					<td data-label="Solicitados">0</td>
+					<td data-label="%">0.00%</td>
 				</tr>
 				<tr>
-					<td>Gris</td>
-					<td>En espera por falta de Recurso</td>
-					<td>0</td>
-					<td>0.00%</td>
-					<td>0</td>
-					<td>0.00%</td>
+					<td data-label="Color" class="color__gris"></td>
+					<td data-label="Status">En espera por falta de Recurso</td>
+					<td data-label="Trabajados">0</td>
+					<td data-label="%">0.00%</td>
+					<td data-label="Solicitados">0</td>
+					<td data-label="%">0.00%</td>
 				</tr>
 			<tr>
-				<td>Verde</td>
-				<td>En Proceso</td>
-				<td>0</td>
-				<td>0.00%</td>
-				<td>0</td>
-				<td>0.00%</td>
+				<td data-label="Color" class="color__verde"></td>
+				<td data-label="Status">En Proceso</td>
+				<td data-label="Trabajados">0</td>
+				<td data-label="%">0.00%</td>
+				<td data-label="Solicitados">0</td>
+				<td data-label="%">0.00%</td>
 			</tr>
 			<tr>
-				<td>Amarillo</td>
-				<td>Validado-Entregado</td>
-				<td>0</td>
-				<td>0.00%</td>
-				<td>0</td>
-				<td>0.00%</td>
+				<td data-label="Color" class="color__amarillo"></td>
+				<td data-label="Status">Validado Entregado</td>
+				<td data-label="Trabajados">0</td>
+				<td data-label="%">0.00%</td>
+				<td data-label="Solicitados">0</td>
+				<td data-label="%">0.00%</td>
 			</tr>
 			<tr>
-				<td>Rojo</td>
-				<td>No procede</td>
-				<td>0</td>
-				<td>0.00%</td>
-				<td>0</td>
-				<td>0.00%</td>
+				<td data-label="Color" class="color__rojo"></td>
+				<td data-label="Status">No procede</td>
+				<td data-label="Trabajados">0</td>
+				<td data-label="%">0.00%</td>
+				<td data-label="Solicitados">0</td>
+				<td data-label="%">0.00%</td>
 			</tr>
 			<tr>
-				<td>Azul</td>
-				<td>Terminado</td>
-				<td>0</td>
-				<td>0.00%</td>
-				<td>0</td>
-				<td>0.00%</td>
+				<td data-label="Color" class="color__azul"></td>
+				<td data-label="Status">Terminado</td>
+				<td data-label="Trabajados">0</td>
+				<td data-label="%">0.00%</td>
+				<td data-label="Solicitados">0</td>
+				<td data-label="%">0.00%</td>
 			</tr>
 			<tr>
-				<td>Naranja</td>
-				<td>Cancelado</td>
-				<td>0</td>
-				<td>0.00%</td>
-				<td>0</td>
-				<td>0.00%</td>
+				<td data-label="Color" class="color__naranja"></td>
+				<td data-label="Status">Cancelado</td>
+				<td data-label="Trabajados">0</td>
+				<td data-label="%">0.00%</td>
+				<td data-label="Solicitados">0</td>
+				<td data-label="%">0.00%</td>
 			</tr>
 			<tr>
-				<td>Cafe</td>
-				<td>Eliminado</td>
-				<td>0</td>
-				<td>0.00%</td>
-				<td>0</td>
-				<td>0.00%</td>
+				<td data-label="Color" class="color__cafe"></td>
+				<td data-label="Status">Eliminado</td>
+				<td data-label="Trabajados">0</td>
+				<td data-label="%">0.00%</td>
+				<td data-label="Solicitados">0</td>
+				<td data-label="%">0.00%</td>
 			</tr>
-			<tr>
-				<td>Blando</td>
-				<td>Total</td>
-				<td>0</td>
-				<td>0.00%</td>
-				<td>0</td>
-				<td>0.00%</td>
-			</tr>
+			
 		</tbody>
 	</table>
 
-	<h2>Reporte por Nivel de Satisfacción <|:v</h2>
+	<h2 class="titulo__dos">Reporte por Nivel de Satisfacción</h2>
 	
 		<table id="" >
 			<thead>
 				
 				<tr>
-					<th>Color</th>
+					<th></th>
 					<th>Status</th>
 					<th>Trabajados</th>
 					<th>%</th>
@@ -128,24 +126,24 @@ header('Location: pagina_no_encontrada');
 			<tbody>
 					
 				<tr>
-					<td>Verde</td>
-					<td>Satisfeho</td>
-					<td>0</td>
-					<td>0.00%</td>
-					<td>0</td>
-					<td>0.00%</td>
+					<td data-label="Color" class="color__verde2"></td>
+					<td data-label="Status">Satisfeho</td>
+					<td data-label="Trabajados">0</td>
+					<td data-label="%">0.00%</td>
+					<td data-label="Solicitados">0</td>
+					<td data-label="%">0.00%</td>
 				</tr>
 				<tr>
-					<td>Rosa</td>
-					<td>No Satisfecho</td>
-					<td>0</td>
-					<td>0.00%</td>
-					<td>0</td>
-					<td>0.00%</td>
+					<td data-label="Color" class="color__rosa"></td>
+					<td data-label="Status">No Satisfecho</td>
+					<td data-label="Trabajados">0</td>
+					<td data-label="%">0.00%</td>
+					<td data-label="Solicitados">0</td>
+					<td data-label="%">0.00%</td>
 				</tr>
 			</tbody>
-	</table>
+		</table>
 	</main>
-</body>
- </html>
+ </body>
+</html>
 
