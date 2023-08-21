@@ -69,9 +69,11 @@ class inicioController{
 
 		$datos = json_decode(file_get_contents('php://input'));
 
-		$tickets = Tickets::busqueda($datos->{'a'});
+		$tickets = Tickets::borrar($datos->{'a'});
 
-		echo json_encode($tickets);
+		$tickets2 = Tickets::final2();
+
+		echo json_encode($tickets2);
 
 	}
 }
