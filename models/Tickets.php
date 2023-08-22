@@ -76,22 +76,17 @@ class Tickets extends General{
 	}
 
 
-	public static function borrar($id){
-		$query = " UPDATE tickets SET estado = 0 WHERE tickets.id = ${id} ";
-		$resultado = self::consultarSQL($query);
-	}
+
 
 	public static function final2(){
-			$query = "SELECT usuarios.nombre,status.nombre_status,status.color,status.progreso,tickets.* FROM " . static::$tabla." INNER JOIN status ON  tickets.id_satisfaccion = status.id 
-			    INNER JOIN usuarios ON tickets.nmr_nom = usuarios.identificador
-			    WHERE tickets.estado = 1
-			    ORDER BY  tickets.id ASC
-			    LIMIT 5
-			    ";
-	        $resultado = self::consultarSQL($query);
+		$query2 = "SELECT usuarios.nombre,status.nombre_status,status.color,status.progreso,tickets.* FROM " . static::$tabla." INNER JOIN status ON  tickets.id_satisfaccion = status.id 
+			INNER JOIN usuarios ON tickets.nmr_nom = usuarios.identificador
+			WHERE tickets.estado = 1
+			ORDER BY  tickets.id ASC
+			LIMIT 5";
+		$resultado2 = self::consultarSQL($query2);
 
-	        return $resultado;
-
+		return $resultado2;
 	}
 }
 ?>

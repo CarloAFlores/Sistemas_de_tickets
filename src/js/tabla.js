@@ -125,23 +125,13 @@ function aceptar4(id){
 
 	let id_ticket = document.querySelector("#id_ticket");
 	const idx = id_ticket.value;
-	
-	var datos = { id: idx};
-
-	var payload = {
-	    a: idx,
-	    b: 2
-	};
-
-	var data = new FormData();
-	data.append( "json", JSON.stringify( payload ) );
 
 	fetch('eliminar', {
 		method: 'POST',
-		body: JSON.stringify(payload),
 		headers: {
-		  'Content-Type': 'application/json'// AQUI indicamos el formato
-		}
+		  'Content-Type': 'application/x-www-form-urlencoded'// AQUI indicamos el formato
+		},
+		body: 'id=' + encodeURIComponent(idx)
 	})
 	.then((response) => response.json())
 	.then(result =>{

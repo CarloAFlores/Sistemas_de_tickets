@@ -67,13 +67,12 @@ class inicioController{
 
 	public static function eliminar(){
 
-		$datos = json_decode(file_get_contents('php://input'));
+		$datos = $_POST['id'];
+		$val = Tickets::borrar($datos);
+		$val2 = Tickets::final();
+		
+		echo json_encode($val2);
 
-		$tickets = Tickets::borrar($datos->{'a'});
-
-		$tickets2 = Tickets::final2();
-
-		echo json_encode($tickets2);
 
 	}
 }

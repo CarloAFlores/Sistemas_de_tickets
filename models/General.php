@@ -169,11 +169,12 @@ class General {
         return $resultado;
     }
 
-    // Eliminar un Registro por su ID
-    public function eliminar() {
-        $query = "DELETE FROM "  . static::$tabla . " WHERE id = " . self::$db->escape_string($this->id) . " LIMIT 1";
+    public static function borrar($id){
+        $query = "UPDATE tickets SET estado = 0 WHERE id = $id";
         $resultado = self::$db->query($query);
         return $resultado;
     }
+
+    // Eliminar un Registro por su ID
 
 }
