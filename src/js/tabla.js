@@ -253,10 +253,10 @@ function hola5(id){
  	console.log('hola');
 
  	let ver = document.getElementById("ocultar-y-mostrar");
- 	if (ver.style.display === "none") {
- 	    ver.style.display = "flex";
- 	} else {
+ 	if (ver.style.display === "flex") {
  	    ver.style.display = "none";
+ 	} else {
+ 	    ver.style.display = "flex";
  	}
 
- }
+ };
