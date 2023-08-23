@@ -22,7 +22,7 @@ header('Location: pagina_no_encontrada');
 	<div class="botones">
         
         <a href="crear" class="boton2">Crear</a>
-        <button href="#"class="boton1" id="ocultar-mostrar" onclick="obtener()">Buscar</button>
+        <button class="boton1" id="ocultar-mostrar" onclick="obtener()">Buscar</button>
     </div>
     <div class="d-md-none content box" id="ocultar-y-mostrar">
 

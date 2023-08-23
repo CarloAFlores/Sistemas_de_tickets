@@ -20,8 +20,8 @@ header('Location: pagina_no_encontrada');
 	</div>
 
 	<div class="botones__modales">
-		<button class="botones boton__areas" onclick="stats()"><i class='bx bx-bar-chart-alt bx-tada' ></i>StatsÁreas</button>
-		<button class="botones boton__persona"><i class='bx bx-bar-chart-alt bx-tada' ></i>StatsPersona</button>
+		<button class="botones boton__areas" onclick="statsArea()"><i class='bx bx-bar-chart-alt bx-tada' ></i>StatsÁreas</button>
+		<button class="botones boton__persona" onclick="statsPerson()"><i class='bx bx-bar-chart-alt bx-tada' ></i>StatsPersona</button>
 	</div>
 
 	<main>
@@ -130,24 +130,61 @@ header('Location: pagina_no_encontrada');
                 <div class="cajita__dos">
                     <h4>Fecha Inicio:</h4>
                     <div>
-                        <input type="date" name="">
+                        <input type="date" name="" id="fechainicio">
                     </div>
                 </div>
                 <div class="cajita__tres">
                     <h4>Fecha Final:</h4>
                     <div>
-                        <input type="date" name="">
+                        <input type="date" name="" id="fechafinal">
                     </div>
                 </div>
                 <div class="cajita__tres">
                     <h4>Área:</h4>
                     <select>
-                    	<option value="1">Seleccione un área</option>
-                    	<option value="2">Value 1</option>
-                    	<option value="3">Value 2</option>
+                    	<option value="" id="area">Seleccione un área</option>
+                    	<option value="1">Value 1</option>
+                    	<option value="2">Value 2</option>
                     </select>
                 </div>
                 <div class="cajita__cuatro">
+                <button type="submit" title="subir" class="botonmodal">BUSCAR</button>
+                </div>
+             </form>
+
+        </div>
+    </div>
+</div>
+<!--se cierra-->
+
+
+<!--segundo-modal-->
+<div class="sgdmodal-container">
+    <div class="sgdmodal modal-closesgd">
+        <p class="closesgd">X</p>
+        
+        <div class="modal-textossgd">
+            <h2>Ingrése <span> Nómina y Fecha de Reporte </span></h2>
+
+
+            <form class="sgdcajita">
+                <div class="sgdcajita__dos">
+                    <h4 >Fecha Inicio:</h4>
+                    <div>
+                        <input type="date" name="" id="fechainicio1">
+                    </div>
+                </div>
+                <div class="sgdcajita__tres">
+                    <h4 >Fecha Final:</h4>
+                    <div>
+                        <input type="date" name="" id="fechafinal1">
+                    </div>
+                </div>
+                <div class="sgdcajita__tres">
+                    <h4>Nómina:</h4>
+                    <input type="text" name="" id="nomina">
+                </div>
+                <div class="sgdcajita__cuatro">
                 <button type="submit" title="subir" class="botonmodal">BUSCAR</button>
                 </div>
              </form>
