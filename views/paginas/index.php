@@ -68,7 +68,9 @@ header('Location: pagina_no_encontrada');
 
         </tr>
     </thead>
-        <tbody>
+        <tbody id="ticketsContainer">
+
+
             <?php foreach ($tickets as $ticket): ?>
             <tr class="tbrow">
                 <td data-label="No. Ticket"><?php echo $ticket->id; ?></td>
@@ -220,7 +222,7 @@ header('Location: pagina_no_encontrada');
                 
                 <div class="cajita__cuatro4">
                     <input type="hidden" name="id_ticket" id="id_ticket">
-                    <button type="button" title="Aceptar" id="aceptar" onclick="aceptar4(<?php echo $ticket->id; ?>)">Aceptar
+                    <button type="button" title="Aceptar" id="aceptar" class="aceptar1" onclick="aceptar4(<?php echo $ticket->id; ?>)">Aceptar
                     </button>
 
                     <button type="submit" title="Cancelar" >Cancelar</button>
