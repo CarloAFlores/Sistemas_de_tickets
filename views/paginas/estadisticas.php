@@ -127,7 +127,7 @@ header('Location: pagina_no_encontrada');
 
 
             <form class="cajita">
-                <div class="cajita__dos">
+                <div class="cajita__tres">
                     <h4>Fecha Inicio:</h4>
                     <div>
                         <input type="date" name="" id="fechainicio">
@@ -141,15 +141,17 @@ header('Location: pagina_no_encontrada');
                 </div>
                 <div class="cajita__tres">
                     <h4>Área:</h4>
-                    <select>
+                    <select id="selectarea">
                     	<option value="" id="area">Seleccione un área</option>
                     	<option value="1">Value 1</option>
                     	<option value="2">Value 2</option>
                     </select>
                 </div>
                 <div class="cajita__cuatro">
-                <button type="submit" title="subir" class="botonmodal">BUSCAR</button>
+                <button type="button" title="subir" class="botonmodal" id="botonmodal">BUSCAR</button>
                 </div>
+
+                
              </form>
 
         </div>
@@ -168,7 +170,7 @@ header('Location: pagina_no_encontrada');
 
 
             <form class="sgdcajita">
-                <div class="sgdcajita__dos">
+                <div class="sgdcajita__tres">
                     <h4 >Fecha Inicio:</h4>
                     <div>
                         <input type="date" name="" id="fechainicio1">
@@ -185,8 +187,10 @@ header('Location: pagina_no_encontrada');
                     <input type="text" name="" id="nomina">
                 </div>
                 <div class="sgdcajita__cuatro">
-                <button type="submit" title="subir" class="botonmodal">BUSCAR</button>
+                <button type="button" title="subir" class="botonmodal1" id="botonmodal1">BUSCAR</button>
                 </div>
+
+
              </form>
 
         </div>
@@ -230,6 +234,7 @@ header('Location: pagina_no_encontrada');
 		</table>
 	</main>
 	<script src="../../src/js/modal_estadisticas.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
  </body>
 </html>
 

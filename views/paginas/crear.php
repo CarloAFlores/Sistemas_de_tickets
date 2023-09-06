@@ -15,6 +15,11 @@
  </head>
 
  <body>
+    <div>
+        <!--<?php foreach ($usuarios as $usuario) {
+            var_dump($usuario);
+        }  ?>
+    </div>-->
 
  	<div class="botones__nuevos">
     	<a  href="inicio" class="boton3">Volver</a>
@@ -31,15 +36,15 @@
             <div class="alta-form">
                 <h3>Crea tu Ticket</h3>
 
-                <form action="">
+                <form action="crear" method="POST">
 
                     <div class="  div" >
                         <label>Etiqueta</label>
-                        <select id="etiqueta1"> 
+                        <select id="etiqueta1" name="etiqueta"> 
                             <option value="" >N/A</option>
-                            <option value="1" >Papeletas</option>
-                            <option value="2" >Formulario</option>
-                            <option value="3" >Gafetes</option>
+                            <option value="Papeletas" >Papeletas</option>
+                            <option value="Formulario" >Formulario</option>
+                            <option value="Gafetes" >Gafetes</option>
                         </select>
     
                     </div>
@@ -55,31 +60,45 @@
 
                     <!--<div class="segundo_div">-->
                 
+
                     <div class="div">
                         <label>Usuario Responsable</label>
-                        <input type="text" name="usuario_r" id="userRespon">
+                        <input type="hidden" name="id_usuariores" id="id_usuariores">
+                        <input type="text" name="usuario_r" id="userRespon" class="">
+                        <div id="resultado" class="resultadoc">
+                            <select id="nombreList" style="display: none;">
+                                <option value="">N/A</option>
+                            </select>
+                        </div>
                     </div>
+
 
 
                     <div class="div">
                         <label>Puesto Responsable</label>
                         <select>
-                            <option value="1">Auxiliar Sistemas</option>
-                            <option value="2">Coach</option>
-                            <option value="3">Auxiliar RH</option>
-                            <option value="4">Asesor de Calidad</option>
-                            <option value="5">Asistente personal del Consejo Directivo</option>
+                            <option value="1">Sistemas</option>
+                            <option value="2">Validación</option>
+                            <option value="3">Coach</option>
+                            <option value="4">Operación</option>
+                            <option value="5">Recursos Humanos</option>
+                            <option value="6">Calidad</option>
                         </select>
 
                     </div>
 
 
-                   <div class="div"> 
+                   <div class="div divUserCorres"> 
                         <label>Usuario Corresponsable</label>
                         <div class="corresponsable">
                         <input type="text" name="usuario_c" id="userCorres">
-                        <button class="div_btn">+</button>
+                        <button class="div_btn" type="button">+</button>
                         </div>
+
+                        <div class="contenedor-azul">
+                          <!-- Los valores seleccionados se agregarán aquí -->
+                        </div>
+
                    </div>
 
 
@@ -87,6 +106,10 @@
                         <label>Adjunto</label>
                         <input class="upload_file" type="file" title="Sube tu archivo">
                     </div>
+
+                    <input type="hidden" name="hora" value="<?php echo date('H:i:s')?>">
+                    <input type="hidden" name="fecha" value="<?php echo date('Y-m-d') ?>">
+                    <input type="hidden" name="nomina" value="<?php echo $_SESSION['identificador']?>">
 
                     <div class="block div_personal boton__guardar">
                         <button class="submit_guardar" type="button" id="guardar1">Guardar</button>
@@ -112,6 +135,7 @@
         </div>
 
     </div>
+
 
 <!------------FORMULARIO PEQUEÑO RESPONSIVO--------------->
 

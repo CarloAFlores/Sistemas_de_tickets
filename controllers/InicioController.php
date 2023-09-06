@@ -4,6 +4,7 @@ namespace Controllers;
 use MVC\Router;
 use Model\Tickets;
 use Model\Login;
+use Model\Usuarios;
 
 
 class inicioController{
@@ -21,9 +22,15 @@ class inicioController{
 
 	public static function crear(Router $router){
 		session_start();
+		
+		$usuarios = Usuarios::ObtenerUsuariosDeLaBaseDeDatos();
 
-		$router->render('paginas/crear');
+		$router->render('paginas/crear',[
+			'usuarios' => $usuarios
+		]);
 	}
+
+	
 
 	public static function pendientes(Router $router){
 		session_start();
@@ -73,6 +80,37 @@ class inicioController{
 		
 		echo json_encode($val2);
 
+	}
+
+
+public static function mirar(){
+
+		$datos = $_POST['nombre'];
+		$nombre = Usuarios::seleccionar($datos);
+
+		echo json_encode($nombre);
+
+}
+
+
+
+	public static function insertar(){
+		
+		$etiqueta = $_POST['etiqueta'];
+		$asunto = $_POST['asunto'];
+		$descripcion = $_POST['motivo'];
+		$fecha = $_POST['fecha'];
+		$hora = $_POST['hora'];
+	
+		$nomina = $_POST['nomina'];
+
+		
+
+		$val2 = Tickets::insertar($etiqueta, $asunto, $descripcion, $hora, $fecha);
+		header("Location: inicio");
+
 
 	}
+
+
 }

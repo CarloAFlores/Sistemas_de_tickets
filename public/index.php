@@ -22,7 +22,11 @@ $router->get('/inicio',[InicioController::class, 'index']);
 
 $router->get('/crear',[InicioController::class, 'crear']);
 
+$router->post('/crear',[InicioController::class, 'insertar']);
+
 $router->post('/eliminar',[InicioController::class, 'eliminar']);
+
+$router->post('/mirar',[InicioController::class, 'mirar']);
 
 //--------------------------------------------------------------------------------------------------------
 

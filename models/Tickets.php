@@ -56,8 +56,8 @@ class Tickets extends General{
 		$query = "SELECT usuarios.nombre,status.nombre_status,status.color,status.progreso,tickets.* FROM " . static::$tabla." INNER JOIN status ON  tickets.id_satisfaccion = status.id 
 		    INNER JOIN usuarios ON tickets.nmr_nom = usuarios.identificador
 		    WHERE tickets.estado = 1
-		    ORDER BY  tickets.id ASC
-		    LIMIT 5
+		    ORDER BY  tickets.id DESC
+		    LIMIT 10
 		    ";
         $resultado = self::consultarSQL($query);
         return $resultado;
@@ -88,5 +88,14 @@ class Tickets extends General{
 
 		return $resultado2;
 	}
+
+	/*public static function ObtenerUsuariosDeLaBaseDeDatos() {
+        $query = "SELECT id, nombre FROM usuarios"; // Ajusta la consulta según tu esquema de base de datos
+        $resultados = self::$db->query($query);
+
+        return $usuarios;
+    }*/
+
+
 }
 ?>

@@ -122,4 +122,80 @@ function volver(regresar){
 }
 
 
+const inputUsuarioResp = document.getElementById('userRespon');
+const nombreList = document.getElementById("nombreList");
+
+// Función para manejar el evento de teclado
+function manejarTeclado(event) {
+    // Obtener el valor actual del campo de entrada de texto
+    const textoIngresado = inputUsuarioResp.value;
+    
+    // Aquí puedes agregar tu lógica personalizada
+    console.log(`Texto ingresado: ${textoIngresado}`);
+
+    id_usuariores.value = textoIngresado;
+
+    let nom = id_usuariores.value;
+
+    return nom;
+}
+
+// Agregar un escuchador de eventos al campo de entrada de texto
+inputUsuarioResp.addEventListener('keyup', manejarTeclado);
+
+
+
+function miFuncion(event) {
+
+	
+    const palabra = inputUsuarioResp.value;
+    console.log(palabra);
+
+    // Enviar la solicitud si la palabra tiene al menos una letra
+    if (palabra.length > 0) {
+        fetch('mirar', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: 'nombre=' + encodeURIComponent(palabra)
+        })
+        .then((response) => response.json())
+        .then(result => {
+            console.log(result);
+
+            // Obtener el contenedor donde se muestran los usuarios
+            const resultado = document.querySelector("#resultado");
+            const nombreList = document.querySelector("#nombreList");
+
+
+            // Limpiar y ocultar la lista desplegable
+            nombreList.innerHTML = '';
+            nombreList.style.display = 'none';
+
+            // Crear una opción para cada usuario en la lista desplegable
+            result.forEach(usuario => {
+                const option = document.createElement('option');
+                option.value = usuario.nombre;
+                option.textContent = usuario.nombre;
+                nombreList.appendChild(option);
+            });
+
+            // Mostrar la lista desplegable
+            nombreList.style.display = 'block';
+        })
+        .catch(error => {
+            console.log('Error al realizar la solicitud:', error);
+        });
+    }
+}
+
+// Manejar la selección de un nombre de la lista desplegable
+nombreList.addEventListener('change', function () {
+    const selectedName = nombreList.value;
+    inputUsuarioResp.value = selectedName;
+    nombreList.style.display = 'none';
+});
+
+inputUsuarioResp.addEventListener('keyup', miFuncion);
 

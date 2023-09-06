@@ -180,6 +180,9 @@ background: linear-gradient(0deg, rgba(94,112,148,1) 0%, rgba(69,103,189,1) 100%
 /*Clase del boton Usuario corresponsable*/
 .corresponsable{
 	display: flex;
+	justify-content: center;
+	align-items: center;
+	
 }
 /*Separacion de contenedores */
 .div{
@@ -228,6 +231,19 @@ background: linear-gradient(0deg, rgba(94,112,148,1) 0%, rgba(69,103,189,1) 100%
 	box-shadow: 11px 10px 12px 2px rgba(50,48,161,0.75);
 }
 
+
+.contenedor-azul{
+	margin-top: 5px;
+	background: blue;
+	display: flex;
+	flex-direction: column;
+
+}
+
+#nombreList{
+	border-bottom: 1px solid #fff;
+	
+}
 
 /*Modo responsivo Celular*/
 
