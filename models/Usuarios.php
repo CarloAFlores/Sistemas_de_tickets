@@ -34,7 +34,7 @@ class Usuarios extends General{
     }
 
     public static function seleccionar($termino){
-    $query = "SELECT nombre FROM usuarios WHERE nombre LIKE '%" . $termino . "%'";
+    $query = "SELECT nombre, identificador, estado FROM usuarios WHERE nombre LIKE '%" . $termino . "%'";
 	$resultado = self::consultarSQL($query);
    
     return $resultado;

@@ -92,25 +92,52 @@ public static function mirar(){
 
 }
 
-
-
-	public static function insertar(){
+	/*public static function insertar(){
 		
 		$etiqueta = $_POST['etiqueta'];
 		$asunto = $_POST['asunto'];
 		$descripcion = $_POST['motivo'];
 		$fecha = $_POST['fecha'];
 		$hora = $_POST['hora'];
-	
-		$nomina = $_POST['nomina'];
-
+    	$id_responsable = $_POST['id_usuariores'];
+		$id_corresponsable = $_POST['id_todosUserCorrespon'];
 		
-
-		$val2 = Tickets::insertar($etiqueta, $asunto, $descripcion, $hora, $fecha);
+		$val2 = Tickets::insertar($etiqueta, $asunto, $descripcion, $hora, $fecha,$id_responsable, $id_corresponsable);
 		header("Location: inicio");
 
 
-	}
+	}*/
+
+	public static function insertar(){
+    $etiqueta = $_POST['etiqueta'];
+    $asunto = $_POST['asunto'];
+    $descripcion = $_POST['motivo'];
+    $fecha = $_POST['fecha'];
+    $hora = $_POST['hora'];
+    $id_responsable = $_POST['id_usuariores'];
+    $id_corresponsable = $_POST['id_todosUserCorrespon'];
+    
+    // Procesa el archivo adjunto
+    $nombre_archivo = $_FILES['archivo_adjunto']['name'];
+    $tipo_archivo = $_FILES['archivo_adjunto']['type'];
+    $tamaño_archivo = $_FILES['archivo_adjunto']['size'];
+    $temp_archivo = $_FILES['archivo_adjunto']['tmp_name'];
+    
+    // Asegúrate de que el archivo se haya cargado correctamente
+    if (!empty($nombre_archivo)) {
+        // Guarda el archivo en una ubicación deseada
+        $ruta_destino = "ruta/donde/guardar/" . $nombre_archivo;
+        move_uploaded_file($temp_archivo, $ruta_destino);
+    } else {
+        // El usuario no cargó un archivo
+        $ruta_destino = null;
+    }
+
+    // Inserta los datos en la base de datos, incluyendo la ruta del archivo adjunto
+    $val2 = Tickets::insertar($etiqueta, $asunto, $descripcion, $hora, $fecha, $id_responsable, $id_corresponsable, $ruta_destino);
+    header("Location: inicio");
+}
+
 
 
 }

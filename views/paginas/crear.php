@@ -36,7 +36,7 @@
             <div class="alta-form">
                 <h3>Crea tu Ticket</h3>
 
-                <form action="crear" method="POST">
+                <form action="crear" method="POST" enctype="multipart/form-data">
 
                     <div class="  div" >
                         <label>Etiqueta</label>
@@ -45,6 +45,8 @@
                             <option value="Papeletas" >Papeletas</option>
                             <option value="Formulario" >Formulario</option>
                             <option value="Gafetes" >Gafetes</option>
+                            <option value="Modulos">Modulos</option>
+                            <option value="Permisos">Permisos</option>
                         </select>
     
                     </div>
@@ -64,6 +66,7 @@
                     <div class="div">
                         <label>Usuario Responsable</label>
                         <input type="hidden" name="id_usuariores" id="id_usuariores">
+
                         <input type="text" name="usuario_r" id="userRespon" class="">
                         <div id="resultado" class="resultadoc">
                             <select id="nombreList" style="display: none;">
@@ -71,48 +74,40 @@
                             </select>
                         </div>
                     </div>
+                        
 
-
-
-                    <div class="div">
-                        <label>Puesto Responsable</label>
-                        <select>
-                            <option value="1">Sistemas</option>
-                            <option value="2">Validación</option>
-                            <option value="3">Coach</option>
-                            <option value="4">Operación</option>
-                            <option value="5">Recursos Humanos</option>
-                            <option value="6">Calidad</option>
-                        </select>
-
-                    </div>
-
-
-                   <div class="div divUserCorres"> 
+                    <div class="div divUserCorres">
                         <label>Usuario Corresponsable</label>
+                        <input type="text" name="id_usuariocor" id="id_usuariocor">
                         <div class="corresponsable">
-                        <input type="text" name="usuario_c" id="userCorres">
-                        <button class="div_btn" type="button">+</button>
+                            <input type="text" name="usuario_c" id="userCorres" class="">
+                            <button class="div_btn" type="button">+</button>
                         </div>
-
+                        <div id="resultado" class="resultadoc">
+                            <select id="nombreList2" style="display: none;">
+                                <option value="">N/A</option>
+                            </select>
+                        </div>
+                        <input type="text" name="id_todosUserCorrespon" id="id_todosUserCorrespon">
                         <div class="contenedor-azul">
                           <!-- Los valores seleccionados se agregarán aquí -->
                         </div>
-
-                   </div>
-
-
-                    <div class="div div_upload">
-                        <label>Adjunto</label>
-                        <input class="upload_file" type="file" title="Sube tu archivo">
                     </div>
+
+
+                    
+                    <div class="block div_upload">
+                        <label>Adjunto</label>
+                        <input class="upload_file" type="file" name="archivo_adjunto" title="Sube tu archivo">
+                    </div>
+
 
                     <input type="hidden" name="hora" value="<?php echo date('H:i:s')?>">
                     <input type="hidden" name="fecha" value="<?php echo date('Y-m-d') ?>">
                     <input type="hidden" name="nomina" value="<?php echo $_SESSION['identificador']?>">
 
                     <div class="block div_personal boton__guardar">
-                        <button class="submit_guardar" type="button" id="guardar1">Guardar</button>
+                        <button class="submit_guardar" type="submit" id="guardar1">Guardar</button>
                     </div>
 
                     <!--</div>-->

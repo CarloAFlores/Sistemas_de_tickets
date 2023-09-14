@@ -129,6 +129,8 @@ class General {
 
     // crea un nuevo registro
     public function crear() {
+
+        echo("arg1"); exit();
         // Sanitizar los datos
         $atributos = $this->sanitizarAtributos();
 
@@ -175,14 +177,19 @@ class General {
         return $resultado;
     }
 
-    // Eliminar un Registro por su ID
 
+    /*public static function insertar($etiqueta, $asunto, $descripcion, $hora, $fecha, $id_responsable, $id_corresponsable){
+        $query = "INSERT INTO tickets (etiqueta, asunto, descripcion, hora_creacion, hora_finalizacion, fecha_creacion, fecha_finalizado, id_status, id_satisfaccion, id_responsable, id_corresponsable, estado, nmr_nom, id_puesto) VALUES ('$etiqueta', '$asunto', '$descripcion', '$hora', '00:00:00', '$fecha', NULL , '1', '3', '$id_responsable', '$id_corresponsable', '1', '2695', '2')";
+        $resultado = self::$db->query($query);
+        return $resultado;
+    }*/
 
-    public static function insertar($etiqueta, $asunto, $descripcion, $hora, $fecha){
-        $query = "INSERT INTO tickets (etiqueta, asunto, descripcion, hora_creacion, hora_finalizacion, fecha_creacion, fecha_finalizado, id_status, id_satisfaccion, id_responsable, id_corresponsable, estado, nmr_nom, id_puesto) VALUES ('$etiqueta', '$asunto', '$descripcion', '$hora', '00:00:00', '$fecha', NULL , '1', '3', '2699', '2698', '1', '2695', '2')";
+    public static function insertar($etiqueta, $asunto, $descripcion, $hora, $fecha, $id_responsable, $id_corresponsable, $ruta_adjunto){
+        $query = "INSERT INTO tickets (etiqueta, asunto, descripcion, hora_creacion, hora_finalizacion, fecha_creacion, fecha_finalizado, adjunto, id_status, id_satisfaccion, id_responsable, id_corresponsable, estado, nmr_nom, id_puesto) VALUES ('$etiqueta', '$asunto', '$descripcion', '$hora', '00:00:00', '$fecha', NULL , '$ruta_adjunto', '1', '3', '$id_responsable', '$id_corresponsable', '1', '2695', '2')";
         $resultado = self::$db->query($query);
         return $resultado;
     }
+
 
 
 

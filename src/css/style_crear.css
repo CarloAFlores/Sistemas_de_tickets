@@ -92,6 +92,12 @@ background: linear-gradient(0deg, rgba(94,112,148,1) 0%, rgba(69,103,189,1) 100%
 	
 }
 
+.div_upload{
+	width: 70% !important;
+	margin: auto;
+	padding: 10px;
+}
+
 /*Estilos a los campos seleccionados*/
 .alta-form form button,
 .alta-form form input,
@@ -100,11 +106,13 @@ background: linear-gradient(0deg, rgba(94,112,148,1) 0%, rgba(69,103,189,1) 100%
 	width: 100%;
 	padding: 0.7rem;
 	border: none;
-	background: none;
 	border-bottom: 1px solid #000;
+	background: none;
 	outline: 0;
 	transition: all 0.3s ease;
+	cursor: pointer;
 }
+
 
 .alta-form form button{
 	background: #000;
@@ -199,7 +207,7 @@ background: linear-gradient(0deg, rgba(94,112,148,1) 0%, rgba(69,103,189,1) 100%
 }
 
 .boton__guardar{
-	width: 60%;
+	width: 50%;
 	margin: 22px auto 0 auto;
 
 }
@@ -234,17 +242,60 @@ background: linear-gradient(0deg, rgba(94,112,148,1) 0%, rgba(69,103,189,1) 100%
 
 .contenedor-azul{
 	margin-top: 5px;
-	background: blue;
+	/*background: blue;*/
 	display: flex;
 	flex-direction: column;
+	text-align: center;
+	color: #fff;
 
 }
+
+.eliminar-usuario{
+	width: 12% !important;
+	margin: 0 0 0 1rem;
+	padding: 0 !important;
+	background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+
+
+}
+.usuario-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px; /* Espacio entre usuarios */
+    /*background: yellow !important;*/
+}
+
+.usuario-seleccionado {
+    background: #4567bd; 
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 5px; /* Espacio entre usuarios */
+    width: 100%;
+}
+
 
 #nombreList{
 	border-bottom: 1px solid #fff;
+	background: #4567bd;
+	color: #fff;
+	border-radius: 12px;
 	
 }
 
+#nombreList2{
+	background: red/*#4567bd*/;
+	color: #fff;
+	border-radius: 12px;
+	border-bottom: 1px solid #fff;
+}
+
+.eliminar-usuario{
+	background: green !important;
+}
 /*Modo responsivo Celular*/
 
 /*Contenedor del botón de Volver*/
