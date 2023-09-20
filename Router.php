@@ -2,7 +2,12 @@
 
 namespace MVC;
 
+
 class Router{
+	public function notFound(){
+    include __DIR__ . "/views/paginas/notfound.php";
+}
+
 
 
 	//En estos arreglos se almacenaran los llamados GET y POST
@@ -42,9 +47,11 @@ class Router{
 			call_user_func($fn,$this);
 		}else{
 			//En caso de ser falso o null solo aparecera este mensaje
-			echo "Pagina no encontrada";
+			 $this->notFound();
 		}
 	}
+
+	
 
 	//Esta funcion es la encargada de dirigirnos a la view mediante los valores de "$view" y "$datos"
 	//Donde $view es enviada desde nuestro Controller y nos dira que carpeta y archivo mandar

@@ -24,12 +24,16 @@ header('Location: pagina_no_encontrada');
         <a href="crear" class="boton2">Crear</a>
         <button class="boton1" id="ocultar-mostrar" onclick="obtener()">Buscar</button>
     </div>
-    <div class="d-md-none content box" id="ocultar-y-mostrar">
 
+    <div class="d-xl-none content box" id="ocultar-y-mostrar">
 
             <form action='/search' id='search-form' method='get' target='_top'>
-            <input id='search-text' name='q' placeholder='Busca tu ticket' type='text' class="buscador">
-            <button id='search-button' type='submit'><span><i class='bx bx-search bx-spin' style='color:#ffffff'  id="lupa"></i></span></button>
+                <input id='search-text' name='q' placeholder='Busca tu ticket' type='text' class="buscador">
+                <button id='search-button' type='submit'>
+                    <span>
+                        <i class='bx bx-search bx-spin' style='color:#ffffff'  id="lupa"></i>
+                    </span>
+                </button>
             </form>
     </div>
     
@@ -37,7 +41,7 @@ header('Location: pagina_no_encontrada');
 
 <table class="tabla">
     <thead>
-        <tr>
+        <tr id="filterRow">
             <th>No. Ticket</th>
             <th>Etiqueta</th>
             <th>Asunto</th>
@@ -50,22 +54,27 @@ header('Location: pagina_no_encontrada');
 
         </tr>
         <tr class="selectores">
-            <th><input type="text" name=""></th>
-            <th><input type="text" name=""></th>
-            <th><input type="text" name=""></th>
-            <th><input type="text" name=""></th>
-            <th><input type="text" name=""></th>
+            <th><input type="text" id="filterNoTicket" placeholder="No. Ticket"></th>
+            <th><input type="text" id="filterEtiqueta" placeholder="Etiqueta"></th>
+            <th><input type="text" id="filterAsunto" placeholder="Asunto"></th>
+            <th><input type="text" id="filterComentario" placeholder="Comentario"></th>
+            <th><input type="text" id="filterUsuarioCrea" placeholder="Usuario Crea"></th>
             <th>
-                <select>
-                    <option value="1"></option>
-                    <option value="2">Value 1</option>
-                    <option value="3">Value 2</option>
+                <select id="filterStatusTicket">
+                    <option value=""></option>
+                    <option value="Creado">Creado</option>
+                    <option value="En Proceso">En Proceso</option>
+                    <option value="Validado">Validado</option>
+                    <option value="Terminado">Terminado</option>
+                    <option value="En espera por falta de recurso">En espera por falta de recurso</option>
+                    <option value="No procede">No procede</option>
+                    <option value="Eliminado">Eliminado</option>
+
                 </select>
             </th>
             <th></th>
             <th></th>
             <th></th>
-
         </tr>
     </thead>
         <tbody id="ticketsContainer">
@@ -351,6 +360,7 @@ header('Location: pagina_no_encontrada');
 </div>
 
     <script src="../../src/js/tabla.js"></script>
+    <script src="../../src/js/filtros.js"></script>
     <!--<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript" src="../../src/js/sweetAlert.js"></script>-->
 	

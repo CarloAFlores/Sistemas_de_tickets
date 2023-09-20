@@ -78,7 +78,7 @@ header('Location: pagina_no_encontrada');
                                 <div class="contenido"><?php echo $val->responsable; ?></div>
                             </div>
                             <div class="columna">
-                                <div class="cabeza">Puesto Corresponsable</div>
+                                <div class="cabeza">Usuario Corresponsable</div>
                                 <div class="contenido"><?php echo $val->corresponsable; ?></div>
                             </div>
                             <div class="columna">

@@ -178,15 +178,15 @@ function aceptar4(id) {
                 <td data-label="Opciones">
                    	<div class="opciones_pequeñas"> 
 
-                    	<button href="#" class="boton-li icono " title="Status" type="button" id="miboton" onclick="hola(<?php echo $ticket->id; ?>)">
+                    	<button href="#" class="boton-li icono " title="Status" type="button" id="miboton" onclick="hola(${ticket.id})">
                     	    <i class='bx bx-list-ul' style='color:#ffffff'></i>
                     	</button>
 
-                    	<button class="boton-subir icono" title="Archivo" onclick="hola2(<?php echo $ticket->id; ?>)" id="">
+                    	<button class="boton-subir icono" title="Archivo" onclick="hola2(${ticket.id})" id="">
                     	    <i class='bx bx-upload' style='color:#ffffff'></i>
                     	</button>
 
-                    	<button class="boton-resubir icono" title="AdRespuesta" onclick="hola3(<?php echo $ticket->id; ?>)">
+                    	<button class="boton-resubir icono" title="AdRespuesta" onclick="hola3(${ticket.id})">
                     	    <i class='bx bx-upload' style='color:#ffffff'></i>
                     	</button>
 

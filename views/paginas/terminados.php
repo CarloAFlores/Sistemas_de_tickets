@@ -6,5 +6,5 @@ header('Location: pagina_no_encontrada');
 
  ?>
 <body>
-	<h1>Terminados papuh :v</h1>
+	<h1>No se encuentra papuh :v</h1>
 </body>

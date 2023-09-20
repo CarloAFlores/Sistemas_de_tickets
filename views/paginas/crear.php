@@ -78,7 +78,7 @@
 
                     <div class="div divUserCorres">
                         <label>Usuario Corresponsable</label>
-                        <input type="text" name="id_usuariocor" id="id_usuariocor">
+                        <input type="hidden" name="id_usuariocor" id="id_usuariocor">
                         <div class="corresponsable">
                             <input type="text" name="usuario_c" id="userCorres" class="">
                             <button class="div_btn" type="button">+</button>
@@ -88,7 +88,7 @@
                                 <option value="">N/A</option>
                             </select>
                         </div>
-                        <input type="text" name="id_todosUserCorrespon" id="id_todosUserCorrespon">
+                        <input type="hidden" name="id_todosUserCorrespon" id="id_todosUserCorrespon">
                         <div class="contenedor-azul">
                           <!-- Los valores seleccionados se agregarán aquí -->
                         </div>
@@ -105,7 +105,8 @@
                     <input type="hidden" name="hora" value="<?php echo date('H:i:s')?>">
                     <input type="hidden" name="fecha" value="<?php echo date('Y-m-d') ?>">
                     <input type="hidden" name="nomina" value="<?php echo $_SESSION['identificador']?>">
-
+                    
+                    
                     <div class="block div_personal boton__guardar">
                         <button class="submit_guardar" type="submit" id="guardar1">Guardar</button>
                     </div>

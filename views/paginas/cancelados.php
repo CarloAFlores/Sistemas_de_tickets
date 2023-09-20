@@ -78,8 +78,8 @@ header('Location: pagina_no_encontrada');
                 <td data-label="Asunto"><?php echo $ticket->asunto; ?></td>
                 <td data-label="Comentario"><?php echo $ticket->descripcion; ?></td>
                 <!--<td data-label="Usuario Crea"><?php echo $ticket->nombre; ?> </td>-->
-                <td data-label="Usuario Responsable">HOLA</td>
-                <td data-label="Usuario Corresponsable">HOLA2</td>
+                <td data-label="Usuario Responsable"><?php echo $ticket->id_responsable; ?></td>
+                <td data-label="Usuario Corresponsable"><?php echo $ticket->id_corresponsable; ?></td>
                 <td data-label="Status Ticket"><?php echo $ticket->nombre_status; ?></td>
                 <td data-label="Progreso">
                     <div class="progress">
