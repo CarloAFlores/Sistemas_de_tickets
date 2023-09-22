@@ -3,7 +3,7 @@ namespace Model;
 
 class Login extends General{
 
-	//En este apartado definicmos nuestros valores de tabla como de columna
+	//En este apartado definimos nuestros valores de tabla como de columna
 	protected static $tabla = 'usuarios';
 	protected static $columnasDB = ['id','nombre','id_puesto','identificador','password','estado'];
 

@@ -60,9 +60,25 @@ class Tickets extends General{
 		    LIMIT 10
 		    ";
 
+
+
         $resultado = self::consultarSQL($query);
         return $resultado;
 	}
+
+	public static function final1($identificador) {
+    
+    $query = "SELECT usuarios.nombre, status.nombre_status, status.color, status.progreso, tickets.*
+              FROM " . static::$tabla . "
+              INNER JOIN status ON tickets.id_status = status.id
+              INNER JOIN usuarios ON tickets.nmr_nom = usuarios.identificador
+              WHERE tickets.nmr_nom = ".$identificador."
+              ";
+
+    $resultado = self::consultarSQL($query);
+    return $resultado;
+}
+
 
 	public static function busqueda($id){
 		$query = "SELECT usuarios.nombre,status.nombre_status,status.color,status.progreso,satisfaccion.nombre_satisfaccion,puesto.nombre_puesto,responsable.nombre as responsable,corresponsable.nombre as corresponsable,tickets.* FROM " . static::$tabla  ." INNER JOIN status ON  tickets.id_satisfaccion = status.id 

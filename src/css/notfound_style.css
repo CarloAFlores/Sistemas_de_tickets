@@ -1,35 +1,48 @@
-body{
-	background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
-	background-repeat: no-repeat;
-	color: white;
-	padding: 2rem;
-	background-position: center center;
-	background-attachment: fixed;
-	background-size: cover;
-
+body {
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    background-repeat: no-repeat;
+    color: white;
+    padding: 2rem;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh; /* Añade esto para hacer que el cuerpo ocupe toda la altura de la ventana */
+    display: flex;
+    flex-direction: column; /* Añade esto para que los elementos se ajusten verticalmente */
+    justify-content: center; /* Añade esto para centrar verticalmente los elementos */
+    align-items: center; /* Añade esto para centrar horizontalmente los elementos */
 }
 
-.imagen{
-	margin: 1rem;
-	width: 40%;
-	display: flex;
-	justify-content: center;
+.imagen {
+    margin: 1rem;
+    width: 40%;
 }
 
 .titulo {
-  text-align: center; /* Añade esta propiedad */
-  padding: 10px; /* Opcional: Agrega un relleno para espaciar el título del borde */
+    text-align: center;
+    padding: 10px;
 }
 
-
 .contenido {
-  
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  align-items: center;
-  justify-content: center;
+    text-align: center; /* Añade esto para centrar el contenido en el centro */
+    padding: 20px; /* Añade un espacio interno */
+    margin: 20px; /* Añade un margen exterior */
+    background-color: rgba(255, 255, 255, 0.2); /* Añade un fondo semitransparente */
+    border-radius: 10px; /* Añade bordes redondeados */
+}
+
+.abajo {
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Ysabeau SC', sans-serif;
+    text-shadow: #0042ff 0.1em 0.1em 0.2em;
+    position: absolute; /* Añade posición absoluta para fijarlo en la parte inferior */
+    bottom: 0; /* Fija el elemento en la parte inferior */
+    width: 100%; /* Añade ancho del 100% para que se extienda por toda la pantalla */
+}
+
+.abajo h3 {
+    font-size: larger;
 }

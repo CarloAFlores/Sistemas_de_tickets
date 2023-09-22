@@ -57,15 +57,20 @@ class inicioController{
 		$router->render('paginas/terminados');
 	}
 
+	
 	public static function cancelados(Router $router){
-		session_start();
+    session_start();
 
-		$tickets = Tickets::final();
+    $identificador = $_SESSION['identificador'];
 
-		$router->render('paginas/cancelados',[
-			'tickets' => $tickets
-		]);
-	}
+    $tickets = Tickets::final1($identificador); // Pasa el argumento $identificador aquí
+
+    $router->render('paginas/cancelados', [
+        'tickets' => $tickets
+    ]);
+}
+
+
 
 	public static function estadisticas(Router $router){
 		session_start();
