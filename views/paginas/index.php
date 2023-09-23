@@ -139,7 +139,7 @@ header('Location: pagina_no_encontrada');
 <!--primer modal-->
 <div class="primermodal-container">
     <div class="primermodal modal-close">
-        <p class="close">X</p>
+        <p class="close" id="close">X</p>
         <img src="../../src/img/ilustracion2.svg" alt="ilustracion">
         <div class="modal-textos">
             <h2>STATUS <span> Ticket </span></h2>
@@ -148,18 +148,28 @@ header('Location: pagina_no_encontrada');
             <form class="cajita">
                 <div class="cajita__dos">
                     <h4>Status</h4>
-                    <select class="cajita__dos--opciones">
-                        <option value="1">Proceso</option>
-                        <option value="2">Validacion</option>
+                    
+                    <select class="cajita__dos--opciones" id="estadoTicket">
+                        <option value="0">Selecciona</option>
+                        <option value="5">En espera por falta de recurso</option>
+                        <option value="2">En proceso</option>
+                        <option value="6">No procede</option>
                     </select>
+                    <input type="hidden" id="hiddenEstadoTicket" name="hiddenEstadoTicket" value="">
+         
+
                 </div>
-                <div class="cajita__tres">
+                <!--<div class="cajita__tres">
                     <h4>Comentario</h4>
                     <textarea rows="1"></textarea>
-                </div>
+                </div>-->
+                <input type="hidden" name="id_ticketstatus" id="id_ticketstatus">
+
                 <div class="cajita__cuatro">
-                <button type="submit" title="subir" class="botonmodal">Guardar</button>
+                    <button type="button" title="subir" class="botonmodal guardastatus" onclick="guardarEstadoTicket(<?php echo $ticket->id; ?>)">Guardar</button>
                 </div>
+
+
              </form>
 
         </div>
@@ -236,7 +246,7 @@ header('Location: pagina_no_encontrada');
 
                     <button type="submit" title="Cancelar" >Cancelar</button>
                 </div>
-             </form>
+            </form>
 
         </div>
     </div>

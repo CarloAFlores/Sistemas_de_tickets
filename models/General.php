@@ -186,6 +186,14 @@ class General {
         return $resultado;
     }
 
+    public static function actualizarestado($proceso, $otroValor){
+        $query = "UPDATE tickets SET id_status = $proceso WHERE id = $otroValor";
+
+        $resultado = self::$db->query($query);
+        return $resultado;
+
+    }
+
 
 
 

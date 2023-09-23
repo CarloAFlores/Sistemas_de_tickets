@@ -87,15 +87,38 @@ class inicioController{
 
 	}
 
+	public static function actualizar() {
+    $data = json_decode(file_get_contents('php://input'));
 
-public static function mirar(){
+    // Acceder a las propiedades del objeto
+    $proceso = $data->proceso;
+    $otroValor = $data->otroValor;
+
+    $val = Tickets::actualizarestado($proceso, $otroValor);
+    $val2 = Tickets::final();
+
+    // En tu controlador PHP, asegúrate de devolver una respuesta JSON válida
+    if (is_array($val2)) {
+        echo json_encode($val2);
+    } else {
+        // Maneja el caso en el que $val2 no es un arreglo
+        echo json_encode([]);
+    }
+
+}
+
+
+
+
+
+	public static function mirar(){
 
 		$datos = $_POST['nombre'];
 		$nombre = Usuarios::seleccionar($datos);
 
 		echo json_encode($nombre);
 
-}
+	}
 
 
 	public static function insertar(){

@@ -28,6 +28,8 @@ $router->post('/eliminar',[InicioController::class, 'eliminar']);
 
 $router->post('/mirar',[InicioController::class, 'mirar']);
 
+$router->post('/actualizar',[InicioController::class, 'actualizar']);
+
 //--------------------------------------------------------------------------------------------------------
 
 $router->get('/pendientes',[InicioController::class, 'pendientes']);

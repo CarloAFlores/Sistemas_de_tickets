@@ -15,31 +15,162 @@ for(var x = 0;x< tbrow.length;x++){
 	});
 }
 
-
-let cerrar = document.querySelectorAll(".close")[0];
+//---------------------------------------------------------------------------------------
+//funcion del modal1
+let cerrar = document.querySelectorAll(".guardastatus")[0];
+let botonCerrarModal = document.getElementById("close"); // Agrega el ID del botón "X"
 
 let modal = document.querySelectorAll(".primermodal")[0];
 let modalC = document.querySelectorAll(".primermodal-container")[0];
 
+// Función para cerrar el modal
+function cerrarModal() {
+    modal.classList.toggle("modal-close");
 
-//funcion del modal1
-cerrar.addEventListener("click",function(){
-	modal.classList.toggle("modal-close");
+    setTimeout(function() {
+        modalC.style.opacity = "0";
+        modalC.style.visibility = "hidden";
+    }, 400);
+}
 
-	setTimeout(function(){
-		modalC.style.opacity = "0";
-		modalC.style.visibility = "hidden";
-	},400)
-})
+// Agrega eventos de click para el botón "Guardar" y el botón "X"
+cerrar.addEventListener("click", cerrarModal);
+botonCerrarModal.addEventListener("click", cerrarModal);
+
 
 function hola(id){
 	modalC.style.opacity = "1";
 	modalC.style.visibility = "visible";
 	modal.classList.toggle("modal-close");
-
-	console.log(id)
+    id_ticketstatus.value = id;
+	console.log(id);
 }
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    var selectEstadoTicket = document.getElementById("estadoTicket");
+    var hiddenEstadoTicket = document.getElementById("hiddenEstadoTicket");
+
+    selectEstadoTicket.addEventListener("change", function () {
+        // Obtener el valor seleccionado en el select
+        var selectedValue = selectEstadoTicket.value;
+
+        // Establecer ese valor en el input hidden
+        hiddenEstadoTicket.value = selectedValue;
+
+        // Mostrar el valor en la consola
+        console.log("Valor seleccionado: " + selectedValue);
+    });
+});
+
+function guardarEstadoTicket(id) {
+    let id_ticketstatus = document.querySelector("#id_ticketstatus");
+    const idx2 = id_ticketstatus.value;
+
+    console.log(idx2);
+
+    var selectEstadoTicket = document.getElementById("estadoTicket");
+    var selectedValue = selectEstadoTicket.value;
+
+    var datos = {
+        proceso: selectedValue,
+        otroValor: idx2
+    };
+
+    
+        // Realizar una solicitud Fetch al servidor para ejecutar la función actualizar
+        fetch('actualizar', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(datos)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data); // Manejar la respuesta del servidor si es necesario
+
+
+            // Verificar que la respuesta del servidor sea un arreglo antes de iterar
+        if (Array.isArray(data)) {
+
+            // Obtener el contenedor donde mostrarás los tickets
+        let ticketsContainer = document.querySelector("#ticketsContainer");
+
+        // Limpiar el contenido anterior del contenedor
+        ticketsContainer.innerHTML = '';
+
+        // Iterar sobre los tickets y crear elementos para mostrarlos
+        data.forEach(ticket => {
+            const ticketElement = document.createElement('tr');
+            ticketElement.classList.add('tbrow');
+
+            const ticketHTML = `
+                <td data-label="No. Ticket">${ticket.id}</td>
+                <td data-label="Etiqueta">${ticket.etiqueta}</td>
+                <td data-label="Asunto">${ticket.asunto}</td>
+                <td data-label="Asunto">${ticket.descripcion}</td>
+                <td data-label="Asunto">${ticket.nombre}</td>
+                <td data-label="Status Ticket">${ticket.nombre_status}</td>
+                <td data-label="Progreso">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated barritamodal bg-${ticket.color}" role="progressbar" style="width:${ticket.progreso}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">${ticket.progreso}%</div>
+                    </div> 
+                </td>
+
+                <td data-label="Opciones">
+                    <div class="opciones_pequeñas"> 
+
+                        <button href="#" class="boton-li icono " title="Status" type="button" id="miboton" onclick="hola(${ticket.id})">
+                            <i class='bx bx-list-ul' style='color:#ffffff'></i>
+                        </button>
+
+                        <button class="boton-subir icono" title="Archivo" onclick="hola2(${ticket.id})" id="">
+                            <i class='bx bx-upload' style='color:#ffffff'></i>
+                        </button>
+
+                        <button class="boton-resubir icono" title="AdRespuesta" onclick="hola3(${ticket.id})">
+                            <i class='bx bx-upload' style='color:#ffffff'></i>
+                        </button>
+
+                        <button class="boton-book icono" title="Resumen">
+                            <i class='bx bxs-book-content' style='color:#ffffff'></i>
+                        </button>
+
+                        <form action="" method="GET">
+                        <button class="boton-trash icono" title="Eliminar" type="button" id="Seraeliminado" onclick="hola4(${ticket.id})">
+                            <i class='bx bxs-trash' style='color:#ffffff' ></i>
+                        </button>
+                        </form>
+
+                        <button class="boton-revision icono" title="Actualizar">
+                            <i class='bx bx-revision' style='color:#ffffff' ></i>
+                        </button>
+                        
+                    </div>
+                </td>
+                <td data-label="Detalles">
+                    <a href="en_proceso?id=${ticket.id}" class="btn" type="button">Ver mas</a>
+                </td>
+
+            `;
+
+                 ticketElement.innerHTML = ticketHTML;
+                ticketsContainer.appendChild(ticketElement);
+            });
+
+        } else {
+            console.error('La respuesta del servidor no es un arreglo válido.');
+        }
+
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+
+    }
+
+//--------------------------------------------------------------------------------------
 
 //funcion del modal2
 
@@ -67,6 +198,8 @@ function hola2(id){
 	console.log(id)
 }
 
+
+//---------------------------------------------------------------------------------------
 //funcion del modal3
 
 let cerrar3 = document.querySelectorAll(".close3")[0];
@@ -92,6 +225,8 @@ function hola3(id){
 	console.log(id)
 }
 
+
+//---------------------------------------------------------------------------------------
 //funcion del modal4(borrar)
 let cerrarx = document.querySelectorAll(".close4")[0];
 let cerrar4 = document.querySelectorAll(".aceptar1")[0];
@@ -152,7 +287,7 @@ function aceptar4(id) {
         console.log(result);
 
         // Obtener el contenedor donde mostrarás los tickets
-        const ticketsContainer = document.querySelector("#ticketsContainer");
+        let ticketsContainer = document.querySelector("#ticketsContainer");
 
         // Limpiar el contenido anterior del contenedor
         ticketsContainer.innerHTML = '';
@@ -221,6 +356,8 @@ function aceptar4(id) {
         console.log('Error al realizar la solicitud:', error);
     });
 }
+
+//---------------------------------------------------------------------------------------
 /*funcion del modal5(vermás)
 
 let cerrar5 = document.querySelectorAll(".close5")[0];
@@ -247,6 +384,8 @@ function hola5(id){
 }
 */
 
+
+//---------------------------------------------------------------------------------------
 /*FUNCION PARA EL BUSCADOR MOVIL*/
  function obtener(){
 
