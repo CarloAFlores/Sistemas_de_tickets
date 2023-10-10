@@ -7,17 +7,6 @@ header('Location: pagina_no_encontrada');
 
 ?>
 
-<!-- Aquí continúa el resto de tu código HTML -->
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Resto de tus etiquetas <head> -->
-</head>
-<body>
-    <!-- Resto de tu contenido HTML -->
-</body>
-</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,33 +40,36 @@ header('Location: pagina_no_encontrada');
 
 <table class="tabla">
     <thead>
-        <tr>
+        <tr id="filterRow">
             <th>No. Ticket</th>
             <th>Etiqueta</th>
             <th>Asunto</th>
             <th>Comentario</th>
-            <th>Usuario Crea</th>
-            <th>Usuario Corresponsable</th>
             <th>Usuario Responsable</th>
+            <th>Usuario Corresponsable</th>
             <th>Status Ticket</th>
             <th>Progreso</th>
-            <!--<th>Opciones</th>
-            <th>Detalles</th>-->
 
         </tr>
         <tr class="selectores">
-            <th><input type="text" name=""></th>
-            <th><input type="text" name=""></th>
-            <th><input type="text" name=""></th>
-            <th><input type="text" name=""></th>
-            <th><input type="text" name=""></th>
-            <th><input type="text" name=""></th>
-            <th><input type="text" name=""></th>
+            <th><input type="text" id="filterNoTicket" placeholder="No. Ticket"></th>
+            <th><input type="text" id="filterEtiqueta" placeholder="Etiqueta"></th>
+            <th><input type="text" id="filterAsunto" placeholder="Asunto"></th>
+            <th><input type="text" id="filterComentario" placeholder="Comentario"></th>
+            <th><input type="text" id="filterUsuarioResponsable" placeholder="Usuario Responsable"></th>
+            <th><input type="text" id="filterUsuarioCorresponsable" placeholder="Usuario Corresponsable"></th>
+            
             <th>
-                <select>
-                    <option value="1"></option>
-                    <option value="2">Value 1</option>
-                    <option value="3">Value 2</option>
+                <select id="filterStatusTicket">
+                    <option value=""></option>
+                    <option value="Creado">Creado</option>
+                    <option value="En Proceso">En Proceso</option>
+                    <option value="Validado">Validado</option>
+                    <option value="Terminado">Terminado</option>
+                    <option value="En espera por falta de recurso">En espera por falta de recurso</option>
+                    <option value="No procede">No procede</option>
+                    <option value="Eliminado">Eliminado</option>
+
                 </select>
             </th>
             <th></th>
@@ -85,16 +77,16 @@ header('Location: pagina_no_encontrada');
             
         </tr>
     </thead>
-        <tbody>
+        <tbody id="ticketsContainer">
             <?php foreach ($tickets as $ticket): ?>
+
             <tr class="tbrow">
                 <td data-label="No. Ticket"><?php echo $ticket->id; ?></td>
                 <td data-label="Etiqueta"><?php echo $ticket->etiqueta; ?></td>
                 <td data-label="Asunto"><?php echo $ticket->asunto; ?></td>
                 <td data-label="Comentario"><?php echo $ticket->descripcion; ?></td>
-                <td data-label="Usuario Crea"><?php echo $ticket->nombre; ?> </td>
-                <td data-label="Usuario Responsable"><?php echo $ticket->id_responsable; ?></td>
-                <td data-label="Usuario Corresponsable"><?php echo $ticket->id_corresponsable; ?></td>
+                <td data-label="Usuario Responsable"><?php echo $ticket->responsable; ?></td>
+                <td data-label="Usuario Corresponsable"><?php echo $ticket->corresponsable; ?></td>
                 <td data-label="Status Ticket"><?php echo $ticket->nombre_status; ?></td>
                 <td data-label="Progreso">
                     <div class="progress">
@@ -134,8 +126,8 @@ header('Location: pagina_no_encontrada');
     </nav>
 </div>
 
-    <script src="../../src/js/tabla.js"></script>
 
+<script src="../../src/js/filtros2.js"></script>
 	
 </body>
 

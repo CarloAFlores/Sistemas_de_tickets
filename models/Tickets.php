@@ -68,28 +68,25 @@ class Tickets extends General{
 
 	public static function final1($identificador) {
     
-    $query = "SELECT usuarios.nombre, status.nombre_status, status.color, status.progreso, tickets.*
+    $query = "SELECT usuarios.nombre,status.nombre_status,status.color,status.progreso,responsable.nombre as responsable,corresponsable.nombre as corresponsable, tickets.*
               FROM " . static::$tabla . "
               INNER JOIN status ON tickets.id_status = status.id
               INNER JOIN usuarios ON tickets.nmr_nom = usuarios.identificador
+              INNER JOIN usuarios AS responsable ON tickets.id_responsable = responsable.identificador
+              INNER JOIN usuarios AS corresponsable ON tickets.id_corresponsable = corresponsable.identificador
               WHERE tickets.nmr_nom = ".$identificador."
               ";
 
     $resultado = self::consultarSQL($query);
     return $resultado;
-}
+	}
 
 
 	public static function busqueda($id){
-		$query = "SELECT usuarios.nombre,status.nombre_status,status.color,status.progreso,satisfaccion.nombre_satisfaccion,puesto.nombre_puesto,responsable.nombre as responsable,corresponsable.nombre as corresponsable,tickets.* FROM " . static::$tabla  ." INNER JOIN status ON  tickets.id_satisfaccion = status.id 
-		    INNER JOIN usuarios ON tickets.nmr_nom = usuarios.identificador
-		    INNER JOIN satisfaccion ON tickets.id_satisfaccion = satisfaccion.id 
-		    INNER JOIN puesto ON tickets.id_puesto = puesto.id
-		    INNER JOIN usuarios AS responsable ON tickets.id_responsable = responsable.identificador
-		    INNER JOIN usuarios AS corresponsable ON tickets.id_corresponsable = corresponsable.identificador
-		    WHERE tickets.id = ${id}";
+		$query = "SELECT usuarios.nombre,status.nombre_status,status.color,status.progreso,satisfaccion.nombre_satisfaccion,puesto.nombre_puesto,responsable.nombre as responsable,corresponsable.nombre as corresponsable,tickets.* FROM " . static::$tabla . " INNER JOIN status ON tickets.id_status = status.id INNER JOIN usuarios ON tickets.nmr_nom = usuarios.identificador INNER JOIN satisfaccion ON tickets.id_satisfaccion = satisfaccion.id INNER JOIN puesto ON tickets.id_puesto = puesto.id INNER JOIN usuarios AS responsable ON tickets.id_responsable = responsable.identificador INNER JOIN usuarios AS corresponsable ON tickets.id_corresponsable = corresponsable.identificador WHERE tickets.id = $id;";
+		    	    
 		$resultado = self::consultarSQL($query);
-		return array_shift( $resultado ) ;
+		return array_shift( $resultado );
 	}
 
 
@@ -106,13 +103,40 @@ class Tickets extends General{
 		return $resultado2;
 	}
 
-	/*public static function ObtenerUsuariosDeLaBaseDeDatos() {
-        $query = "SELECT id, nombre FROM usuarios"; // Ajusta la consulta según tu esquema de base de datos
-        $resultados = self::$db->query($query);
+	public static function mostrarformulario($id){
 
-        return $usuarios;
-    }*/
-
+	$query = "SELECT
+    tickets.id,
+    usuarios.nombre AS responsable,
+    GROUP_CONCAT(corresponsable.nombre ORDER BY corresponsable.nombre DESC) AS corresponsable,
+    status.nombre_status,
+    status.color,
+    status.progreso,
+    satisfaccion.nombre_satisfaccion,
+    puesto.nombre_puesto,
+    tickets.*
+	FROM
+	    " . static::$tabla . "
+	INNER JOIN status ON tickets.id_status = status.id
+	INNER JOIN usuarios ON tickets.nmr_nom = usuarios.identificador
+	INNER JOIN satisfaccion ON tickets.id_satisfaccion = satisfaccion.id
+	INNER JOIN puesto ON tickets.id_puesto = puesto.id
+	INNER JOIN usuarios AS responsable ON tickets.id_responsable = responsable.identificador
+	LEFT JOIN usuarios AS corresponsable ON FIND_IN_SET(corresponsable.identificador, tickets.id_corresponsable)
+	WHERE tickets.id = $id
+	GROUP BY
+	    tickets.id,
+	    usuarios.nombre,
+	    status.nombre_status,
+	    status.color,
+	    status.progreso,
+	    satisfaccion.nombre_satisfaccion,
+	    puesto.nombre_puesto;";
+	
+			$resultado = self::consultarSQL($query);
+			return array_shift( $resultado );
+		}
+	
 
 }
 ?>

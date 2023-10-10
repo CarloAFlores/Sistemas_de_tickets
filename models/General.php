@@ -181,7 +181,6 @@ class General {
     public static function insertar($etiqueta, $asunto, $descripcion, $hora, $fecha, $id_responsable, $id_corresponsable, $crea, $ruta_adjunto){
         $query = "INSERT INTO tickets (etiqueta, asunto, descripcion, hora_creacion, hora_finalizacion, fecha_creacion, fecha_finalizado, adjunto, id_status, id_satisfaccion, id_responsable, id_corresponsable, estado, nmr_nom, id_puesto) VALUES ('$etiqueta', '$asunto', '$descripcion', '$hora', '00:00:00', '$fecha', NULL , '$ruta_adjunto', '1', '3', '$id_responsable', '$id_corresponsable', '1', '$crea', '2')";
 
-
         $resultado = self::$db->query($query);
         return $resultado;
     }
@@ -194,7 +193,28 @@ class General {
 
     }
 
+    public static function actualizardatosformulario($id, $etiqueta, $asunto, $descripcion, $fecha, $hora, $crea, $id_responsable, $id_corresponsable, $ruta_destino){
+        $query = "UPDATE tickets 
+                SET etiqueta = '$etiqueta', 
+                asunto = '$asunto', 
+                descripcion = '$descripcion', 
+                hora_creacion = '$hora', 
+                hora_finalizacion = '0:00:00', 
+                fecha_creacion = '$fecha', 
+                fecha_finalizado = NULL, 
+                adjunto = '$ruta_destino', 
+                id_status = '1', 
+                id_satisfaccion = '3', 
+                id_responsable = '$id_responsable', 
+                id_corresponsable = '$id_corresponsable', 
+                estado = '1', 
+                nmr_nom = '$crea', 
+                id_puesto = '2'
+                WHERE id = $id;";
 
+        $resultado = self::$db->query($query);
+        return $resultado;
+    }
 
 
 }

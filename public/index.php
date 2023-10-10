@@ -40,6 +40,10 @@ $router->get('/falta_recursos',[InicioController::class, 'falta_recursos']);
 
 $router->get('/terminados',[InicioController::class, 'terminados']);
 
+$router->post('/terminados',[InicioController::class, 'update']);
+
+
+
 $router->get('/cancelados',[InicioController::class, 'cancelados']);
 
 //--------------------------------------------------------------------------------------------------------

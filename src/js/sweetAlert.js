@@ -59,8 +59,6 @@ button.addEventListener('click', (e) => {
     }
 });
 
-
-
 //---------------------------------------------------------------------------
 
 
@@ -125,7 +123,7 @@ function agregar() {
 
         // Crea un elemento oculto para almacenar el identificador
         const idElement = document.createElement('input');
-        idElement.type = 'hidden';
+        idElement.type = 'text';
         idElement.className = "input-nuevo";
         idElement.value = idUsuarioCorresponsable;
 
@@ -146,11 +144,7 @@ function agregar() {
         // Limpia los campos de entrada
             inputUsuarioCorresp.value = '';
             id_usuariocor.value = '';
-
-
 }
-
-
 
 
 document.addEventListener('click', function(event) {
@@ -189,3 +183,57 @@ function eliminarUsuario(usuarioContainer, idUsuarioCorresponsable) {
     document.getElementById('id_todosUserCorrespon').value = usuariosCorresponsables.join(',');
 }
 
+
+
+/*// Agrega un manejador de clic para los botones "X"
+document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('eliminar-usuario')) {
+        const idUsuarioCorresponsable = event.target.getAttribute('data-id');
+        console.log(`Clic en botón "X" con data-id: ${idUsuarioCorresponsable}`);
+        
+        // Resto del código para eliminar el usuario y actualizar la lista
+    }
+});
+
+
+document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('eliminar-usuario')) {
+        // Obtén el identificador del usuario corresponsable del botón "X" específico
+        const idUsuarioCorresponsable = event.target.getAttribute('data-id');
+        
+        // Elimina el usuario y el botón al hacer clic
+        const usuarioContainer2 = event.target.closest('.usuario-container');
+        if (usuarioContainer2) {
+            usuarioContainer2.remove();
+
+            // Elimina el ID del usuario corresponsable del array
+            const index = usuariosCorresponsables.indexOf(idUsuarioCorresponsable);
+            if (index !== -1) {
+                usuariosCorresponsables.splice(index, 1);
+            }
+
+            // Actualiza el valor del campo oculto id_todosUserCorrespon
+            document.getElementById('id_todosUserCorrespon').value = usuariosCorresponsables.join(',');
+
+            console.log(usuariosCorresponsables);
+        }
+    }
+});
+document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('eliminar-usuario')) {
+       let dataId = event.target.getAttribute('data-id');
+       console.log('dataId:', dataId);
+       let usuarioInput = document.getElementById('adios_' + dataId);
+       console.log('usuarioInput:', usuarioInput);
+       if (usuarioInput) {
+           let valorInput = usuarioInput.value;
+           console.log('valorInput:', valorInput);
+       } else {
+           console.log('Elemento no encontrado');
+       }
+    }
+});
+*/
+
+
+    

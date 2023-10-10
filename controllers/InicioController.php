@@ -54,7 +54,12 @@ class inicioController{
 
 	public static function terminados(Router $router){
 		session_start();
-		$router->render('paginas/terminados');
+		$id = $_GET['id'];
+
+		$val = Tickets::mostrarformulario($id);
+		$router->render('paginas/terminados',[
+			'val' => $val
+		]);
 	}
 
 	
@@ -108,9 +113,6 @@ class inicioController{
 }
 
 
-
-
-
 	public static function mirar(){
 
 		$datos = $_POST['nombre'];
@@ -122,6 +124,8 @@ class inicioController{
 
 
 	public static function insertar(){
+
+
 
     $etiqueta = $_POST['etiqueta'];
     $asunto = $_POST['asunto'];
@@ -157,7 +161,43 @@ class inicioController{
     $val2 = Tickets::insertar($etiqueta, $asunto, $descripcion, $hora, $fecha, $id_responsable, $id_corresponsable, $crea, $ruta_destino);
     header("Location: inicio");
 }
+	
 
+	public static function update(){
+
+		$id = $_POST['id_registro'];
+		$etiqueta = $_POST['etiqueta'];
+		$asunto = $_POST['asunto'];
+		$descripcion = $_POST['motivo'];
+		$fecha = $_POST['fecha'];
+		$hora = $_POST['hora'];
+		$crea = intval($_POST['nomina']);
+		$id_responsable = $_POST['id_usuariores'];
+		$id_corresponsable = $_POST['id_todosUserCorrespon'];
+		//var_dump($crea);
+		//exit();
+		
+		// Procesa el archivo adjunto
+		$nombre_archivo = $_FILES['archivo_adjunto']['name'];
+		$tipo_archivo = $_FILES['archivo_adjunto']['type'];
+		$tamaño_archivo = $_FILES['archivo_adjunto']['size'];
+		$temp_archivo = $_FILES['archivo_adjunto']['tmp_name'];
+		
+		// Asegúrate de que el archivo se haya cargado correctamente
+		if (!empty($nombre_archivo)) {
+		    // Guarda el archivo en una ubicación deseada
+		    $ruta_destino = "/var/www/html/Sistemas_de_tickets/archivos/" . $nombre_archivo;
+		    move_uploaded_file($temp_archivo, $ruta_destino);
+		} else {
+		    // El usuario no cargó un archivo
+		    $ruta_destino = null;
+		}
+
+		
+		// Inserta los datos en la base de datos, incluyendo la ruta del archivo adjunto
+		$val2 = Tickets::actualizardatosformulario($id, $etiqueta, $asunto, $descripcion, $fecha, $hora, $crea, $id_responsable, $id_corresponsable, $ruta_destino);
+		header("Location: inicio");
+	}
 
 
 }

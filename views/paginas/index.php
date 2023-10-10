@@ -21,7 +21,7 @@ header('Location: pagina_no_encontrada');
 <body>
 	<div class="botones">
         
-        <a href="crear" class="boton2">Crear</a>
+        <a href="crear" class="boton2" type="button">Crear</a>
         <button class="boton1" id="ocultar-mostrar" onclick="obtener()">Buscar</button>
     </div>
 
@@ -45,7 +45,7 @@ header('Location: pagina_no_encontrada');
             <th>No. Ticket</th>
             <th>Etiqueta</th>
             <th>Asunto</th>
-            <th>Comentario</th>
+            <th>Motivo</th>
             <th>Usuario Crea</th>
             <th>Status Ticket</th>
             <th>Progreso</th>
@@ -57,7 +57,7 @@ header('Location: pagina_no_encontrada');
             <th><input type="text" id="filterNoTicket" placeholder="No. Ticket"></th>
             <th><input type="text" id="filterEtiqueta" placeholder="Etiqueta"></th>
             <th><input type="text" id="filterAsunto" placeholder="Asunto"></th>
-            <th><input type="text" id="filterComentario" placeholder="Comentario"></th>
+            <th><input type="text" id="filterComentario" placeholder="Motivo"></th>
             <th><input type="text" id="filterUsuarioCrea" placeholder="Usuario Crea"></th>
             <th>
                 <select id="filterStatusTicket">
@@ -121,10 +121,12 @@ header('Location: pagina_no_encontrada');
                     	    <i class='bx bxs-trash' style='color:#ffffff' ></i>
                     	</button>
                         </form>
+                        
+                        <button class="boton-revision icono" title="Actualizar" data-id="<?php echo $ticket->id; ?>">
+                            <i class='bx bx-revision' style='color:#ffffff'></i>
+                        </button>
 
-                    	<button class="boton-revision icono" title="Actualizar">
-                    	    <i class='bx bx-revision' style='color:#ffffff' ></i>
-                    	</button>
+
                         
                    	</div>
                 </td>
@@ -148,8 +150,9 @@ header('Location: pagina_no_encontrada');
             <form class="cajita">
                 <div class="cajita__dos">
                     <h4>Status</h4>
-                    
+                     
                     <select class="cajita__dos--opciones" id="estadoTicket">
+                       
                         <option value="0">Selecciona</option>
                         <option value="5">En espera por falta de recurso</option>
                         <option value="2">En proceso</option>
@@ -371,6 +374,7 @@ header('Location: pagina_no_encontrada');
 
     <script src="../../src/js/tabla.js"></script>
     <script src="../../src/js/filtros.js"></script>
+    <script src="../../src/js/redireccion_form.js"></script>
     <!--<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript" src="../../src/js/sweetAlert.js"></script>-->
 	

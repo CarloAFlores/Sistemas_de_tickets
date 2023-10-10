@@ -89,12 +89,10 @@
                             </select>
                         </div>
                         <input type="hidden" name="id_todosUserCorrespon" id="id_todosUserCorrespon">
-                        <div class="contenedor-azul">
+                        <div class="contenedor-azul" style="background: blue;">
                           <!-- Los valores seleccionados se agregarán aquí -->
                         </div>
                     </div>
-
-
                     
                     <div class="block div_upload">
                         <label>Adjunto</label>

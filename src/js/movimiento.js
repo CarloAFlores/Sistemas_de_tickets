@@ -286,14 +286,9 @@ nombreList2.addEventListener('click', function () {
         inputUsuarioCorresp.value = selectedOption2.textContent;
         id_usuariocor.value = selectedOption2.dataset.id; // Asigna el identificador al campo oculto
         nombreList2.style.display = 'none';
-
-        /* Actualiza el valor del campo oculto id_todosUserCorrespon
-        const usuariosCorresponsables = [selectedOption2.dataset.id];
-        document.getElementById('id_todosUserCorrespon').value = usuariosCorresponsables.join(',');*/
     }
     
 });
-
 
 
 inputUsuarioCorresp.addEventListener('keyup', miFuncion2);
